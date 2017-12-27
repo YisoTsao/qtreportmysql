@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Handies</h1>
+
+<div class="media">
+    <div class="media-body">
+      <table class="table table-hover" >
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Pccitem</th>
+      <th>Receivedate</th>
+      <th>Startdate</th>
+      <th>Finishdate</th>
+      <th>Solution</th>
+      <th>Schedule</th>
+      <th>Capacity</th>
+      <th>Qual</th>
+      <th>Read</th>
+      <th>Write</th>
+      <th>Owner</th>
+      <th id="hide">Prodname</th>
+      <th id="hide">Desc</th>
+      <th id="hide">Prodpn</th>
+      <th id="hide">Fwvversion</th>
+      <th id="hide">Ftype</th>
+      <th id="hide">Pcbvers</th>
+      <th id="hide">Testres</th>
+      <th id="hide">Expl</th>
+      <th id="hide">Rpname</th>
+      <th id="hide">Rpdate</th>
+      <th id="hide">Approvename</th>
+      <th id="hide">Explain</th>
+      <th>Remark</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @handies.each do |handy| %>
+      <tr>
+        <td><%= handy.item %></td>
+        <td><%= handy.pccitem %></td>
+        <td><%= handy.receivedate %></td>
+        <td><%= handy.startdate %></td>
+        <td><%= handy.finishdate %></td>
+        <td><%= handy.solution %></td>
+        <td><%= handy.schedule %></td>
+        <td><%= handy.capacity %></td>
+        <td><%= handy.qual %></td>
+        <td><%= handy.read %></td>
+        <td><%= handy.write %></td>
+        <td><%= handy.owner %></td>
+        <td id="hide"><%= handy.prodname %></td>
+        <td id="hide"><%= handy.desc %></td>
+        <td id="hide"><%= handy.prodpn %></td>
+        <td id="hide"><%= handy.fwvversion %></td>
+        <td id="hide"><%= handy.ftype %></td>
+        <td id="hide"><%= handy.pcbvers %></td>
+        <td id="hide"><%= handy.testres %></td>
+        <td id="hide"><%= handy.expl %></td>
+        <td id="hide"><%= handy.rpname %></td>
+        <td id="hide"><%= handy.rpdate %></td>
+        <td id="hide"><%= handy.approvename %></td>
+        <td id="hide"><%= handy.explain %></td>
+        <td><%= handy.remark %></td>
+        <td><%= link_to 'Show', handy %></td>
+        <td><%= link_to 'Edit', edit_handy_path(handy) %></td>
+        <td><%= link_to 'Destroy', handy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+
+<br>
+
+<%= link_to 'New Handy', new_handy_path %>

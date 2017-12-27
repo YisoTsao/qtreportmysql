@@ -1,0 +1,2 @@
+class Handy < ApplicationRecord
+end

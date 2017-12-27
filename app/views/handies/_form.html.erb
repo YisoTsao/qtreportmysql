@@ -1,0 +1,142 @@
+<%= form_with(model: handy, local: true) do |form| %>
+  <% if handy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(handy.errors.count, "error") %> prohibited this handy from being saved:</h2>
+
+      <ul>
+      <% handy.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :item %>
+    <%= form.number_field :item, id: :handy_item %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pccitem %>
+    <%= form.number_field :pccitem, id: :handy_pccitem %>
+  </div>
+
+  <div class="field">
+    <%= form.label :receivedate %>
+    <%= form.date_select :receivedate, id: :handy_receivedate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :startdate %>
+    <%= form.date_select :startdate, id: :handy_startdate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :finishdate %>
+    <%= form.date_select :finishdate, id: :handy_finishdate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :solution %>
+    <%= form.text_field :solution, id: :handy_solution %>
+  </div>
+
+  <div class="field">
+    <%= form.label :schedule %>
+    <%= form.text_area :schedule, id: :handy_schedule %>
+  </div>
+
+  <div class="field">
+    <%= form.label :capacity %>
+    <%= form.text_field :capacity, id: :handy_capacity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :qual %>
+    <%= form.text_field :qual, id: :handy_qual %>
+  </div>
+
+  <div class="field">
+    <%= form.label :read %>
+    <%= form.text_field :read, id: :handy_read %>
+  </div>
+
+  <div class="field">
+    <%= form.label :write %>
+    <%= form.text_field :write, id: :handy_write %>
+  </div>
+
+  <div class="field">
+    <%= form.label :owner %>
+    <%= form.text_field :owner, id: :handy_owner %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prodname %>
+    <%= form.text_field :prodname, id: :handy_prodname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :desc %>
+    <%= form.text_area :desc, id: :handy_desc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prodpn %>
+    <%= form.text_field :prodpn, id: :handy_prodpn %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fwvversion %>
+    <%= form.text_area :fwvversion, id: :handy_fwvversion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ftype %>
+    <%= form.text_field :ftype, id: :handy_ftype %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pcbvers %>
+    <%= form.text_field :pcbvers, id: :handy_pcbvers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :testres %>
+    <%= form.text_field :testres, id: :handy_testres %>
+  </div>
+
+  <div class="field">
+    <%= form.label :expl %>
+    <%= form.text_field :expl, id: :handy_expl %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rpname %>
+    <%= form.text_field :rpname, id: :handy_rpname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rpdate %>
+    <%= form.date_select :rpdate, id: :handy_rpdate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :approvename %>
+    <%= form.text_area :approvename, id: :handy_approvename %>
+  </div>
+
+  <div class="field">
+    <%= form.label :explain %>
+    <%= form.text_area :explain, id: :handy_explain %>
+  </div>
+
+  <div class="field">
+    <%= form.label :remark %>
+    <%= form.text_area :remark, id: :handy_remark %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

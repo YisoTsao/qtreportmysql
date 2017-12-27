@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+h1{
+	padding-top: 10px;
+}
+
+#bs-example-navbar-collapse-1 {
+background-color: #111;
+}
+
+body{
+	padding-top: 40px;
+	padding-left: 20px;
+}
+
+
+
+.navbar-default .navbar-nav > li > a{
+	color: #ffffff;
+}
+
+#indexbarcolor{
+	background-color: #444;
+	color: rgb(255, 176, 87);
+}
