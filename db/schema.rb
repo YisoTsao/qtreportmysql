@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171228030941) do
+ActiveRecord::Schema.define(version: 20171228091039) do
 
   create_table "handies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "item"
@@ -99,6 +99,46 @@ ActiveRecord::Schema.define(version: 20171228030941) do
     t.text "pc5basic"
     t.text "pc5result"
     t.text "pc5led"
+    t.text "cdmread"
+    t.text "cdmwrite"
+    t.text "rdr112"
+    t.text "rdw112"
+    t.text "rdr4k"
+    t.text "rdw4k"
+    t.text "rdrqd324k"
+    t.text "rdwqd324k"
+    t.text "pc2cdmread"
+    t.text "pc2cdmwrite"
+    t.text "pc2rdr112"
+    t.text "pc2rdw112"
+    t.text "pc2rdr4k"
+    t.text "pc2rdw4k"
+    t.text "pc2rdrqd324k"
+    t.text "pc2rdwqd324k"
+    t.text "pc3cdmread"
+    t.text "pc3cdmwrite"
+    t.text "pc3rdr112"
+    t.text "pc3rdw112"
+    t.text "pc3rdr4k"
+    t.text "pc3rdw4k"
+    t.text "pc3rdrqd324k"
+    t.text "pc3rdwqd324k"
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
+    t.string "image1_file_name"
+    t.string "image1_content_type"
+    t.integer "image1_file_size"
+    t.datetime "image1_updated_at"
+    t.string "image2_file_name"
+    t.string "image2_content_type"
+    t.integer "image2_file_size"
+    t.datetime "image2_updated_at"
+    t.string "image3_file_name"
+    t.string "image3_content_type"
+    t.integer "image3_file_size"
+    t.datetime "image3_updated_at"
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
