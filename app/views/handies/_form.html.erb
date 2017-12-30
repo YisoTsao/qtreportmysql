@@ -1,4 +1,19 @@
-<%= form_with(model: handy, local: true) do |form| %>
+
+<%= form_for @handy, html: { multipart: true } do |form| %>
+    <%= form.label :image %>
+    <%= form.file_field :image  %>
+
+    <%= form.label :image1 %>
+    <%= form.file_field :image1  %>
+
+    <%= form.label :image2 %>
+    <%= form.file_field :image2  %>
+
+    <%= form.label :image3 %>
+    <%= form.file_field :image3  %>
+
+
+<%= form_for(handy) do |f| %>
   <% if handy.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(handy.errors.count, "error") %> prohibited this handy from being saved:</h2>
@@ -11,132 +26,509 @@
     </div>
   <% end %>
 
+
   <div class="field">
-    <%= form.label :item %>
-    <%= form.number_field :item, id: :handy_item %>
+    <%= f.label :id %>
+    <%= f.number_field :id %>
   </div>
 
   <div class="field">
-    <%= form.label :pccitem %>
-    <%= form.number_field :pccitem, id: :handy_pccitem %>
+    <%= f.label :item %>
+    <%= f.number_field :item %>
   </div>
 
   <div class="field">
-    <%= form.label :receivedate %>
-    <%= form.date_select :receivedate, id: :handy_receivedate %>
+    <%= f.label :pccitem %>
+    <%= f.number_field :pccitem %>
+  </div>
+
+  <div class="field" >
+    <%= f.label :receivedate %>
+    <%= f.text_field :receivedate %>
   </div>
 
   <div class="field">
-    <%= form.label :startdate %>
-    <%= form.date_select :startdate, id: :handy_startdate %>
+    <%= f.label :startdate %>
+    <%= f.text_field :startdate %>
   </div>
 
   <div class="field">
-    <%= form.label :finishdate %>
-    <%= form.date_select :finishdate, id: :handy_finishdate %>
+    <%= f.label :finishdate %>
+    <%= f.text_field :finishdate %>
   </div>
 
   <div class="field">
-    <%= form.label :solution %>
-    <%= form.text_field :solution, id: :handy_solution %>
+    <%= f.label :solution %>
+    <%= f.text_field :solution %>
   </div>
 
   <div class="field">
-    <%= form.label :schedule %>
-    <%= form.text_area :schedule, id: :handy_schedule %>
+    <%= f.label :schedule %>
+    <%= f.number_field :schedule %>
   </div>
 
   <div class="field">
-    <%= form.label :capacity %>
-    <%= form.text_field :capacity, id: :handy_capacity %>
+    <%= f.label :capacity %>
+    <%= f.text_field :capacity %>
   </div>
 
   <div class="field">
-    <%= form.label :qual %>
-    <%= form.text_field :qual, id: :handy_qual %>
+    <%= f.label :qual %>
+    <%= f.text_field :qual %>
   </div>
 
   <div class="field">
-    <%= form.label :read %>
-    <%= form.text_field :read, id: :handy_read %>
+    <%= f.label :read %>
+    <%= f.text_field :read %>
   </div>
 
   <div class="field">
-    <%= form.label :write %>
-    <%= form.text_field :write, id: :handy_write %>
+    <%= f.label :write %>
+    <%= f.text_field :write %>
   </div>
 
   <div class="field">
-    <%= form.label :owner %>
-    <%= form.text_field :owner, id: :handy_owner %>
+    <%= f.label :owner %>
+    <%= f.text_field :owner %>
   </div>
 
   <div class="field">
-    <%= form.label :prodname %>
-    <%= form.text_field :prodname, id: :handy_prodname %>
+    <%= f.label :prodname %>
+    <%= f.text_field :prodname %>
   </div>
 
   <div class="field">
-    <%= form.label :desc %>
-    <%= form.text_area :desc, id: :handy_desc %>
+    <%= f.label :prodpn %>
+    <%= f.text_field :prodpn %>
+  </div>
+   <div class="field">
+    <%= f.label :fwvversion %>
+    <%= f.text_field :fwvversion %>
+  </div>  
+
+  <div class="field">
+    <%= f.label :Description %>
+    <%= f.text_field :desc %>
+  </div> 
+
+   <div class="field">
+    <%= f.label :ftype %>
+    <%= f.text_field :ftype %>
+  </div>
+   <div class="field">
+    <%= f.label :pcbvers %>
+    <%= f.text_field :pcbvers %>
+  </div>
+   <div class="field">
+    <%= f.label :testresult %>
+    <%= f.text_field :testres %>
+  </div>
+   <div class="field">
+    <%= f.label :expl %>
+    <%= f.text_field :expl %>
   </div>
 
   <div class="field">
-    <%= form.label :prodpn %>
-    <%= form.text_field :prodpn, id: :handy_prodpn %>
+    <%= f.label :Remark %>
+    <%= f.text_field :remark %>
   </div>
 
   <div class="field">
-    <%= form.label :fwvversion %>
-    <%= form.text_area :fwvversion, id: :handy_fwvversion %>
+    <%= f.label :Reportname %>
+    <%= f.text_field :rpname %>
   </div>
 
   <div class="field">
-    <%= form.label :ftype %>
-    <%= form.text_field :ftype, id: :handy_ftype %>
+    <%= f.label :Reportdate %>
+    <%= f.text_field :rpdate %>
   </div>
 
   <div class="field">
-    <%= form.label :pcbvers %>
-    <%= form.text_field :pcbvers, id: :handy_pcbvers %>
+    <%= f.label :Approvename %>
+    <%= f.text_field :approvename %>
   </div>
 
   <div class="field">
-    <%= form.label :testres %>
-    <%= form.text_field :testres, id: :handy_testres %>
+    <%= f.label :PC1OS %>
+    <%= f.text_field :pc1os %>
   </div>
 
   <div class="field">
-    <%= form.label :expl %>
-    <%= form.text_field :expl, id: :handy_expl %>
+    <%= f.label :PC1MB %>
+    <%= f.text_field :pc1mb %>
   </div>
 
   <div class="field">
-    <%= form.label :rpname %>
-    <%= form.text_field :rpname, id: :handy_rpname %>
+    <%= f.label :PC1Vendor %>
+    <%= f.text_field :pc1vendor %>
   </div>
 
   <div class="field">
-    <%= form.label :rpdate %>
-    <%= form.date_select :rpdate, id: :handy_rpdate %>
+    <%= f.label :PC1Chip %>
+    <%= f.text_field :pc1chip %>
   </div>
 
   <div class="field">
-    <%= form.label :approvename %>
-    <%= form.text_area :approvename, id: :handy_approvename %>
+    <%= f.label :PC1BIOS %>
+    <%= f.text_field :pc1bios %>
   </div>
 
   <div class="field">
-    <%= form.label :explain %>
-    <%= form.text_area :explain, id: :handy_explain %>
+    <%= f.label :PC1basic %>
+    <%= f.text_field :pc1basic %>
   </div>
 
   <div class="field">
-    <%= form.label :remark %>
-    <%= form.text_area :remark, id: :handy_remark %>
+    <%= f.label :PC1LED %>
+    <%= f.text_field :pc1led %>
   </div>
 
+
+  <div class="field">
+    <%= f.label :PC1comp32 %>
+    <%= f.text_field :pc1comp32 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PC1burnin %>
+    <%= f.text_field :pc1burnin %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pc1fat %>
+    <%= f.text_field :pc1fat %>
+  </div>
+  <div class="field">
+    <%= f.label :pc1fat32 %>
+    <%= f.text_field :pc1fat32 %>
+  </div>
+  <div class="field">
+    <%= f.label :pc1ntfs %>
+    <%= f.text_field :pc1ntfs %>
+  </div>
+  <div class="field">
+    <%= f.label :pc1exfat %>
+    <%= f.text_field :pc1exfat %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :cdmread %>
+    <%= f.text_field :cdmread %>
+  </div>
+  <div class="field">
+    <%= f.label :cdmwrite %>
+    <%= f.text_field :cdmwrite %>
+  </div>
+  <div class="field">
+    <%= f.label :rdr512 %>
+    <%= f.text_field :rdr112 %>
+  </div>
+  <div class="field">
+    <%= f.label :rdw512 %>
+    <%= f.text_field :rdw112 %>
+  </div>
+  <div class="field">
+    <%= f.label :rdr4k %>
+    <%= f.text_field :rdr4k %>
+  </div>
+  <div class="field">
+    <%= f.label :rdw4k %>
+    <%= f.text_field :rdw4k %>
+  </div>
+  <div class="field">
+    <%= f.label :rdrqd324k %>
+    <%= f.text_field :rdrqd324k %>
+  </div>
+  <div class="field">
+    <%= f.label :rdwqd324k %>
+    <%= f.text_field :rdwqd324k %>
+  </div>
+
+
+
+  <div class="field">
+    <%= f.label :pc1result %>
+    <%= f.text_field :pc1result %>
+  </div>
+  <div class="field">
+    <%= f.label :PC2OS %>
+    <%= f.text_field :pc2os %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PC2MB %>
+    <%= f.text_field :pc2mb %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PC2Vendor %>
+    <%= f.text_field :pc2vendor %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PC2Chip %>
+    <%= f.text_field :pc2chip %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PC2BIOS %>
+    <%= f.text_field :pc2bios %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PC2basic %>
+    <%= f.text_field :pc2basic %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PC2LED %>
+    <%= f.text_field :pc2led %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PC2comp32 %>
+    <%= f.text_field :pc2comp32 %>
+  </div>
+  <div class="field">
+    <%= f.label :PC2burnin %>
+    <%= f.text_field :pc2burnin %>
+  </div>
+<div class="field">
+    <%= f.label :pc2fat %>
+    <%= f.text_field :pc2fat %>
+  </div>
+  <div class="field">
+    <%= f.label :pc2fat32 %>
+    <%= f.text_field :pc2fat32 %>
+  </div>
+  <div class="field">
+    <%= f.label :pc2ntfs %>
+    <%= f.text_field :pc2ntfs %>
+  </div>
+  <div class="field">
+    <%= f.label :pc2exfat %>
+    <%= f.text_field :pc2exfat %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pc2cdmread %>
+    <%= f.text_field :pc2cdmread %>
+  </div>
+  <div class="field">
+    <%= f.label :pc2cdmwrite %>
+    <%= f.text_field :pc2cdmwrite %>
+  </div>
+  <div class="field">
+    <%= f.label :pc2rdr512 %>
+    <%= f.text_field :pc2rdr112 %>
+  </div>
+  <div class="field">
+    <%= f.label :pc2rdw512 %>
+    <%= f.text_field :pc2rdw112 %>
+  </div>
+  <div class="field">
+    <%= f.label :pc2rdr4k %>
+    <%= f.text_field :pc2rdr4k %>
+  </div>
+  <div class="field">
+    <%= f.label :pc2rdw4k %>
+    <%= f.text_field :pc2rdw4k %>
+  </div>
+  <div class="field">
+    <%= f.label :pc2rdrqd324k %>
+    <%= f.text_field :pc2rdrqd324k %>
+  </div>
+  <div class="field">
+    <%= f.label :pc2rdwqd324k %>
+    <%= f.text_field :pc2rdwqd324k %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pc2result %>
+    <%= f.text_field :pc2result %>
+  </div>
+  <div class="field">
+    <%= f.label :PC3OS %>
+    <%= f.text_field :pc3os %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PC3MB %>
+    <%= f.text_field :pc3mb %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PC3Vendor %>
+    <%= f.text_field :pc3vendor %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PC3Chip %>
+    <%= f.text_field :pc3chip %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PC3BIOS %>
+    <%= f.text_field :pc3bios %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PC3basic %>
+    <%= f.text_field :pc3basic %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PC3LED %>
+    <%= f.text_field :pc3led %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PC3comp32 %>
+    <%= f.text_field :pc3comp32 %>
+  </div>
+  <div class="field">
+    <%= f.label :PC3burnin %>
+    <%= f.text_field :pc3burnin %>
+  </div>
+  <div class="field">
+    <%= f.label :pc3fat %>
+    <%= f.text_field :pc3fat %>
+  </div>
+  <div class="field">
+    <%= f.label :pc3fat32 %>
+    <%= f.text_field :pc3fat32 %>
+  </div>
+  <div class="field">
+    <%= f.label :pc3ntfs %>
+    <%= f.text_field :pc3ntfs %>
+  </div>
+  <div class="field">
+    <%= f.label :pc3exfat %>
+    <%= f.text_field :pc3exfat %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pc3cdmread %>
+    <%= f.text_field :pc3cdmread %>
+  </div>
+  <div class="field">
+    <%= f.label :pc3cdmwrite %>
+    <%= f.text_field :pc3cdmwrite %>
+  </div>
+  <div class="field">
+    <%= f.label :pc3rdr512 %>
+    <%= f.text_field :pc3rdr112 %>
+  </div>
+  <div class="field">
+    <%= f.label :pc3rdw512 %>
+    <%= f.text_field :pc3rdw112 %>
+  </div>
+  <div class="field">
+    <%= f.label :pc3rdr4k %>
+    <%= f.text_field :pc3rdr4k %>
+  </div>
+  <div class="field">
+    <%= f.label :pc3rdw4k %>
+    <%= f.text_field :pc3rdw4k %>
+  </div>
+  <div class="field">
+    <%= f.label :pc3rdrqd324k %>
+    <%= f.text_field :pc3rdrqd324k %>
+  </div>
+  <div class="field">
+    <%= f.label :pc3rdwqd324k %>
+    <%= f.text_field :pc3rdwqd324k %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pc3result %>
+    <%= f.text_field :pc3result %>
+  </div>
+   <div class="field">
+    <%= f.label :PC4OS %>
+    <%= f.text_field :pc4os %>
+  </div>
+  <div class="field">
+    <%= f.label :PC4MB %>
+    <%= f.text_field :pc4mb %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PC4Vendor %>
+    <%= f.text_field :pc4vendor %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PC4Chip %>
+    <%= f.text_field :pc4chip %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PC4BIOS %>
+    <%= f.text_field :pc4bios %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PC4basic %>
+    <%= f.text_field :pc4basic %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PC4LED %>
+    <%= f.text_field :pc4led %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pc4ext34 %>
+    <%= f.text_field :pc4ext34 %>
+  </div>
+  <div class="field">
+    <%= f.label :pc4result %>
+    <%= f.text_field :pc4result %>
+  </div>
+  <div class="field">
+    <%= f.label :PC5OS %>
+    <%= f.text_field :pc5os %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PC5MB %>
+    <%= f.text_field :pc5mb %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PC5Vendor %>
+    <%= f.text_field :pc5vendor %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PC5Chip %>
+    <%= f.text_field :pc5chip %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PC5BIOS %>
+    <%= f.text_field :pc5bios %>
+  </div>
+  <div class="field">
+    <%= f.label :PC5basic %>
+    <%= f.text_field :pc5basic %>
+  </div>
+
+  <div class="field">
+    <%= f.label :PC5LED %>
+    <%= f.text_field :pc5led %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pc5result %>
+    <%= f.text_field :pc5result %>
+  </div>
   <div class="actions">
-    <%= form.submit %>
+    <%= f.submit %>
   </div>
+
+ 
+<% end %>
 <% end %>

@@ -1,20 +1,52 @@
-class HandiesController < InheritedResources::Base
-	before_action :set_handy, only: [:show, :edit, :update, :destroy, :report ]
-def index
-	@handies = Handy.all
-end
+class HandiesController < ApplicationController
+  before_action :set_handy, only: [:show, :edit, :update, :destroy, :report ]
 
-def show
+  # GET /handies
+  # GET /handies.json
+  def index
+    if params[:search]
+         @handies = Handy.where('pccitem LIKE ? OR receivedate LIKE ? OR startdate LIKE ? OR
+          finishdate LIKE ? OR schedule LIKE ? OR solution LIKE ? OR capacity LIKE ?',
+           "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", 
+           "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%")
+      else
 
-end
-def new
-	@handy = Handy.new
-end
-def edit
+      @handies = Handy.all
+        respond_to do |format|
+            format.html 
+            format.json 
+            format.csv { send_data @handies.to_csv }
+            format.pdf  { render template: 'handies/standreport', pdf: 'Report', layout: 'pdf.html',  location: @handy }  # Report is downloade file name
+            end  
+       end 
+  end
 
-end
 
-def create
+
+
+  # GET /handies/1    
+  # GET /handies/1.json
+
+  def show 
+  end
+
+  def report
+
+  end
+
+  # GET /handies/new
+  def new
+    @handy = Handy.new
+  end
+
+  # GET /handies/1/edit
+  def edit
+  end
+
+ 
+  # POST /handies
+  # POST /handies.json
+  def create
     @handy = Handy.new(handy_params)
     respond_to do |format|
       if @handy.save
@@ -26,9 +58,15 @@ def create
       end
     end
   end
+        
 
-
-def update
+def import
+  Handy.import(params[:file])
+  redirect_to handies_url, notice: "Handies imported."
+end
+  # PATCH/PUT /handies/1
+  # PATCH/PUT /handies/1.json
+  def update
     respond_to do |format|
       if @handy.update(handy_params)
         format.html { redirect_to @handy}
@@ -51,11 +89,12 @@ def update
   end
 
   private
-
-  def set_handy
+    # Use callbacks to share common setup or constraints between actions.
+    def set_handy
       @handy = Handy.find(params[:id])
     end
 
+    # Never trust parameters from the scary internet, only allow the white list through.
     def handy_params
       params.require(:handy).permit(:item, :pccitem, :receivedate, :startdate, :finishdate, 
         :solution, :schedule, :capacity, :qual, :read, :write, :owner, :prodname, :prodpn, :desc,
@@ -67,9 +106,11 @@ def update
         :pc1fat, :pc1fat32, :pc1ntfs, :pc1exfat, :pc1result,:pc2fat, :pc2fat32, :pc2ntfs, :pc2exfat, :pc2result,
         :pc3fat, :pc3fat32, :pc3ntfs, :pc3exfat, :pc3result, :pc4ext34, :pc4result, :pc5result,
         :pc1led, :pc2led, :pc3led, :pc4led, :pc5led, :image, :image1, :image2, :image3,
-        :cdmread, :cdmwrite, :rdr512, :rdw512, :rdr4k, :rdw4k, :rdrqd324k, :rdwqd324k,
-        :pc2cdmread,:pc2cdmwrite,:pc2rdr512,:pc2rdw512,:pc2rdr4k, :pc2rdw4k, :pc2rdrqd324k,:pc2rdwqd324k,
-        :pc3cdmread,:pc3cdmwrite,:pc3rdr512,:pc3rdw512,:pc3rdr4k, :pc3rdw4k, :pc3rdrqd324k,:pc3rdwqd324k,)
+        :cdmread, :cdmwrite, :rdr112, :rdw112, :rdr4k, :rdw4k, :rdrqd324k, :rdwqd324k,
+        :pc2cdmread,:pc2cdmwrite,:pc2rdr112,:pc2rdw112,:pc2rdr4k, :pc2rdw4k, :pc2rdrqd324k,:pc2rdwqd324k,
+        :pc3cdmread,:pc3cdmwrite,:pc3rdr112,:pc3rdw112,:pc3rdr4k, :pc3rdw4k, :pc3rdrqd324k,:pc3rdwqd324k,)
     end
-end
 
+  
+
+end

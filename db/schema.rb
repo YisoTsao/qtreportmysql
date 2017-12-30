@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20171228091039) do
     t.string "rpname"
     t.date "rpdate"
     t.text "approvename"
-    t.text "explain"
+    t.text "Explain"
     t.text "remark"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

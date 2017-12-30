@@ -44,7 +44,6 @@ gem 'progress_bar'
 gem 'nifty-generators'
 gem 'pdfkit'
 gem 'render_anywhere'
-gem 'wkhtmltopdf-binary'
 gem "paperclip", "~> 5.0.0"
 gem 'will_paginate', '~> 3.1.0'
 gem 'activeadmin'

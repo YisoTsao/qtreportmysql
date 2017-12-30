@@ -24,7 +24,7 @@ class CreateHandies < ActiveRecord::Migration[5.1]
       t.string :rpname
       t.date :rpdate
       t.text :approvename
-      t.text :explain
+      t.text :Explain
       t.text :remark
 
       t.timestamps

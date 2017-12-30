@@ -5,28 +5,28 @@ has_attached_file :image,
   {   large: "1500x1500", 
       medium: "300x300",
       thumb: "200x200"}, 
-      default_url: "/images/:style/missing.png"
+      default_url:  ""# "/images/:style/missing.png"
 
 has_attached_file  :image1,
   styles: 
   {   large: "1500x1500", 
       medium: "300x300",
       thumb: "200x200"}, 
-      default_url: "/images/:style/missing.png"
+      default_url: ""# "/images/:style/missing.png"
 
       has_attached_file :image2,
   styles: 
   {   large: "1500x1500", 
       medium: "300x300",
       thumb: "200x200"}, 
-      default_url: "/images/:style/missing.png"
+      default_url: ""# "/images/:style/missing.png"
 
       has_attached_file :image3, 
   styles: 
   {   large: "1500x1500", 
       medium: "400x400",
       thumb: "200x200"}, 
-      default_url: "/images/:style/missing.png"
+      default_url: ""# "/images/:style/missing.png"
 
   #This validates the type of file uploaded. According to this, only images are allowed.
   # validates_attachment_content_type :image, :image1, :image2, :image3,   content_type: /\Aimage\/.*\z/
