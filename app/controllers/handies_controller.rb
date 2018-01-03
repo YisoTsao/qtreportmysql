@@ -16,7 +16,7 @@ class HandiesController < ApplicationController
             format.html 
             format.json 
             format.csv { send_data @handies.to_csv }
-            format.xls { send_data @handies.to_csv }
+            #format.xls { send_data @handies.to_csv }
             format.pdf  { render template: 'handies/standreport', pdf: 'Report', layout: 'pdf.html', location: @handy }  # Report is downloade file name
             end  
        end 
