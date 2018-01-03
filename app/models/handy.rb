@@ -52,6 +52,7 @@ has_attached_file  :image1,
 
 def self.to_csv(options = {})
   # if export specify columns
+  #def self.to_csv(column_names, handies,options = {})
   # column_names =[ "item"  , "pccitem", "receivedate" ,"startdate" ,"finishdate" , "solution"]
     CSV.generate(options) do |csv|
       csv << column_names
