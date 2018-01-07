@@ -16,7 +16,7 @@ development:
   encoding: utf8
   pool: 5
   username: root
-  password: yiso0525
+  password: Yiso_525
   database: quallist_development
 
 test:
@@ -24,7 +24,7 @@ test:
   encoding: utf8
   pool: 5
   username: root
-  password: yiso0525
+  password: Yiso_525
   database: quallist_test
 
 production:
@@ -32,4 +32,4 @@ production:
   encoding: utf8
   database: quallist_production
   username: root
-  password: yiso0525
+  password: Yiso_525

@@ -10,48 +10,47 @@
 
 <br><br><br>
 
-  <% @handies.find do |handy| %>
 
   <table style="width:50%;">
   <tr>
   <td id="desc" >Product Name:</td>
-  <td id="descline" ><%= handy.prodname %></td>
+  <td id="descline" ><%= @handy.prodname %></td>
   </tr>
   <tr>
     <td id="desc" >Product P/N:</td>
-    <td id="descline" ><%= handy.prodpn %></td>
+    <td id="descline" ><%= @handy.prodpn %></td>
   </tr>
    <tr>
     <td id="desc" >Firmware Version:</td>
-    <td id="descline"><%= handy.fwvversion %></td>
+    <td id="descline"><%= @handy.fwvversion %></td>
   </tr>
    <tr>
     <td id="desc" > Description:</td>
-    <td id="descline"><%= handy.desc %></td>
+    <td id="descline"><%= @handy.desc %></td>
   </tr>
    <tr>
     <td id="desc" > Controller:</td>
-    <td id="descline"><%= handy.solution %></td>
+    <td id="descline"><%= @handy.solution %></td>
   </tr>
    <tr>
     <td id="desc" >Flash Type:</td>
-    <td id="descline"><%= handy.ftype %></td>
+    <td id="descline"><%= @handy.ftype %></td>
   </tr>
    <tr>
     <td id="desc" >PCB Version:</td>
-    <td id="descline"><%= handy.pcbvers %></td>
+    <td id="descline"><%= @handy.pcbvers %></td>
   </tr>
    <tr>
     <td id="desc" >Qualification:</td>
-    <td id="descline"><%= handy.qual %></td>
+    <td id="descline"><%= @handy.qual %></td>
   </tr>
    <tr>
     <td id="desc">Test Result:</td>
-    <td id="descline"><%= handy.testres %></td>
+    <td id="descline"><%= @handy.testres %></td>
   </tr>
    <tr>
     <td id="desc" >Explain:</td>
-    <td id="descline"><%= handy.prodname %> <%= handy.capacity %> <%= handy.qual %> <%= handy.solution %> <%=handy.ftype %></td>
+    <td id="descline"><%= @handy.prodname %> <%= @handy.capacity %> <%= @handy.qual %> <%= @handy.solution %> <%=@handy.ftype %></td>
   </tr>
   </table>
 
@@ -71,12 +70,12 @@
     <td id="border1px">Signature</td>
   </tr>
   <tr style="border: 1px solid black;text-align: center;">
-    <td style="border:1px solid black;height:40px;"><%= handy.rpname %></td>
-    <td id="border1px"><%= handy.rpdate%></td>
-    <td id="border1px"><%= handy.rpname%></td>
-    <td id="border1px"><%= handy.approvename %></td>
-    <td id="border1px"><%= handy.rpdate%></td>
-    <td id="border1px"><%= handy.approvename%></td>
+    <td style="border:1px solid black;height:40px;"><%= @handy.rpname %></td>
+    <td id="border1px"><%= @handy.rpdate%></td>
+    <td id="border1px"><%= @handy.rpname%></td>
+    <td id="border1px"><%= @handy.approvename %></td>
+    <td id="border1px"><%= @handy.rpdate%></td>
+    <td id="border1px"><%= @handy.approvename%></td>
   </tr>
 </table>
 <br><br>
@@ -93,7 +92,7 @@
 
 <div id="bolder">SUMMARY RESULT</div>
 <ol class="eng" class="height">
-  <li id="bolder">Function Test With M/B :<%= handy.pc1mb%></li>
+  <li id="bolder">Function Test With M/B :<%= @handy.pc1mb%></li>
     <ol class="dec"> 
       <li class="height">Basic Function Test</li>
       <li class="height">Format Test</li>
@@ -102,7 +101,7 @@
       <li class="height">Test Result</li>
   </ol>
     
-  <li id="bolder">Function Test With M/B :<%= handy.pc2mb%></li>
+  <li id="bolder">Function Test With M/B :<%= @handy.pc2mb%></li>
   <ol class="dec">
       <li class="height">Basic Function Test</li>
       <li class="height">Format Test</li>
@@ -146,12 +145,12 @@
   </tr>
   <tr id="border1px">
     <td colspan="2" id="border1px">Testing Product</td>
-    <td colspan="5" id="border1px"><%= handy.desc %></td>
+    <td colspan="5" id="border1px"><%= @handy.desc %></td>
   </tr>
   <tr id="border1px">
     <td colspan="2" id="border1px">System</td>
-    <td id="border1px" style="height:35px;width:20%"><%= handy.pc1os%></td>
-    <td id="border1px" style="height:35px;width:20%"><%= handy.pc2os%></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc1os%></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc2os%></td>
     <td id="border1px" style="height:35px;width:20%"></td>
     <td id="border1px" style="height:35px;width:20%"></td>
     <td id="border1px" style="height:35px;width:20%"></td>
@@ -159,32 +158,32 @@
   <tr id="border1px" id="border1px">
     <td rowspan="4"  id="border1px">MB</td>
     <td id="border1px">Name</td>
-    <td id="border1px" style="height:35px;width:20%"><%= handy.pc1mb %></td>
-    <td id="border1px" style="height:35px;width:20%"><%= handy.pc2mb %></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc1mb %></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc2mb %></td>
     <td id="border1px" style="height:35px;width:20%"></td>
     <td id="border1px" style="height:35px;width:20%"></td>
     <td id="border1px" style="height:35px;width:20%"></td>
   </tr>
   <tr id="border1px" >
     <td id="border1px">Vendor</td>
-    <td id="border1px" style="height:35px;width:20%"><%= handy.pc1vendor %></td>
-    <td id="border1px"><%= handy.pc2vendor %></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc1vendor %></td>
+    <td id="border1px"><%= @handy.pc2vendor %></td>
     <td id="border1px"></td>
     <td id="border1px"></td>
     <td id="border1px"></td>
   </tr>
   <tr id="border1px" >
     <td id="border1px">Chipset</td>
-    <td id="border1px" style="height:35px;width:20%"><%= handy.pc1chip %></td>
-    <td id="border1px" style="height:35px;width:20%"><%= handy.pc2chip %></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc1chip %></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc2chip %></td>
     <td id="border1px" style="height:35px;width:20%"></td>
     <td id="border1px" style="height:35px;width:20%"></td>
     <td id="border1px" style="height:35px;width:20%"></td>
   </tr>
     <tr id="border1px" >
     <td id="border1px">BIOS</td>
-    <td id="border1px" style="height:35px;width:20%"><%= handy.pc1bios%></td>
-    <td id="border1px"><%= handy.pc2bios%></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc1bios%></td>
+    <td id="border1px"><%= @handy.pc2bios%></td>
     <td id="border1px"></td>
     <td id="border1px"></td>
     <td id="border1px"></td>
@@ -194,8 +193,8 @@
   </tr>
    <tr id="border1px" >
     <td colspan="2"  id="border1px">Basic Function Test</td>
-    <td id="border1px"><%= handy.pc1basic %></td>
-    <td id="border1px"><%= handy.pc2basic %></td>
+    <td id="border1px"><%= @handy.pc1basic %></td>
+    <td id="border1px"><%= @handy.pc2basic %></td>
     <td id="border1px"></td>
     <td id="border1px"></td>
     <td id="border1px"></td>
@@ -203,16 +202,16 @@
    <tr id="border1px" >
     <td rowspan="2"  >Burn In Test</td>
     <td id="border1px" >Comp32</td>
-    <td id="border1px"><%= handy.pc1comp32 %></td>
-    <td id="border1px"><%= handy.pc2comp32 %> </td>
+    <td id="border1px"><%= @handy.pc1comp32 %></td>
+    <td id="border1px"><%= @handy.pc2comp32 %> </td>
     <td id="border1px"></td>
     <td id="border1px"> </td>
     <td id="border1px"> </td>
   </tr>
    <tr id="border1px" >
     <td  id="border1px">BurnIn test </td>
-    <td id="border1px"><%= handy.pc1burnin %></td>
-    <td id="border1px"><%= handy.pc2burnin %></td>
+    <td id="border1px"><%= @handy.pc1burnin %></td>
+    <td id="border1px"><%= @handy.pc2burnin %></td>
     <td id="border1px"></td>
     <td id="border1px"> </td>
     <td id="border1px"> </td>
@@ -221,7 +220,7 @@
     <td colspan="7" style="text-align: left;" ><b>Remark:</b></td>
   </tr>
    <tr  >
-    <td colspan="7" style="text-align: center;"><b>Test Result - <%= handy.testres %> </b></td>
+    <td colspan="7" style="text-align: center;"><b>Test Result - <%= @handy.testres %> </b></td>
   </tr>
 </table>
 
@@ -239,23 +238,23 @@
        <div id="text-center"> <%= wicked_pdf_image_tag 'topbar.png' %></div>
 
 
-<p id="bolder">A.  Function Test With M/B : <%= handy.pc1mb%></p>
+<p id="bolder">A.  Function Test With M/B : <%= @handy.pc1mb%></p>
 <table style="width:100%;border-collapse:collapse;" >
 <tr id="border1px" >
   <td id="text-cent-col-bord" style="height:30px;width:25%;font-weight:bolder;">Testing Product</td>
-  <td id="border1px" style="height:30px;width:35%;"><%= handy.desc%></td>
+  <td id="border1px" style="height:30px;width:35%;"><%= @handy.desc%></td>
   <td id="text-cent-col-bord" style="height:30px;width:20%;font-weight:bolder;">Testing Engineer</td>
-  <td id="border1px" style="height:30px;width:30%;"><%= handy.rpname %></td>
+  <td id="border1px" style="height:30px;width:30%;"><%= @handy.rpname %></td>
 </tr>
 
 <tr >
   <td rowspan="2" style="height:60px;width:20%;font-weight:bolder;border-bottom: 1px solid black" id="text-cent-col-bord">Testing Environment</td>
-  <td >Brand: <%= handy.pc1vendor%></td>
-  <td >Chipset: <%= handy.pc1chip%></td>
-  <td style="border-right: 1px solid black;">BIOS: <%= handy.pc1bios %></td>
+  <td >Brand: <%= @handy.pc1vendor%></td>
+  <td >Chipset: <%= @handy.pc1chip%></td>
+  <td style="border-right: 1px solid black;">BIOS: <%= @handy.pc1bios %></td>
 </tr>
 <tr style="border-bottom: 1px solid black;">
-  <td>M/B: <%= handy.pc1mb %></td>
+  <td>M/B: <%= @handy.pc1mb %></td>
   <td colspan="2" style="border-right: 1px solid black;"></td>
   <td></td>
 </tr>
@@ -275,15 +274,15 @@
      <td id="text-cent-col-bord" style="width:10%;">Delete</td>  
   </tr>
   <tr style="border: 1px solid black">
-     <td id="text-cent-col-bord"><%= handy.pc1os %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.pc1basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.pc1basic %></td>
-     <td id="border1px" style="text-align: center;"><%= handy.pc1basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.pc1basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.pc1basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.pc1led %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.pc1basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.pc1basic %></td>
+     <td id="text-cent-col-bord"><%= @handy.pc1os %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc1basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc1basic %></td>
+     <td id="border1px" style="text-align: center;"><%= @handy.pc1basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc1basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc1basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc1led %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc1basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc1basic %></td>
   </tr>
 </table>
 </li>
@@ -297,11 +296,11 @@
       <td id="text-cent-col-bord" style="width:20%;">exFAT</td>
     </tr>
     <tr style="border: 1px solid black">
-      <td id="text-cent-col-bord" style="width:20%;"><%= handy.pc1os %></td>
-      <td id="border1px" style="text-align: center;"><%= handy.pc1fat %></td>
-      <td id="border1px" style="text-align: center;"><%= handy.pc1fat32 %></td>
-      <td id="border1px" style="text-align: center;"><%= handy.pc1ntfs %></td>
-      <td id="border1px" style="text-align: center;"><%= handy.pc1exfat %></td>
+      <td id="text-cent-col-bord" style="width:20%;"><%= @handy.pc1os %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc1fat %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc1fat32 %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc1ntfs %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc1exfat %></td>
     </tr>
    
   </table>
@@ -314,17 +313,17 @@
       <td id="text-cent-col-bord" style="width: 35%;">Burn In Test V6.0 15hrs</td>
     </tr>
     <tr style="border: 1px solid black">
-      <td id="text-cent-col-bord"><%= handy.pc1os %></td>
-      <td id="border1px" style="text-align: center;"><%= handy.pc1comp32%></td>
-      <td id="border1px" style="text-align: center;"><%= handy.pc1burnin%></td>
+      <td id="text-cent-col-bord"><%= @handy.pc1os %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc1comp32%></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc1burnin%></td>
     </tr>
     
     </table>
    <!--  <li style="padding-top: 15px;"> Read/ Write Speed Test
-       <p><%= wicked_pdf_image_tag handy.image.url(:medium) %></p>.
+       <p><%= wicked_pdf_image_tag @handy.image.url(:medium) %></p>.
     </li> -->
     <li style="padding-top: 15px;"> Read/ Write Speed Test
-      <!-- <p><%= wicked_pdf_image_tag handy.image.url(:medium) %></p>  -->
+      <!-- <p><%= wicked_pdf_image_tag @handy.image.url(:medium) %></p>  -->
     </li>
     
     <table style="border-collapse:collapse;border: 1px solid black;padding-top: 15px;">  
@@ -345,22 +344,22 @@ Speed Test Unit =MB/s</td>
      <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Random QD32 4K</td>  
   </tr>
   <tr style="border: 1px solid black">
-     <td id="text-cent-col-bord"><%= handy.pc1os %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.cdmread %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.cdmwrite %></td>
-     <td id="border1px" style="text-align: center;"><%= handy.rdr112 %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.rdw112 %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.rdr4k %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.rdw4k %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.rdrqd324k %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.rdwqd324k %></td>
+     <td id="text-cent-col-bord"><%= @handy.pc1os %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.cdmread %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.cdmwrite %></td>
+     <td id="border1px" style="text-align: center;"><%= @handy.rdr112 %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.rdw112 %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.rdr4k %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.rdw4k %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.rdrqd324k %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.rdwqd324k %></td>
   </tr>
 </table>
 
     <table style="border-collapse:collapse;border: 1px solid black;width:100%;border">
     <li style="padding-top: 15px;">Test Result
        <tr  >
-    <td  style="text-align: left;"><%= handy.pc1result %></td>
+    <td  style="text-align: left;"><%= @handy.pc1result %></td>
       </tr>
     </li>
     </table>
@@ -379,23 +378,23 @@ Speed Test Unit =MB/s</td>
       <div id="text-center"> <%= wicked_pdf_image_tag 'topbar.png' %></div>
 
 
-<p id="bolder">B.  Function Test With M/B : <%= handy.pc2mb%></p>
+<p id="bolder">B.  Function Test With M/B : <%= @handy.pc2mb%></p>
 <table style="width:100%;border-collapse:collapse;" >
 <tr id="border1px" >
   <td id="text-cent-col-bord" style="height:30px;width:25%;font-weight:bolder;">Testing Product</td>
-  <td id="border1px" style="height:30px;width:35%;"><%= handy.desc%></td>
+  <td id="border1px" style="height:30px;width:35%;"><%= @handy.desc%></td>
   <td id="text-cent-col-bord" style="height:30px;width:20%;font-weight:bolder;">Testing Engineer</td>
-  <td id="border1px" style="height:30px;width:30%;"><%= handy.rpname %></td>
+  <td id="border1px" style="height:30px;width:30%;"><%= @handy.rpname %></td>
 </tr>
 
 <tr >
   <td rowspan="2" style="height:60px;width:20%;font-weight:bolder;border-bottom: 1px solid black" id="text-cent-col-bord">Testing Environment</td>
-  <td >Brand: <%= handy.pc2vendor%></td>
-  <td >Chipset: <%= handy.pc2chip%></td>
-  <td style="border-right: 1px solid black;">BIOS: <%= handy.pc2bios %></td>
+  <td >Brand: <%= @handy.pc2vendor%></td>
+  <td >Chipset: <%= @handy.pc2chip%></td>
+  <td style="border-right: 1px solid black;">BIOS: <%= @handy.pc2bios %></td>
 </tr>
 <tr style="border-bottom: 1px solid black;">
-  <td>M/B: <%= handy.pc2mb %></td>
+  <td>M/B: <%= @handy.pc2mb %></td>
   <td colspan="2" style="border-right: 1px solid black;"></td>
   <td></td>
 </tr>
@@ -415,15 +414,15 @@ Speed Test Unit =MB/s</td>
      <td id="text-cent-col-bord" style="width:10%;">Delete</td>  
   </tr>
   <tr style="border: 1px solid black">
-     <td id="text-cent-col-bord"><%= handy.pc2os %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.pc2basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.pc2basic %></td>
-     <td id="border1px" style="text-align: center;"><%= handy.pc2basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.pc2basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.pc2basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.pc2led %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.pc2basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.pc2basic %></td>
+     <td id="text-cent-col-bord"><%= @handy.pc2os %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2basic %></td>
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2led %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2basic %></td>
   </tr>
 </table>
 </li>
@@ -437,11 +436,11 @@ Speed Test Unit =MB/s</td>
       <td id="text-cent-col-bord" style="width:20%;">exFAT</td>
     </tr>
     <tr style="border: 1px solid black">
-      <td id="text-cent-col-bord" style="width:20%;"><%= handy.pc2os %></td>
-      <td id="border1px" style="text-align: center;"><%= handy.pc2fat %></td>
-      <td id="border1px" style="text-align: center;"><%= handy.pc2fat32 %></td>
-      <td id="border1px" style="text-align: center;"><%= handy.pc2ntfs %></td>
-      <td id="border1px" style="text-align: center;"><%= handy.pc2exfat %></td>
+      <td id="text-cent-col-bord" style="width:20%;"><%= @handy.pc2os %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc2fat %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc2fat32 %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc2ntfs %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc2exfat %></td>
     </tr>
    
   </table>
@@ -454,14 +453,14 @@ Speed Test Unit =MB/s</td>
       <td id="text-cent-col-bord" style="width: 35%;">Burn In Test V6.0 15hrs</td>
     </tr>
     <tr style="border: 1px solid black">
-      <td id="text-cent-col-bord"><%= handy.pc2os %></td>
-      <td id="border1px" style="text-align: center;"><%= handy.pc2comp32%></td>
-      <td id="border1px" style="text-align: center;"><%= handy.pc2burnin%></td>
+      <td id="text-cent-col-bord"><%= @handy.pc2os %></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc2comp32%></td>
+      <td id="border1px" style="text-align: center;"><%= @handy.pc2burnin%></td>
     </tr>
     
     </table>
      <li style="padding-top: 15px;"> Read/ Write Speed Test
-      <!-- <p><%= wicked_pdf_image_tag handy.image1.url(:medium) %></p>. -->
+      <!-- <p><%= wicked_pdf_image_tag @handy.image1.url(:medium) %></p>. -->
     </li>
 
     <table style="border-collapse:collapse;border: 1px solid black;padding-top: 15px;">  
@@ -482,22 +481,22 @@ Speed Test Unit =MB/s</td>
      <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Random QD32 4K</td>  
   </tr>
   <tr style="border: 1px solid black">
-     <td id="text-cent-col-bord"><%= handy.pc2os %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.pc2cdmread %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.pc2cdmwrite %></td>
-     <td id="border1px" style="text-align: center;"><%= handy.pc2rdr112 %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.pc2rdw112 %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.pc2rdr4k %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.pc2rdw4k %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.pc2rdrqd324k %></td> 
-     <td id="border1px" style="text-align: center;"><%= handy.pc2rdwqd324k %></td>
+     <td id="text-cent-col-bord"><%= @handy.pc2os %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2cdmread %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2cdmwrite %></td>
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2rdr112 %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2rdw112 %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2rdr4k %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2rdw4k %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2rdrqd324k %></td> 
+     <td id="border1px" style="text-align: center;"><%= @handy.pc2rdwqd324k %></td>
   </tr>
 </table>
 
     <table style="border-collapse:collapse;border: 1px solid black;width:100%;border">
     <li style="padding-top: 15px;">Test Result
        <tr  >
-    <td  style="text-align: left;"><%= handy.pc2result %></td>
+    <td  style="text-align: left;"><%= @handy.pc2result %></td>
       </tr>
     </li>
     </table>
@@ -553,7 +552,6 @@ Speed Test Unit =MB/s</td>
     <pre><b>Form No: PCRD002-F05-02</b>                     <b>6</b></pre>
      <div style="text-align: right;"> <%= wicked_pdf_image_tag 'bottombar.png' %></div>
 <!--  page 6 Bottom -->
-    <% end %>
 
 </tbody>
 </table>

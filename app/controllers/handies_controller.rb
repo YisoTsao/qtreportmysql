@@ -17,7 +17,7 @@ class HandiesController < ApplicationController
             format.json 
             format.csv { send_data @handies.to_csv }
             format.xls { send_data @handies.to_csv }
-            format.pdf  { render template: 'handies/report', pdf: 'Report', layout: 'pdf.html', location: @handy }  # Report is downloade file name
+            #format.pdf  { render template: 'handies/report', pdf: 'Report', layout: 'pdf.html', location: @handy }  # Report is downloade file name
             end  
        end 
   end
@@ -29,10 +29,18 @@ class HandiesController < ApplicationController
   # GET /handies/1.json
 
   def show 
+    respond_to do |format|
+            format.html 
+            format.json 
+            format.pdf  { render template: 'handies/report' , pdf: 'Report', layout: 'pdf.html', location: @handy } 
+
+            end  
   end
 
-  def report
+  
 
+  def report
+  
   end
 
   # GET /handies/new

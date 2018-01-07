@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   devise_for :users
 
 resources :handies do
-  	collection { post :import }
+  	collection { post :import , :report}
 end
 
   root to: 'pages#home'

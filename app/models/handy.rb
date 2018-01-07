@@ -1,5 +1,6 @@
 class Handy < ApplicationRecord
 
+
 has_attached_file :image, 
   styles: 
   {   large: "1500x1500", 

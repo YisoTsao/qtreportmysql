@@ -2,9 +2,9 @@
 
 <h1>Handies</h1>
 <%= form_tag handies_path, :method => :get do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "搜尋", :name => nil %>
+  
+    <%= text_field_tag :search, params[:search] , class: "search" %>
+    <%= submit_tag "Search ", :name => nil  %>
 <% end %>
 
 
@@ -25,8 +25,9 @@
       <th>Read</th>
       <th>Write</th>
       <th>Owner</th>
+      <th>Result</th>      
       <th>Remark</th>
-      <th>ID</th>
+      <th id="hide">ID</th>
       <th id="hide">prodname</th>
       <th id="hide">desc</th>
       <th id="hide">prodpn</th>
@@ -118,8 +119,9 @@
         <td><%= handy.read %></td>
         <td><%= handy.write %></td>
         <td><%= handy.owner %></td>
+        <th><%= handy.testres %></th>
         <td><%= handy.remark %></td>
-        <td><%=  handy.id %></td>
+        <td id="hide"><%=  handy.id %></td>
        <th id="hide"><%= handy.prodname %></th>
       <th id="hide"><%= handy.desc %></th>
       <th id="hide"><%= handy.prodpn %></th>
@@ -219,6 +221,7 @@
 <%= file_field_tag :file %>
 <%= submit_tag "Upload CSV file"  , class: 'btn btn-default'%>
 <% end %>
+
 
 
 <h3>Export file </h3>

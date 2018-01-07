@@ -279,6 +279,7 @@
 <td><%= link_to image_tag(@handy.image3.url(:thumb)), @handy.image3.url %></td>
 </table>
 
+<%= link_to 'Download PDF' , handy_url(format: "pdf"), class: 'btn btn-primary'%>
 
 
 <font size= "20" ><%= link_to 'Edit', edit_handy_path(@handy) %></font> <font size= "20" >|</font>
