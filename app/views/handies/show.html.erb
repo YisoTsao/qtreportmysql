@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-
+<h1><%= link_to 'Download PDF' , handy_url(format: "pdf"), class: 'btn btn-primary'%>
+</h1>
 <h1>Product Description </h1>
 
 <table style="width:50%;">
@@ -47,7 +48,7 @@
   </table>
 
 
-<h3>Product Description ( Auto import)</h3>
+<h1>Product Description </h1>
 
 <div class="media">
     <div class="media-body">
@@ -92,7 +93,7 @@
 
 <br>
 
-<h3>M/B Description </h3>
+<h1>M/B Description </h1>
 <div class="media">
     <div class="media-body">
       <table class="table table-hover">
@@ -217,59 +218,75 @@
 </tbody>
 </table>
 
-<h3>CrystalDiskMark </h3>
 
-<tbody>
-  <table style="width: 60%">
-  <tr style="border: 1px solid black">
-     <td id="text-cent-col-bord" style="width:10%;font-size:12px;" ></td>
-     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Read</td> 
-     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Write</td>
-     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Random read 512K</td> 
-     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Random write 512K</td> 
-     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Random read 4K</td> 
-     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Random write 4K</td> 
-     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Random QD32 4K</td> 
-     <td id="text-cent-col-bord" style="width:10%;font-size:12px;">Random QD32 4K</td>  
-  </tr>
-  <tr style="border: 1px solid black">
-     <td id="border1px">PC1</td>
-     <td id="border1px" ><%= @handy.cdmread %></td> 
-     <td id="border1px" ><%= @handy.cdmwrite %></td>
-     <td id="border1px" ><%= @handy.rdr112 %></td> 
-     <td id="border1px" ><%= @handy.rdw112 %></td> 
-     <td id="border1px" ><%= @handy.rdr4k %></td> 
-     <td id="border1px" ><%= @handy.rdw4k %></td> 
-     <td id="border1px" ><%= @handy.rdrqd324k %></td> 
-     <td id="border1px" ><%= @handy.rdwqd324k %></td>
-  </tr>
-  <tr style="border: 1px solid black">
-     <td id="border1px">PC2</td>
-     <td id="border1px" ><%= @handy.pc2cdmread %></td> 
-     <td id="border1px" ><%= @handy.pc2cdmwrite %></td>
-     <td id="border1px" ><%= @handy.pc2rdr112 %></td> 
-     <td id="border1px" ><%= @handy.pc2rdw112 %></td> 
-     <td id="border1px" ><%= @handy.pc2rdr4k %></td> 
-     <td id="border1px" ><%= @handy.pc2rdw4k %></td> 
-     <td id="border1px" ><%= @handy.pc2rdrqd324k %></td> 
-     <td id="border1px" ><%= @handy.pc2rdwqd324k %></td>
-  </tr>
-  <tr style="border: 1px solid black">
-     <td id="border1px">PC3</td>
-     <td id="border1px" ><%= @handy.pc3cdmread %></td> 
-     <td id="border1px" ><%= @handy.pc3cdmwrite %></td>
-     <td id="border1px" ><%= @handy.pc3rdr112 %></td> 
-     <td id="border1px" ><%= @handy.pc3rdw112 %></td> 
-     <td id="border1px" ><%= @handy.pc3rdr4k %></td> 
-     <td id="border1px" ><%= @handy.pc3rdw4k %></td> 
-     <td id="border1px" ><%= @handy.pc3rdrqd324k %></td> 
-     <td id="border1px" ><%= @handy.pc3rdwqd324k %></td>
-  </tr>
+
+<h1>CrystalDiskMark </h1>
+<div class="media">
+    <div class="media-body">
+      <table class="table table-hover">
+  <thead>
+    <tr>
+    <th id="indexbarcolor">PC</th>
+      <th id="indexbarcolor">Read</th>
+      <th id="indexbarcolor">Write</th>
+      <th id="indexbarcolor">Random read 512K</th>
+      <th id="indexbarcolor">andom write 512K</th>
+      <th id="indexbarcolor">Random read 4K</th>
+      <th id="indexbarcolor">Random write 4K</th>
+      <th id="indexbarcolor">Random read QD32 4K</th>
+      <th id="indexbarcolor">Random write QD32 4K</th>
+      <th  id="indexbarcolor" colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td>1</th>
+        <td><%= @handy.cdmread %></td>
+        <td><%= @handy.cdmwrite %></td>
+        <td><%= @handy.rdr112  %></td>
+        <td><%= @handy.rdw112 %></td>
+        <td><%= @handy.rdr4k %></td>
+        <td><%= @handy.rdw4k %></td>
+        <td><%= @handy.rdrqd324k %></td>
+        <td><%= @handy.rdwqd324k %></td>
+        <t
+</tr>
+</tbody>
+  <tbody>
+      <tr>
+        <td>2</th>
+        <td><%= @handy.pc2cdmread %></td>
+        <td><%= @handy.pc2cdmwrite %></td>
+        <td><%= @handy.pc2rdr112  %></td>
+        <td><%= @handy.pc2rdw112 %></td>
+        <td><%= @handy.pc2rdr4k %></td>
+        <td><%= @handy.pc2rdw4k %></td>
+        <td><%= @handy.pc2rdrqd324k %></td>
+        <td><%= @handy.pc2rdwqd324k %></td>
+       
+</tr>
+</tbody>
+  <tbody>
+      <tr>
+        <td>3</th>
+        <td><%= @handy.pc3cdmread %></td>
+        <td><%= @handy.pc3cdmwrite %></td>
+        <td><%= @handy.pc3rdr112  %></td>
+        <td><%= @handy.pc3rdw112 %></td>
+        <td><%= @handy.pc3rdr4k %></td>
+        <td><%= @handy.pc3rdw4k %></td>
+        <td><%= @handy.pc3rdrqd324k %></td>
+        <td><%= @handy.pc3rdwqd324k %></td>
+        
+</tr>
+</tbody>
 </table>
-    </tbody>
+
+
 
 <table> 
-<h3>Benchmark</h3>
+<h1>Benchmark</h1>
 <td><%= link_to image_tag(@handy.image.url(:thumb)), @handy.image.url %></td>
 
 <td><%= link_to image_tag(@handy.image1.url(:thumb)), @handy.image1.url %></td>
@@ -279,7 +296,6 @@
 <td><%= link_to image_tag(@handy.image3.url(:thumb)), @handy.image3.url %></td>
 </table>
 
-<%= link_to 'Download PDF' , handy_url(format: "pdf"), class: 'btn btn-primary'%>
 
 
 <font size= "20" ><%= link_to 'Edit', edit_handy_path(@handy) %></font> <font size= "20" >|</font>

@@ -14,6 +14,8 @@
     <%= form.file_field :image3  %>
   </p>
 
+
+
 <%= form_for(handy) do |f| %>
   <% if handy.errors.any? %>
     <div id="error_explanation">
@@ -30,7 +32,7 @@
 
   <div class="field">
     <%= f.label :id %>
-    <%= f.number_field :id , class: 'width'%>
+    <%= f.number_field :id , class: 'width'%> 
   </div>
 
   <div class="field">

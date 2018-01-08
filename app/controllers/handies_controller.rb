@@ -32,7 +32,7 @@ class HandiesController < ApplicationController
     respond_to do |format|
             format.html 
             format.json 
-            format.pdf  { render template: 'handies/report' , pdf: 'Report', layout: 'pdf.html', location: @handy } 
+            format.pdf  { render template: 'handies/standreport' , pdf: 'Report', layout: 'pdf.html', location: @handy } 
 
             end  
   end
