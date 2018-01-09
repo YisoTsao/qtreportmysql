@@ -7,7 +7,11 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 set :stage , :production
-server '139.162.111.15', user: 'gary', roles: %w{app db web}
+# Linode IP
+# server '139.162.111.15', user: 'gary', roles: %w{app db web}
+
+#QT server IP
+server '192.168.1.98', user: 'deploy', roles: %w{app db web}
 
 
 # role-based syntax
