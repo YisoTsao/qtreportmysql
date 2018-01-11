@@ -1,5 +1,5 @@
 class Handy < ApplicationRecord
-
+  has_many :user
 
 has_attached_file :image, 
   styles: 
@@ -40,10 +40,6 @@ has_attached_file  :image1,
    content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] },
    size: { in: 0..10000.kilobytes }
 
-
-
-
-  has_many :user
 
 	def self.import(file)
     CSV.foreach(file.path, headers: true) do |row|
