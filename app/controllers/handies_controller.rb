@@ -11,7 +11,7 @@ class HandiesController < ApplicationController
            "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%")
       else
 
-      @handies = Handy.all
+      @handies = Handy.all 
         respond_to do |format|
             format.html 
             format.json 
