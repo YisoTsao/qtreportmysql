@@ -10,15 +10,16 @@ class HandiesController < ApplicationController
            "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", 
            "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%")
       else
-
-      @handies = Handy.all 
-        respond_to do |format|
+      @handies = Handy.all
+      respond_to do |format|
             format.html 
             format.json 
             format.csv { send_data @handies.to_csv }
-            format.xls { send_data @handies.to_csv }
-            #format.pdf  { render template: 'handies/report', pdf: 'Report', layout: 'pdf.html', location: @handy }  # Report is downloade file name
-            end  
+            format.xls { send_data @handies.to_csv } 
+                end  
+
+      #@handies = Handy.paginate(page:params[:page], per_page: 30 )
+        
        end 
   end
 
