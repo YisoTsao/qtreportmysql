@@ -15,7 +15,7 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bund
 
 #Deploy to QT server 
 set :deploy_to,"/home/deploy/quallist"
-#set :passenger_restart_with_touch, true
+set :passenger_restart_with_touch, true
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 
