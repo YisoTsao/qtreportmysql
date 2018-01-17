@@ -1,6 +1,6 @@
 class HandiesController < ApplicationController
   before_action :set_handy, only: [:show, :edit, :update, :destroy, :report ]
-
+  before_action :authenticate_user! , only: [:new, :create, :edit, :update, :destroy]
   # GET /handies
   # GET /handies.json
   def index
@@ -59,6 +59,7 @@ class HandiesController < ApplicationController
   def create
     @handy = Handy.new(handy_params)
     respond_to do |format|
+      @handy.user = current_user
       if @handy.save
         format.html { redirect_to @handy}
         format.json { render :show, status: :created, location: @handy }
@@ -118,7 +119,7 @@ end
         :pc1led, :pc2led, :pc3led, :pc4led, :pc5led, :image, :image1, :image2, :image3,
         :cdmread, :cdmwrite, :rdr112, :rdw112, :rdr4k, :rdw4k, :rdrqd324k, :rdwqd324k,
         :pc2cdmread,:pc2cdmwrite,:pc2rdr112,:pc2rdw112,:pc2rdr4k, :pc2rdw4k, :pc2rdrqd324k,:pc2rdwqd324k,
-        :pc3cdmread,:pc3cdmwrite,:pc3rdr112,:pc3rdw112,:pc3rdr4k, :pc3rdw4k, :pc3rdrqd324k,:pc3rdwqd324k,)
+        :pc3cdmread,:pc3cdmwrite,:pc3rdr112,:pc3rdw112,:pc3rdr4k, :pc3rdw4k, :pc3rdrqd324k,:pc3rdwqd324k)
     end
 
   

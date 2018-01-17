@@ -1,6 +1,5 @@
 class Handy < ApplicationRecord
-  has_many :user
-
+belongs_to :user
 
 has_attached_file :image, 
   styles: 

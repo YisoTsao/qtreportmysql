@@ -11,11 +11,11 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bund
 
 # Default deploy_to directory is /var/www/my_app_name
 #Deploy to Lindoe  
- #set :deploy_to, "/home/gary/qtreportmysql"
+ set :deploy_to, "/home/gary/qtreportmysql"
 
 #Deploy to QT server 
-set :deploy_to,"/home/deploy/quallist"
-set :passenger_restart_with_touch, true
+#set :deploy_to,"/home/deploy/quallist"
+#set :passenger_restart_with_touch, true
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 
