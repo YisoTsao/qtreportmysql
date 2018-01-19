@@ -1,0 +1,2 @@
+class Eflashssd < ApplicationRecord
+end

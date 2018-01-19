@@ -1,5 +1,5 @@
 class HandiesController < ApplicationController
-  before_action :set_handy, only: [:show, :edit, :update, :destroy, :report ]
+  before_action :set_handy, only: [:show, :edit, :update, :destroy ]
   before_action :authenticate_user! , only: [:new, :create, :edit, :update, :destroy]
   # GET /handies
   # GET /handies.json
@@ -38,11 +38,6 @@ class HandiesController < ApplicationController
             end  
   end
 
-  
-
-  def report
-  
-  end
 
   # GET /handies/new
   def new
@@ -71,7 +66,7 @@ class HandiesController < ApplicationController
   end
         
 
-def import
+def import   
   Handy.import(params[:file])
   redirect_to handies_url, notice: "Handies imported."
 end

@@ -21,6 +21,7 @@
       <th>Startdate</th>
       <th>Finishdate</th>
       <th>Solution</th>
+      <th >Flash</th>
       <th>Schedule</th>
       <th>Capacity</th>
       <th>Qual</th>
@@ -34,7 +35,6 @@
       <th id="hide">desc</th>
       <th id="hide">prodpn</th>
       <th id="hide">fwvversion</th>
-      <th id="hide">ftype</th>
       <th id="hide">pcbvers</th>
       <th id="hide">testres</th>
       <th id="hide">expl</th>
@@ -115,6 +115,7 @@
         <td><%= handy.startdate %></td>
         <td><%= handy.finishdate %></td>
         <td><%= handy.solution %></td>
+        <th ><%= handy.ftype %></th>
         <td><%= handy.schedule %></td>
         <td><%= handy.capacity %></td>
         <td><%= handy.qual %></td>
@@ -128,7 +129,6 @@
       <th id="hide"><%= handy.desc %></th>
       <th id="hide"><%= handy.prodpn %></th>
       <th id="hide"><%= handy.fwvversion %></th>
-      <th id="hide"><%= handy.ftype %></th>
       <th id="hide"><%= handy.pcbvers %></th>
       <th id="hide"><%= handy.testres %></th>
       <th id="hide"><%= handy.expl %></th>
@@ -197,9 +197,9 @@
 
      
       <!-- -->
-      <% if current_user && current_user == handy.user %>
+      <% if current_user  %>
         <td><%= link_to 'Show', handy , class: 'btn btn-mini btn-default' %></td>
-        <td><%= link_to 'Edit', edit_handy_path(handy) , class: 'btn btn-mini btn-success' %></td>
+        <td><%= link_to 'Edit', edit_handy_path(handy) , class: 'btn btn-mini btn-primary' %></td>
         <td><%= link_to 'Destroy', handy, method: :delete, data: { confirm: 'Are you sure?' } , class: 'btn btn-mini btn-danger'%></td>
       </tr>
     <% end %>

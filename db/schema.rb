@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180117101604) do
+ActiveRecord::Schema.define(version: 20180119070549) do
 
   create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "namespace"
@@ -41,6 +41,94 @@ ActiveRecord::Schema.define(version: 20180117101604) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admin_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
+  create_table "eflashssds", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.date "receivedate"
+    t.date "startdate"
+    t.date "finishdate"
+    t.string "solution"
+    t.string "ftype"
+    t.integer "pccitem"
+    t.string "capacity"
+    t.string "qual"
+    t.string "owner"
+    t.string "prodname"
+    t.string "prodpn"
+    t.text "fwvversion"
+    t.text "desc"
+    t.string "pcbvers"
+    t.string "testres"
+    t.string "rpname"
+    t.date "rpdate"
+    t.text "approvename"
+    t.text "expl"
+    t.text "remark"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "pc1os"
+    t.text "pc1mb"
+    t.text "pc1vendor"
+    t.text "pc1chip"
+    t.text "pc1bios"
+    t.text "pc1interface"
+    t.text "pc1basic"
+    t.text "pc1comp32"
+    t.text "pc1burnin"
+    t.text "pc1wboot"
+    t.text "pc1cboot"
+    t.text "pc1fat"
+    t.text "pc1fat32"
+    t.text "pc1ntfs"
+    t.text "pc1exfat"
+    t.text "pc1result"
+    t.text "pc1led"
+    t.text "pc1inos1"
+    t.text "pc1inos2"
+    t.text "pc1inos3"
+    t.text "pc1inos4"
+    t.text "pc1inos5"
+    t.text "pc2os"
+    t.text "pc2mb"
+    t.text "pc2vendor"
+    t.text "pc2chip"
+    t.text "pc2bios"
+    t.text "pc2interface"
+    t.text "pc2basic"
+    t.text "pc2result"
+    t.text "pc2led"
+    t.text "pc2inos1"
+    t.text "pc2inos2"
+    t.text "pc2inos3"
+    t.text "pc2inos4"
+    t.text "pc2inos5"
+    t.text "pc2inos6"
+    t.text "pc2inos7"
+    t.text "pc2inos8"
+    t.text "pc3os"
+    t.text "pc3mb"
+    t.text "pc3vendor"
+    t.text "pc3chip"
+    t.text "pc3bios"
+    t.text "pc3interface"
+    t.text "pc4os"
+    t.text "pc4mb"
+    t.text "pc4vendor"
+    t.text "pc4chip"
+    t.text "pc4bios"
+    t.text "pc4interface"
+    t.string "image1_file_name"
+    t.string "image1_content_type"
+    t.integer "image1_file_size"
+    t.datetime "image1_updated_at"
+    t.string "image2_file_name"
+    t.string "image2_content_type"
+    t.integer "image2_file_size"
+    t.datetime "image2_updated_at"
+    t.string "image3_file_name"
+    t.string "image3_content_type"
+    t.integer "image3_file_size"
+    t.datetime "image3_updated_at"
   end
 
   create_table "handies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
