@@ -33,7 +33,7 @@ has_attached_file  :image1,
   # validates_attachment_content_type :image, :image1, :image2, :image3,   content_type: /\Aimage\/.*\z/
 
   #Use this if you do not want to validate the uploaded file type.
-     do_not_validate_attachment_file_type :image
+     #do_not_validate_attachment_file_type :image
 
  #Validates file, file type and file size
    validates_attachment :image, :image1, :image2, :image3,  

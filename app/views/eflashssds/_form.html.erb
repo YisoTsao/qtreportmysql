@@ -1,0 +1,369 @@
+
+<%= form_for @eflashssd, html: { multipart: true } do |form| %>
+    <p class="imagefont">
+   
+    <%= form.label :image1 %>
+    <%= form.file_field :image1  %>
+
+    <%= form.label :image2 %>
+    <%= form.file_field :image2  %>
+
+    <%= form.label :image3 %>
+    <%= form.file_field :image3  %>
+  </p>
+
+
+
+
+  <div class="field">
+    <%= form.label :id %>
+    <%= form.number_field :id , class: 'width'%> 
+  </div>
+
+  <div class="field" >
+    <%= form.label :receivedate %>
+    <%= form.text_field :receivedate , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :startdate %>
+    <%= form.text_field :startdate , class: 'width'%>  
+    </div>
+
+  <div class="field">
+    <%= form.label :finishdate %>
+    <%= form.text_field :finishdate , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :solution %>
+    <%= form.text_field :solution , class: 'width'%>  
+    </div>
+
+  <div class="field">
+    <%= form.label :ftype %>
+    <%= form.text_field :ftype , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :pccitem %>
+    <%= form.number_field :pccitem , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :capacity %>
+    <%= form.text_field :capacity , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :qual %>
+    <%= form.text_field :qual , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :owner %>
+    <%= form.text_field :owner , class: 'width'%>
+  </div>
+
+<div class="field">
+    <%= form.label :testresult %>
+    <%= form.text_field :testres , class: 'width'%>
+  </div>
+   
+  <div class="field">
+    <%= form.label :Remark %>
+    <%= form.text_field :remark , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :prodname %>
+    <%= form.text_field :prodname , class: 'width'%>
+  </div>
+
+<div class="field">
+    <%= form.label :Description %>
+    <%= form.text_field :desc , class: 'width'%>
+  </div> 
+
+  <div class="field">
+    <%= form.label :prodpn %>
+    <%= form.text_field :prodpn , class: 'width'%>
+  </div>
+   <div class="field">
+    <%= form.label :fwvversion %>
+    <%= form.text_field :fwvversion , class: 'width'%>
+  </div>  
+   
+   <div class="field">
+    <%= form.label :pcbvers %>
+    <%= form.text_field :pcbvers , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :Reportname %>
+    <%= form.text_field :rpname , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :Reportdate %>
+    <%= form.text_field :rpdate , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :Approvename %>
+    <%= form.text_field :approvename , class: 'width'%>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :PC1OS %>
+    <%= form.text_field :pc1os , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :PC1MB %>
+    <%= form.text_field :pc1mb , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :PC1Vendor %>
+    <%= form.text_field :pc1vendor , class: 'width'%>  
+    </div>
+
+  <div class="field">
+    <%= form.label :PC1Chip %>
+    <%= form.text_field :pc1chip , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :PC1BIOS %>
+    <%= form.text_field :pc1bios , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :PC1interface %>
+    <%= form.text_field :pc1interface , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :PC1basic %>
+    <%= form.text_field :pc1basic , class: 'width'%>  
+  </div>
+
+  <div class="field">
+    <%= form.label :PC1comp32 %>
+    <%= form.text_field :pc1comp32 , class: 'width'%>  
+    </div>
+
+  <div class="field">
+    <%= form.label :PC1burnin %>
+    <%= form.text_field :pc1burnin , class: 'width'%>
+  </div>
+
+<div class="field">
+    <%= form.label :PC1wboot %>
+    <%= form.text_field :pc1wboot , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :PC1cboot %>
+    <%= form.text_field :pc1cboot , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :pc1fat %>
+    <%= form.text_field :pc1fat , class: 'width'%>
+  </div>
+  <div class="field">
+    <%= form.label :pc1fat32 %>
+    <%= form.text_field :pc1fat32 , class: 'width'%>
+  </div>
+  <div class="field">
+    <%= form.label :pc1ntfs %>
+    <%= form.text_field :pc1ntfs , class: 'width'%>
+  </div>
+  <div class="field">
+    <%= form.label :pc1exfat %>
+    <%= form.text_field :pc1exfat , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :pc1result %>
+    <%= form.text_field :pc1result , class: 'width'%>
+  </div> 
+
+  <div class="field">
+    <%= form.label :PC1LED %>
+    <%= form.text_field :pc1led , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :PC1inos1 %>
+    <%= form.text_field :pc1inos1 , class: 'width'%>
+  </div>
+
+ <div class="field">
+    <%= form.label :PC1inos2 %>
+    <%= form.text_field :pc1inos2 , class: 'width'%>
+  </div>
+   <div class="field">
+    <%= form.label :PC1inos3 %>
+    <%= form.text_field :pc1inos3 , class: 'width'%>
+  </div>
+   <div class="field">
+    <%= form.label :PC1inos4 %>
+    <%= form.text_field :pc1inos4 , class: 'width'%>
+  </div>
+   <div class="field">
+    <%= form.label :PC1inos5 %>
+    <%= form.text_field :pc1inos5 , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :PC2OS %>
+    <%= form.text_field :pc2os , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :PC2MB %>
+    <%= form.text_field :pc2mb , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :PC2Vendor %>
+    <%= form.text_field :pc2vendor , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :PC2Chip %>
+    <%= form.text_field :pc2chip , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :PC2BIOS %>
+    <%= form.text_field :pc2bios , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :PC2interface %>
+    <%= form.text_field :pc2interface , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :PC2basic %>
+    <%= form.text_field :pc2basic , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :pc2result %>
+    <%= form.text_field :pc2result , class: 'width'%>
+  </div>
+
+<div class="field">
+    <%= form.label :PC2inos1 %>
+    <%= form.text_field :pc2inos1 , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :PC2inos2 %>
+    <%= form.text_field :pc2inos2 , class: 'width'%>
+  </div>
+
+<div class="field">
+    <%= form.label :PC2inos3 %>
+    <%= form.text_field :pc2inos3 , class: 'width'%>
+  </div>
+<div class="field">
+    <%= form.label :PC2inos4 %>
+    <%= form.text_field :pc2inos4 , class: 'width'%>
+  </div>
+<div class="field">
+    <%= form.label :PC2inos5 %>
+    <%= form.text_field :pc2inos5 , class: 'width'%>
+  </div>
+<div class="field">
+    <%= form.label :PC2inos6 %>
+    <%= form.text_field :pc2inos6 , class: 'width'%>
+  </div>
+<div class="field">
+    <%= form.label :PC2inos7 %>
+    <%= form.text_field :pc2inos7 , class: 'width'%>
+  </div>
+<div class="field">
+    <%= form.label :PC2inos8 %>
+    <%= form.text_field :pc2inos8 , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :PC3OS %>
+    <%= form.text_field :pc3os , class: 'width'%>
+  </div>
+
+  
+  <div class="field">
+    <%= form.label :PC3OS %>
+    <%= form.text_field :pc3os , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :PC3MB %>
+    <%= form.text_field :pc3mb , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :PC3Vendor %>
+    <%= form.text_field :pc3vendor , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :PC3Chip %>
+    <%= form.text_field :pc3chip , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :PC3BIOS %>
+    <%= form.text_field :pc3bios , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :PC3interface %>
+    <%= form.text_field :pc3interface , class: 'width'%>
+  </div>
+
+  
+   <div class="field">
+    <%= form.label :PC4OS %>
+    <%= form.text_field :pc4os , class: 'width'%>
+  </div>
+  <div class="field">
+    <%= form.label :PC4MB %>
+    <%= form.text_field :pc4mb , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :PC4Vendor %>
+    <%= form.text_field :pc4vendor , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :PC4Chip %>
+    <%= form.text_field :pc4chip , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :PC4BIOS %>
+    <%= form.text_field :pc4bios , class: 'width'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :PC4interface %>
+    <%= form.text_field :pc4interface , class: 'width'%>
+  </div>
+
+  
+ <div class="actions">
+    <%= form.submit %>
+  </div>
+
+ 
+<% end %>

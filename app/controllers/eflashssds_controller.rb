@@ -23,7 +23,7 @@ class EflashssdsController < ApplicationController
 
 def create
     @eflashssd = Eflashssd.new(eflashssd_params)
-      #@eflashssd.user = current_user
+      @eflashssd.user = current_user
       if @eflashssd.save
         redirect_to @eflashssd
       else
@@ -61,9 +61,16 @@ private
 	
 
 def eflashssd_params
-	params.require(:eflashssd).permit(:pccitem, :receivedate, :startdate, :finishdate, 
-        :solution, :capacity, :qual, :owner, :prodname, :prodpn, :desc,
-        :fwvversion, :ftype, :pcbvers, :testres , :expl, :rpname, :rpdate, :approvename, :remark)
+	params.require(:eflashssd).permit(:pccitem, :receivedate, :startdate, :finishdate,:solution, :capacity, 
+		:qual, :owner, :prodname, :prodpn, :desc, :fwvversion, :ftype, :pcbvers, :testres , :expl, :rpname, 
+		:rpdate, :approvename, :remark, :pc1os  ,:pc1mb  ,:pc1vendor ,:pc1chip  ,:pc1bios  ,:pc1interface ,
+        :pc1basic  ,:pc1comp32  ,:pc1burnin  ,:pc1wboot  ,:pc1cboot  ,:pc1fat  ,:pc1fat32  ,:pc1ntfs ,
+        :pc1exfat  ,:pc1result  ,:pc1led  ,:pc1inos1  ,:pc1inos2  , :pc1inos3 , :pc1inos4  ,:pc1inos5, 
+        :pc2os ,:pc2mb ,:pc2vendor ,:pc2chip ,:pc2bios ,:pc2interface ,:pc2basic ,:pc2result ,:pc2led ,
+        :pc2inos1  ,:pc2inos2  ,:pc2inos3  ,:pc2inos4  ,:pc2inos5  ,:pc2inos6  ,:pc2inos7  ,:pc2inos8 ,
+        :pc3os  ,:pc3mb  ,:pc3vendor  ,:pc3chip  ,:pc3bios  ,:pc3interface,
+		:pc4os  ,:pc4mb  ,:pc4vendor  ,:pc4chip  ,:pc4bios  ,:pc4interface,
+		:image1, :image2, :image3)
 end
 	
 
