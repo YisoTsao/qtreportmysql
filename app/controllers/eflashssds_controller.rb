@@ -23,9 +23,9 @@ class EflashssdsController < ApplicationController
 
 def create
     @eflashssd = Eflashssd.new(eflashssd_params)
-      @eflashssd.user = current_user
+      #@eflashssd.user = current_user
       if @eflashssd.save
-        redirect_to @eflashssd
+        redirect_to eflashssd_path
       else
         render 'new'    
       end
@@ -33,7 +33,6 @@ def create
 
 def update
       if @eflashssd.update(eflashssd_params)
-        redirect_to @eflashssd
         render 'show' 
       else
         render 'edit'
