@@ -2,8 +2,27 @@ class EflashssdsController < ApplicationController
 	before_action :set_eflashssd, only: [:show, :edit, :update, :destroy ]
 
   def index
+     if params[:search]
+         @eflashssds = Eflashssd.where('pccitem LIKE ? OR receivedate LIKE ? OR startdate LIKE ? OR
+          finishdate LIKE ? OR qual LIKE ? OR solution LIKE ? OR capacity LIKE ?',
+           "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", 
+           "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%")
+      else
+
   	@eflashssds = Eflashssd.all
+    respond_to do |format|
+            format.html 
+            format.json 
+            format.csv { send_data @eflashssds.to_csv }
+            format.xls { send_data @eflashssds.to_csv } 
+                end  
+
+      #@eflashssds = Eflashssd.paginate(page:params[:page], per_page: 30 )
+        
+       end 
   end
+
+
 
   def new
   	@eflashssd = Eflashssd.new
@@ -13,7 +32,7 @@ class EflashssdsController < ApplicationController
   	respond_to do |format|
             format.html 
             format.json 
-            #format.pdf  { render template: 'handies/report' , pdf: 'Report', layout: 'pdf.html', location: @handy } 
+            format.pdf  { render template: 'eflashssds/report' , pdf: 'Report', layout: 'pdf.html', location: @handy } 
             end 
   end
 

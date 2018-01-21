@@ -6,8 +6,8 @@ class HandiesController < ApplicationController
   def index
     if params[:search]
          @handies = Handy.where('pccitem LIKE ? OR receivedate LIKE ? OR startdate LIKE ? OR
-          finishdate LIKE ? OR schedule LIKE ? OR solution LIKE ? OR capacity LIKE ?',
-           "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", 
+          finishdate LIKE ? OR schedule LIKE ? OR qual LIKE ? OR solution LIKE ? OR capacity LIKE ?',
+           "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%",
            "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%")
       else
       @handies = Handy.all

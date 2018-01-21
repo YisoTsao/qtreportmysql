@@ -13,43 +13,43 @@
   <table style="width:50%;">
   <tr>
   <td id="desc" style="font-size:20px;" >Product Name:</td>
-  <td id="descline" ><%= @handy.prodname %></td>
+  <td id="descline" ><%= @eflashssd.prodname %></td>
   </tr>
   <tr>
     <td id="desc" style="font-size:20px;" >Product P/N:</td>
-    <td id="descline" ><%= @handy.prodpn %></td>
+    <td id="descline" ><%= @eflashssd.prodpn %></td>
   </tr>
    <tr>
     <td id="desc" style="font-size:20px;" >Firmware Version:</td>
-    <td id="descline"><%= @handy.fwvversion %></td>
+    <td id="descline"><%= @eflashssd.fwvversion %></td>
   </tr>
    <tr>
     <td id="desc" style="font-size:20px;" > Description:</td>
-    <td id="descline" ><%= @handy.desc %></td>
+    <td id="descline" ><%= @eflashssd.desc %></td>
   </tr>
    <tr>
     <td id="desc" style="font-size:20px;" > Controller:</td>
-    <td id="descline" style="padding-top: 5px;"><%= @handy.solution %></td>
+    <td id="descline" style="padding-top: 5px;"><%= @eflashssd.solution %></td>
   </tr>
    <tr>
     <td id="desc" style="font-size:20px;"  >Flash Type:</td>
-    <td id="descline"><%= @handy.ftype %></td>
+    <td id="descline"><%= @eflashssd.ftype %></td>
   </tr>
    <tr>
     <td id="desc" style="font-size:20px;" >PCB Version:</td>
-    <td id="descline" style="padding-top: 5px;"><%= @handy.pcbvers %></td>
+    <td id="descline" style="padding-top: 5px;"><%= @eflashssd.pcbvers %></td>
   </tr>
    <tr>
     <td id="desc" style="font-size:20px;" >Qualification:</td>
-    <td id="descline"><%= @handy.qual %></td>
+    <td id="descline"><%= @eflashssd.qual %></td>
   </tr>
    <tr>
     <td id="desc" style="font-size:20px;" >Test Result:</td>
-    <td id="descline"><%= @handy.testres %></td>
+    <td id="descline"><%= @eflashssd.testres %></td>
   </tr>
    <tr>
     <td id="desc" style="font-size:20px;" >Explain:</td>
-    <td id="descline"><%= @handy.prodname %> <%= @handy.capacity %> <%= @handy.qual %> <%= @handy.solution %> <%=@handy.ftype %></td>
+    <td id="descline"><%= @eflashssd.prodname %> <%= @eflashssd.capacity %> <%= @eflashssd.qual %> <%= @eflashssd.solution %> <%=@eflashssd.ftype %></td>
   </tr>
   </table>
 
@@ -69,12 +69,12 @@
     <td id="border1px">Signature</td>
   </tr>
   <tr style="border: 1px solid black;text-align: center;">
-    <td style="border:1px solid black;height:40px;"><%= @handy.rpname %></td>
-    <td id="border1px"><%= @handy.rpdate%></td>
-    <td id="border1px"><%= @handy.rpname%></td>
-    <td id="border1px"><%= @handy.approvename %></td>
-    <td id="border1px"><%= @handy.rpdate%></td>
-    <td id="border1px"><%= @handy.approvename%></td>
+    <td style="border:1px solid black;height:40px;"><%= @eflashssd.rpname %></td>
+    <td id="border1px"><%= @eflashssd.rpdate%></td>
+    <td id="border1px"><%= @eflashssd.rpname%></td>
+    <td id="border1px"><%= @eflashssd.approvename %></td>
+    <td id="border1px"><%= @eflashssd.rpdate%></td>
+    <td id="border1px"><%= @eflashssd.approvename%></td>
   </tr>
 </table>
 <p style="border-bottom-style:solid;border-bottom: 2px solid;"></p>
@@ -90,7 +90,7 @@
 
 <div id="bolder">SUMMARY RESULT</div>
 <ol class="eng" class="height">
-  <li id="bolder">Function Test With M/B :<%= @handy.pc1mb%></li>
+  <li id="bolder">Function Test With M/B :<%= @eflashssd.pc1mb%></li>
     <ol class="dec"> 
       <li class="height">Basic Function Test</li>
       <li class="height">Format Test</li>
@@ -99,7 +99,7 @@
       <li class="height">Test Result</li>
   </ol>
     
-  <li id="bolder">Function Test With M/B :<%= @handy.pc2mb%></li>
+  <li id="bolder">Function Test With M/B :<%= @eflashssd.pc2mb%></li>
   <ol class="dec">
       <li class="height">Basic Function Test</li>
       <li class="height">Format Test</li>
@@ -108,7 +108,7 @@
       <li class="height">Test Result</li>
       </ol>
    
-  <li id="bolder">Function Test With M/B :<%= @handy.pc3mb%></li>
+  <li id="bolder">Function Test With M/B :<%= @eflashssd.pc3mb%></li>
   <ol class="dec">
       <li class="height">Basic Function Test</li>
       <li class="height">Format Test</li>
@@ -117,16 +117,11 @@
       <li class="height">Test Result</li>
   </ol>
 
-  <li id="bolder">Function Test With <%= @handy.pc4os%></li>
+  <li id="bolder">Function Test With <%= @eflashssd.pc4os%></li>
   <ol class="dec">
       <li class="height">Basic Function Test</li>
       <li class="height">Format Test</li>
       <li class="height">Read/ Write Speed Test</li>
-      <li class="height">Test Result</li>
-  </ol>
-  <li id="bolder">Function Test With <%= @handy.pc5mb%></li>
-  <ol class="dec">
-      <li class="height">Basic Function Test</li>
       <li class="height">Test Result</li>
   </ol>
       <li id="bolder">Platform Compatibility Test :</li>
@@ -157,78 +152,66 @@
     <td id="border1px" class="colord6"><b>PC2</b></td>
     <td id="border1px" class="colord6"><b>PC3</b></td>
     <td id="border1px" class="colord6"><b>PC4</b></td>
-    <td id="border1px" class="colord6"><b>PC5</b></td>
   </tr>
   <tr id="border1px">
     <td colspan="2" id="border1px">Testing Product</td>
-    <td colspan="5" id="border1px"><%= @handy.desc %></td>
+    <td colspan="5" id="border1px"><%= @eflashssd.desc %></td>
   </tr>
   <tr id="border1px">
     <td colspan="2" id="border1px">System</td>
-    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc1os%></td>
-    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc2os%></td>
-    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc3os%></td>
-    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc4os%></td>
-    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc5os%></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @eflashssd.pc1os%></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @eflashssd.pc2os%></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @eflashssd.pc3os%></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @eflashssd.pc4os%></td>
   </tr>
   <tr id="border1px" id="border1px">
     <td rowspan="4"  id="border1px">MB</td>
     <td id="border1px">Name</td>
-    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc1mb %></td>
-    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc2mb %></td>
-    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc3mb %></td>
-    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc4mb %></td>
-    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc5mb %></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @eflashssd.pc1mb %></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @eflashssd.pc2mb %></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @eflashssd.pc3mb %></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @eflashssd.pc4mb %></td>
   </tr>
   <tr id="border1px" >
     <td id="border1px">Vendor</td>
-    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc1vendor %></td>
-    <td id="border1px"><%= @handy.pc2vendor %></td>
-    <td id="border1px"><%= @handy.pc3vendor %></td>
-    <td id="border1px"><%= @handy.pc4vendor %></td>
-    <td id="border1px"><%= @handy.pc5vendor %></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @eflashssd.pc1vendor %></td>
+    <td id="border1px"><%= @eflashssd.pc2vendor %></td>
+    <td id="border1px"><%= @eflashssd.pc3vendor %></td>
+    <td id="border1px"><%= @eflashssd.pc4vendor %></td>
   </tr>
   <tr id="border1px" >
     <td id="border1px">Chipset</td>
-    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc1chip %></td>
-    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc2chip %></td>
-    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc3chip %></td>
-    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc4chip %></td>
-    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc5chip %></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @eflashssd.pc1chip %></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @eflashssd.pc2chip %></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @eflashssd.pc3chip %></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @eflashssd.pc4chip %></td>
   </tr>
     <tr id="border1px" >
     <td id="border1px">BIOS</td>
-    <td id="border1px" style="height:35px;width:20%"><%= @handy.pc1bios%></td>
-    <td id="border1px"><%= @handy.pc2bios%></td>
-    <td id="border1px"><%= @handy.pc3bios%></td>
-    <td id="border1px"><%= @handy.pc4bios%></td>
-    <td id="border1px"><%= @handy.pc5bios%></td>
+    <td id="border1px" style="height:35px;width:20%"><%= @eflashssd.pc1bios%></td>
+    <td id="border1px"><%= @eflashssd.pc2bios%></td>
+    <td id="border1px"><%= @eflashssd.pc3bios%></td>
+    <td id="border1px"><%= @eflashssd.pc4bios%></td>
   </tr id="border1px" >
   <tr id="border1px" >
     <td colspan="7" class="colord6"><b>Test Result</b></td>
   </tr>
    <tr id="border1px" >
     <td colspan="2"  id="border1px">Basic Function Test</td>
-    <td id="border1px"><%= @handy.pc1basic %></td>
-    <td id="border1px"><%= @handy.pc2basic %></td>
-    <td id="border1px"><%= @handy.pc3basic %></td>
-    <td id="border1px"><%= @handy.pc4basic %></td>
-    <td id="border1px"><%= @handy.pc5basic %></td>
+    <td id="border1px"><%= @eflashssd.pc1basic %></td>
+    <td id="border1px"><%= @eflashssd.pc2basic %></td>
+    
   </tr>
    <tr id="border1px" >
     <td rowspan="2"  >Burn In Test</td>
     <td id="border1px" >Comp32</td>
-    <td id="border1px"><%= @handy.pc1comp32 %></td>
-    <td id="border1px"><%= @handy.pc2comp32 %> </td>
-    <td id="border1px"><%= @handy.pc3comp32 %></td>
+    <td id="border1px"><%= @eflashssd.pc1comp32 %></td>   
     <td id="border1px"> </td>
     <td id="border1px"> </td>
   </tr>
    <tr id="border1px" >
     <td  id="border1px">BurnIn test </td>
-    <td id="border1px"><%= @handy.pc1burnin %></td>
-    <td id="border1px"><%= @handy.pc2burnin %></td>
-    <td id="border1px"><%= @handy.pc3burnin %></td>
+    <td id="border1px"><%= @eflashssd.pc1burnin %></td>
     <td id="border1px"> </td>
     <td id="border1px"> </td>
   </tr>
@@ -236,7 +219,7 @@
     <td colspan="7" style="text-align: left;" ><b>Remark:</b></td>
   </tr>
    <tr  >
-    <td colspan="7" style="text-align: center;"><b>Test Result - <%= @handy.testres %> </b></td>
+    <td colspan="7" style="text-align: center;"><b>Test Result - <%= @eflashssd.testres %> </b></td>
   </tr>
 </table>
 
@@ -254,23 +237,23 @@
        <div id="text-center"> <%= wicked_pdf_image_tag 'topbar.png' %></div>
 
 
-<p id="bolder">A.  Function Test With M/B : <%= @handy.pc1mb%></p>
+<p id="bolder">A.  Function Test With M/B : <%= @eflashssd.pc1mb%></p>
 <table style="width:100%;border-collapse:collapse;" >
 <tr id="border1px" >
   <td id="text-cent-col-bord" style="height:30px;width:25%;font-weight:bolder;">Testing Product</td>
-  <td id="border1px" style="height:30px;width:35%;"><%= @handy.desc%></td>
+  <td id="border1px" style="height:30px;width:35%;"><%= @eflashssd.desc%></td>
   <td id="text-cent-col-bord" style="height:30px;width:20%;font-weight:bolder;">Testing Engineer</td>
-  <td id="border1px" style="height:30px;width:30%;"><%= @handy.rpname %></td>
+  <td id="border1px" style="height:30px;width:30%;"><%= @eflashssd.rpname %></td>
 </tr>
 
 <tr >
   <td rowspan="2" style="height:60px;width:20%;font-weight:bolder;border-bottom: 1px solid black" id="text-cent-col-bord">Testing Environment</td>
-  <td >Brand: <%= @handy.pc1vendor%></td>
-  <td >Chipset: <%= @handy.pc1chip%></td>
-  <td style="border-right: 1px solid black;">BIOS: <%= @handy.pc1bios %></td>
+  <td >Brand: <%= @eflashssd.pc1vendor%></td>
+  <td >Chipset: <%= @eflashssd.pc1chip%></td>
+  <td style="border-right: 1px solid black;">BIOS: <%= @eflashssd.pc1bios %></td>
 </tr>
 <tr style="border-bottom: 1px solid black;">
-  <td>M/B: <%= @handy.pc1mb %></td>
+  <td>M/B: <%= @eflashssd.pc1mb %></td>
   <td colspan="2" style="border-right: 1px solid black;"></td>
   <td></td>
 </tr>
@@ -290,15 +273,15 @@
      <td id="text-cent-col-bord" style="width:10%;">Delete</td>  
   </tr>
   <tr style="border: 1px solid black">
-     <td id="text-cent-col-bord"><%= @handy.pc1os %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc1basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc1basic %></td>
-     <td id="border1px" style="text-align: center;"><%= @handy.pc1basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc1basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc1basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc1led %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc1basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc1basic %></td>
+     <td id="text-cent-col-bord"><%= @eflashssd.pc1os %></td> 
+     <td id="border1px" style="text-align: center;"><%= @eflashssd.pc1basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @eflashssd.pc1basic %></td>
+     <td id="border1px" style="text-align: center;"><%= @eflashssd.pc1basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @eflashssd.pc1basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @eflashssd.pc1basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @eflashssd.pc1led %></td> 
+     <td id="border1px" style="text-align: center;"><%= @eflashssd.pc1basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @eflashssd.pc1basic %></td>
   </tr>
 </table>
 </li>
@@ -306,17 +289,17 @@
   <table style="border-collapse:collapse;border: 1px solid black;width:70%;border">
     <tr style="border: 1px solid black">
       <td id="text-cent-col-bord" style="width:25%;"></td>
-      <td id="text-cent-col-bord" style="width:20%;">FAT</td>
+      <!-- <td id="text-cent-col-bord" style="width:20%;">FAT</td> -->
       <td id="text-cent-col-bord" style="width:20%;">FAT32</td>
       <td id="text-cent-col-bord" style="width:20%;">NTFS</td>
-      <td id="text-cent-col-bord" style="width:20%;">exFAT</td>
+      <!-- <td id="text-cent-col-bord" style="width:20%;">exFAT</td> -->
     </tr>
     <tr style="border: 1px solid black">
-      <td id="text-cent-col-bord" style="width:20%;"><%= @handy.pc1os %></td>
-      <td id="border1px" style="text-align: center;"><%= @handy.pc1fat %></td>
-      <td id="border1px" style="text-align: center;"><%= @handy.pc1fat32 %></td>
-      <td id="border1px" style="text-align: center;"><%= @handy.pc1ntfs %></td>
-      <td id="border1px" style="text-align: center;"><%= @handy.pc1exfat %></td>
+      <td id="text-cent-col-bord" style="width:20%;"><%= @eflashssd.pc1os %></td>
+    <!--  <td id="border1px" style="text-align: center;"><%= @eflashssd.pc1fat %></td> -->
+      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc1fat32 %></td> 
+      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc1ntfs %></td>
+    <!--  <td id="border1px" style="text-align: center;"><%= @eflashssd.pc1exfat %></td> -->
     </tr>
    
   </table>
@@ -326,22 +309,22 @@
     <tr style="border: 1px solid black">
       <td id="text-cent-col-bord" style="width: 25%;"></td>
       <td id="text-cent-col-bord" style="width: 35%;">Comp32 15hrs</td>
-      <td id="text-cent-col-bord" style="width: 35%;">Burn In Test V6.0 15hrs</td>
+      <td id="text-cent-col-bord" style="width: 35%;">Burn In Test V8.0 168hrs</td>
     </tr>
     <tr style="border: 1px solid black">
-      <td id="text-cent-col-bord"><%= @handy.pc1os %></td>
-      <td id="border1px" style="text-align: center;"><%= @handy.pc1comp32%></td>
-      <td id="border1px" style="text-align: center;"><%= @handy.pc1burnin%></td>
+      <td id="text-cent-col-bord"><%= @eflashssd.pc1os %></td>
+      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc1comp32%></td>
+      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc1burnin%></td>
     </tr>
     
     </table>
     <li style="padding-top: 15px;"> Read/ Write Speed Test
-      <p><%= wicked_pdf_image_tag @handy.image.url(:medium) %></p>
+      <p><%= wicked_pdf_image_tag @eflashssd.image1.url(:medium) %></p>
     </li>
     <table style="border-collapse:collapse;border: 1px solid black;width:100%;border">
     <li style="padding-top: 15px;">Test Result
        <tr  >
-    <td  style="text-align: left;"><%= @handy.pc1result %></td>
+    <td  style="text-align: left;"><%= @eflashssd.pc1result %></td>
       </tr>
     </li>
     </table>
@@ -360,23 +343,23 @@
       <div id="text-center"> <%= wicked_pdf_image_tag 'topbar.png' %></div>
 
 
-<p id="bolder">B.  Function Test With M/B : <%= @handy.pc2mb%></p>
+<p id="bolder">B.  Function Test With M/B : <%= @eflashssd.pc2mb%></p>
 <table style="width:100%;border-collapse:collapse;" >
 <tr id="border1px" >
   <td id="text-cent-col-bord" style="height:30px;width:25%;font-weight:bolder;">Testing Product</td>
-  <td id="border1px" style="height:30px;width:35%;"><%= @handy.desc%></td>
+  <td id="border1px" style="height:30px;width:35%;"><%= @eflashssd.desc%></td>
   <td id="text-cent-col-bord" style="height:30px;width:20%;font-weight:bolder;">Testing Engineer</td>
-  <td id="border1px" style="height:30px;width:30%;"><%= @handy.rpname %></td>
+  <td id="border1px" style="height:30px;width:30%;"><%= @eflashssd.rpname %></td>
 </tr>
 
 <tr >
   <td rowspan="2" style="height:60px;width:20%;font-weight:bolder;border-bottom: 1px solid black" id="text-cent-col-bord">Testing Environment</td>
-  <td >Brand: <%= @handy.pc2vendor%></td>
-  <td >Chipset: <%= @handy.pc2chip%></td>
-  <td style="border-right: 1px solid black;">BIOS: <%= @handy.pc2bios %></td>
+  <td >Brand: <%= @eflashssd.pc2vendor%></td>
+  <td >Chipset: <%= @eflashssd.pc2chip%></td>
+  <td style="border-right: 1px solid black;">BIOS: <%= @eflashssd.pc2bios %></td>
 </tr>
 <tr style="border-bottom: 1px solid black;">
-  <td>M/B: <%= @handy.pc2mb %></td>
+  <td>M/B: <%= @eflashssd.pc2mb %></td>
   <td colspan="2" style="border-right: 1px solid black;"></td>
   <td></td>
 </tr>
@@ -396,58 +379,39 @@
      <td id="text-cent-col-bord" style="width:10%;">Delete</td>  
   </tr>
   <tr style="border: 1px solid black">
-     <td id="text-cent-col-bord"><%= @handy.pc2os %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc2basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc2basic %></td>
-     <td id="border1px" style="text-align: center;"><%= @handy.pc2basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc2basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc2basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc2led %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc2basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc2basic %></td>
+     <td id="text-cent-col-bord"><%= @eflashssd.pc2os %></td> 
+     <td id="border1px" style="text-align: center;"><%= @eflashssd.pc2basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @eflashssd.pc2basic %></td>
+     <td id="border1px" style="text-align: center;"><%= @eflashssd.pc2basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @eflashssd.pc2basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @eflashssd.pc2basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @eflashssd.pc2led %></td> 
+     <td id="border1px" style="text-align: center;"><%= @eflashssd.pc2basic %></td> 
+     <td id="border1px" style="text-align: center;"><%= @eflashssd.pc2basic %></td>
   </tr>
-</table>
-</li>
-<li style="padding-top: 15px;">Format Test
-  <table style="border-collapse:collapse;border: 1px solid black;width:70%;border">
-    <tr style="border: 1px solid black">
-      <td id="text-cent-col-bord" style="width:25%;"></td>
-      <td id="text-cent-col-bord" style="width:20%;">FAT</td>
-      <td id="text-cent-col-bord" style="width:20%;">FAT32</td>
-      <td id="text-cent-col-bord" style="width:20%;">NTFS</td>
-      <td id="text-cent-col-bord" style="width:20%;">exFAT</td>
-    </tr>
-    <tr style="border: 1px solid black">
-      <td id="text-cent-col-bord" style="width:20%;"><%= @handy.pc2os %></td>
-      <td id="border1px" style="text-align: center;"><%= @handy.pc2fat %></td>
-      <td id="border1px" style="text-align: center;"><%= @handy.pc2fat32 %></td>
-      <td id="border1px" style="text-align: center;"><%= @handy.pc2ntfs %></td>
-      <td id="border1px" style="text-align: center;"><%= @handy.pc2exfat %></td>
-    </tr>
-   
-  </table>
+
 </li>
 <li style="padding-top: 15px;">Burn in test
   <table style="border-collapse:collapse;border: 1px solid black;width:70%;border">
     <tr style="border: 1px solid black">
       <td id="text-cent-col-bord" style="width: 25%;"></td>
       <td id="text-cent-col-bord" style="width: 35%;">Comp32 15hrs</td>
-      <td id="text-cent-col-bord" style="width: 35%;">Burn In Test V6.0 15hrs</td>
+      <td id="text-cent-col-bord" style="width: 35%;">Burn In Test V8.0 168hrs</td>
     </tr>
     <tr style="border: 1px solid black">
-      <td id="text-cent-col-bord"><%= @handy.pc2os %></td>
-      <td id="border1px" style="text-align: center;"><%= @handy.pc2comp32%></td>
-      <td id="border1px" style="text-align: center;"><%= @handy.pc2burnin%></td>
+      <td id="text-cent-col-bord"><%= @eflashssd.pc2os %></td>
+      <td id="border1px" style="text-align: center;"><%= %></td>
+      <td id="border1px" style="text-align: center;"><%= %></td>
     </tr>
     
     </table>
     <li style="padding-top: 15px;"> Read/ Write Speed Test
-      <p><%= wicked_pdf_image_tag @handy.image1.url(:medium) %></p>
+      <p><%= wicked_pdf_image_tag @eflashssd.image1.url(:medium) %></p>
     </li>
     <table style="border-collapse:collapse;border: 1px solid black;width:100%;border">
     <li style="padding-top: 15px;">Test Result
        <tr  >
-    <td  style="text-align: left;"><%= @handy.pc2result %></td>
+    <td  style="text-align: left;"><%= @eflashssd.pc2result %></td>
       </tr>
     </li>
     </table>
@@ -465,94 +429,35 @@
      <div id="text-center"> <%= wicked_pdf_image_tag 'topbar.png' %></div>
 
 
-<p id="bolder">C.  Function Test With M/B : <%= @handy.pc3mb%></p>
+<p id="bolder">C.  Function Test With M/B : <%= @eflashssd.pc3mb%></p>
 <table style="width:100%;border-collapse:collapse;" >
 <tr id="border1px" >
   <td id="text-cent-col-bord" style="height:30px;width:25%;font-weight:bolder;">Testing Product</td>
-  <td id="border1px" style="height:30px;width:35%;"><%= @handy.desc%></td>
+  <td id="border1px" style="height:30px;width:35%;"><%= @eflashssd.desc%></td>
   <td id="text-cent-col-bord" style="height:30px;width:20%;font-weight:bolder;">Testing Engineer</td>
-  <td id="border1px" style="height:30px;width:30%;"><%= @handy.rpname %></td>
+  <td id="border1px" style="height:30px;width:30%;"><%= @eflashssd.rpname %></td>
 </tr>
 
 <tr >
   <td rowspan="2" style="height:60px;width:20%;font-weight:bolder;border-bottom: 1px solid black" id="text-cent-col-bord">Testing Environment</td>
-  <td >Brand: <%= @handy.pc3vendor%></td>
-  <td >Chipset: <%= @handy.pc3chip%></td>
-  <td style="border-right: 1px solid black;">BIOS: <%= @handy.pc3bios %></td>
+  <td >Brand: <%= @eflashssd.pc3vendor%></td>
+  <td >Chipset: <%= @eflashssd.pc3chip%></td>
+  <td style="border-right: 1px solid black;">BIOS: <%= @eflashssd.pc3bios %></td>
 </tr>
 <tr style="border-bottom: 1px solid black;">
-  <td>M/B: <%= @handy.pc3mb %></td>
+  <td>M/B: <%= @eflashssd.pc3mb %></td>
   <td colspan="2" style="border-right: 1px solid black;"></td>
   <td></td>
 </tr>
 </table>
-<ol>
-<li>Basic Function Test
-<table style="border-collapse:collapse;border: 1px solid black;">  
-  <tr style="border: 1px solid black">
-     <td id="text-cent-col-bord" style="width:20%;"></td> 
-     <td id="text-cent-col-bord" style="width:10%;">Hot Plug</td> 
-     <td id="text-cent-col-bord" style="width:10%;">Safe Removed</td>
-     <td id="text-cent-col-bord" style="width:10%;">Suspend  (S3)</td> 
-     <td id="text-cent-col-bord" style="width:10%;">Hibernate  (S4)</td> 
-     <td id="text-cent-col-bord" style="width:10%;">Restart</td> 
-     <td id="text-cent-col-bord" style="width:10%;">LED</td> 
-     <td id="text-cent-col-bord" style="width:10%;">Copy</td> 
-     <td id="text-cent-col-bord" style="width:10%;">Delete</td>  
-  </tr>
-  <tr style="border: 1px solid black">
-     <td id="text-cent-col-bord"><%= @handy.pc3os %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc3basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc3basic %></td>
-     <td id="border1px" style="text-align: center;"><%= @handy.pc3basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc3basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc3basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc3led %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc3basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc3basic %></td>
-  </tr>
-</table>
-</li>
-<li style="padding-top: 15px;">Format Test
-  <table style="border-collapse:collapse;border: 1px solid black;width:70%;border">
-    <tr style="border: 1px solid black">
-      <td id="text-cent-col-bord" style="width:25%;"></td>
-      <td id="text-cent-col-bord" style="width:20%;">FAT</td>
-      <td id="text-cent-col-bord" style="width:20%;">FAT32</td>
-      <td id="text-cent-col-bord" style="width:20%;">NTFS</td>
-      <td id="text-cent-col-bord" style="width:20%;">exFAT</td>
-    </tr>
-    <tr style="border: 1px solid black">
-      <td id="text-cent-col-bord" style="width:20%;"><%= @handy.pc3os %></td>
-      <td id="border1px" style="text-align: center;"><%= @handy.pc3fat %></td>
-      <td id="border1px" style="text-align: center;"><%= @handy.pc3fat32 %></td>
-      <td id="border1px" style="text-align: center;"><%= @handy.pc3ntfs %></td>
-      <td id="border1px" style="text-align: center;"><%= @handy.pc3exfat %></td>
-    </tr>
-   
-  </table>
-</li>
-<li style="padding-top: 10px;">Burn in test
-  <table style="border-collapse:collapse;border: 1px solid black;width:70%;border">
-    <tr style="border: 1px solid black">
-      <td id="text-cent-col-bord" style="width: 25%;"></td>
-      <td id="text-cent-col-bord" style="width: 35%;">Comp32 15hrs</td>
-      <td id="text-cent-col-bord" style="width: 35%;">Burn In Test V6.0 15hrs</td>
-    </tr>
-    <tr style="border: 1px solid black">
-      <td id="text-cent-col-bord"><%= @handy.pc3os %></td>
-      <td id="border1px" style="text-align: center;"><%= @handy.pc3comp32 %></td>
-      <td id="border1px" style="text-align: center;"><%= @handy.pc3burnin %></td>
-    </tr>
-    
-    </table>
+
     <li style="padding-top: 10px;"> Read/ Write Speed Test
-      <p><%= wicked_pdf_image_tag @handy.image2.url(:medium) %></p>
+      <p><%= wicked_pdf_image_tag @eflashssd.image2.url(:medium) %></p>
     </li>
     <table style="border-collapse:collapse;border: 1px solid black;width:100%;border">
     <li style="padding-top: 10px;">Test Result
        <tr  >
-    <td  style="text-align: left;"><%= @handy.pc3result %></td>
+    <td  style="text-align: left;"><%=  %></td>
       </tr>
     </li>
     </table>
@@ -570,78 +475,38 @@
      <div id="text-center"> <%= wicked_pdf_image_tag 'topbar.png' %></div>
 
 
-<p id="bolder" >D.  Function Test With: <%= @handy.pc4os%></p>
+<p id="bolder" >D.  Function Test With: <%= @eflashssd.pc4os%></p>
 <table style="width:100%;border-collapse:collapse;" >
 <tr id="border1px" >
   <td id="text-cent-col-bord" style="height:30px;width:25%;font-weight:bolder;">Testing Product</td>
-  <td id="border1px" style="height:30px;width:35%;"><%= @handy.desc%></td>
+  <td id="border1px" style="height:30px;width:35%;"><%= @eflashssd.desc%></td>
   <td id="text-cent-col-bord" style="height:30px;width:20%;font-weight:bolder;">Testing Engineer</td>
-  <td id="border1px" style="height:30px;width:30%;"><%= @handy.rpname %></td>
+  <td id="border1px" style="height:30px;width:30%;"><%= @eflashssd.rpname %></td>
 </tr>
 
 <tr >
   <td rowspan="2" style="height:60px;width:20%;font-weight:bolder;border-bottom: 1px solid black" id="text-cent-col-bord">Testing Environment</td>
-  <td >Brand: <%= @handy.pc4vendor%></td>
-  <td >Chipset: <%= @handy.pc4chip%></td>
-  <td style="border-right: 1px solid black;">BIOS: <%= @handy.pc4bios %></td>
+  <td >Brand: <%= @eflashssd.pc4vendor%></td>
+  <td >Chipset: <%= @eflashssd.pc4chip%></td>
+  <td style="border-right: 1px solid black;">BIOS: <%= @eflashssd.pc4bios %></td>
 </tr>
 <tr style="border-bottom: 1px solid black;">
-  <td>M/B: <%= @handy.pc4mb %></td>
+  <td>M/B: <%= @eflashssd.pc4mb %></td>
   <td colspan="2" style="border-right: 1px solid black;">Testing Software: Ubuntu 14.04</td>
   <td></td>
 </tr>
 </table>
 <ol>
-<li>Basic Function Test
-<table style="border-collapse:collapse;border: 1px solid black;">  
-  <tr style="border: 1px solid black">
-     <td id="text-cent-col-bord" style="width:20%;"></td> 
-     <td id="text-cent-col-bord" style="width:10%;">Hot Plug</td> 
-     <td id="text-cent-col-bord" style="width:10%;">Safe Removed</td>
-     <td id="text-cent-col-bord" style="width:10%;">Suspend  (S3)</td> 
-     <td id="text-cent-col-bord" style="width:10%;">Hibernate  (S4)</td> 
-     <td id="text-cent-col-bord" style="width:10%;">Restart</td> 
-     <td id="text-cent-col-bord" style="width:10%;">LED</td> 
-     <td id="text-cent-col-bord" style="width:10%;">Copy</td> 
-     <td id="text-cent-col-bord" style="width:10%;">Delete</td>  
-  </tr>
-  <tr style="border: 1px solid black">
-     <td id="text-cent-col-bord"><%= @handy.pc4os %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc4basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc4basic %></td>
-     <td id="border1px" style="text-align: center;"><%= @handy.pc4basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc4basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc4basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc4led %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc4basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc4basic %></td>
-  </tr>
-</table>
-</li>
-<li style="padding-top: 15px;">Format Test
-  <table style="border-collapse:collapse;border: 1px solid black;width:70%;border">
-    <tr style="border: 1px solid black">
-      <td id="text-cent-col-bord" style="width:25%;"></td>
-      <td id="text-cent-col-bord" style="width:20%;">ext3</td>
-      <td id="text-cent-col-bord" style="width:20%;">ext4</td>
-      
-    </tr>
-    <tr style="border: 1px solid black">
-      <td id="text-cent-col-bord" style="width:25%;"><%= @handy.pc4os %></td>
-      <td id="border1px" style="text-align: center;"><%= @handy.pc4ext34 %></td>
-      <td id="border1px" style="text-align: center;"><%= @handy.pc4ext34 %></td>
-      
-    </tr>
-  </table>
+
 </li>
     <li style="padding-top: 15px;"> Read/ Write Speed Test
-      <p><%= wicked_pdf_image_tag @handy.image3.url(:medium) %></p>
+      <p><%= wicked_pdf_image_tag @eflashssd.image3.url(:medium) %></p>
     </li>
     <br><br>
     <table style="border-collapse:collapse;border: 1px solid black;width:100%;border">
     <li style="padding-top: 15px;">Test Result
        <tr  >
-    <td  style="text-align: left;"><%= @handy.pc4result %></td>
+    <td  style="text-align: left;"><%=  %></td>
       </tr>
     </li>
     </table>
@@ -654,78 +519,7 @@
      <div style="text-align: right;"> <%= wicked_pdf_image_tag 'bottombar.png' %></div>
 
 <!--  page 7 Bottom -->
-<!--  page 8 Top --> 
 
-     <div id="text-center"> <%= wicked_pdf_image_tag 'topbar.png' %></div>
-
-
-<p id="bolder" >E.  Function Test With : <%= @handy.pc5mb%></p>
-<table style="width:100%;border-collapse:collapse;" >
-<tr id="border1px" >
-  <td id="text-cent-col-bord" style="height:30px;width:25%;font-weight:bolder;">Testing Product</td>
-  <td id="border1px" style="height:30px;width:35%;"><%= @handy.desc%></td>
-  <td id="text-cent-col-bord" style="height:30px;width:20%;font-weight:bolder;">Testing Engineer</td>
-  <td id="border1px" style="height:30px;width:30%;"><%= @handy.rpname %></td>
-</tr>
-
-<tr >
-  <td rowspan="2" style="height:60px;width:20%;font-weight:bolder;border-bottom: 1px solid black" id="text-cent-col-bord">Testing Environment</td>
-  <td >Brand: <%= @handy.pc5vendor%></td>
-  <td ></td>
-  <td style="border-right: 1px solid black;"></td>
-</tr>
-<tr style="border-bottom: 1px solid black;">
-  <td>M/B: <%= @handy.pc5mb %></td>
-  <td colspan="2" style="border-right: 1px solid black;"> </td>
-  <td></td>
-</tr>
-</table>
-<ol>
-<li>Basic Function Test
-<table style="border-collapse:collapse;border: 1px solid black;">  
-  <tr style="border: 1px solid black">
-     <td id="text-cent-col-bord" style="width:13%;"></td> 
-     <td id="text-cent-col-bord" style="width:10%;">Hot Plug</td> 
-     <td id="text-cent-col-bord" style="width:10%;">Safe Removed</td>
-     <td id="text-cent-col-bord" style="width:10%;">Sleep</td> 
-     <td id="text-cent-col-bord" style="width:10%;">Restart</td> 
-     <td id="text-cent-col-bord" style="width:10%;">LED</td> 
-     <td id="text-cent-col-bord" style="width:10%;">Copy</td> 
-     <td id="text-cent-col-bord" style="width:10%;">Delete</td>  
-  </tr>
-  <tr style="border: 1px solid black">
-     <td id="text-cent-col-bord">Result</td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc5basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc5basic %></td>
-     <td id="border1px" style="text-align: center;"><%= @handy.pc5basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc5basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc5led %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc5basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= @handy.pc5basic %></td> 
-  </tr>
-</table>
-</li>
-    <table style="border-collapse:collapse;border: 1px solid black;width:100%;border">
-    <li>Test Result
-       <tr  >
-    <td  style="text-align: left;"><%= @handy.pc5result %></td>
-      </tr>
-    </li>
-    </table>
-</li>
-</ol>
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-  <br><br>
-  <p style="border-bottom-style:solid;border-bottom: 2px solid;"></p>
-  <pre>Form No: APA-RD-00001-F05-1                  8</pre>
-     <div style="text-align: right;"> <%= wicked_pdf_image_tag 'bottombar.png' %></div>
-
-<!--  page 8 Bottom -->
 <!--  page 9 Top --> 
 
       <div id="text-center"> <%= wicked_pdf_image_tag 'topbar.png' %></div>
