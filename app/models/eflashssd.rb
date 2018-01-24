@@ -3,22 +3,22 @@ belongs_to :user , optional: true
 
 has_attached_file  :image1,
   styles: 
-  {   large: "1500x1500", 
-      medium: "300x300",
+  {   large: "500x500", 
+      medium: "346x346",
       thumb: "200x200"}, 
       default_url: ""# "/images/:style/missing.png"
 
       has_attached_file :image2,
   styles: 
-  {   large: "1500x1500", 
-      medium: "300x300",
+  {   large: "500x500", 
+      medium: "346x346",
       thumb: "200x200"}, 
       default_url: ""# "/images/:style/missing.png"
 
       has_attached_file :image3, 
   styles: 
-  {   large: "1500x1500", 
-      medium: "400x400",
+  {   large: "500x500", 
+      medium: "600x600",
       thumb: "200x200"}, 
       default_url: ""# "/images/:style/missing.png"
 

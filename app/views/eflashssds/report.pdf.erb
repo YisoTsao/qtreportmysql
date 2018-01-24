@@ -47,13 +47,13 @@
     <td id="desc" style="font-size:20px;" >Test Result:</td>
     <td id="descline"><%= @eflashssd.testres %></td>
   </tr>
-   <tr>
+   <!-- <tr>
     <td id="desc" style="font-size:20px;" >Explain:</td>
     <td id="descline"><%= @eflashssd.prodname %> <%= @eflashssd.capacity %> <%= @eflashssd.qual %> <%= @eflashssd.solution %> <%=@eflashssd.ftype %></td>
-  </tr>
+  </tr> -->
   </table>
 
-    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br>
 
   <div style="font-weight:bold;" id="tablecolor" class="static">
   APPROVAL
@@ -90,50 +90,37 @@
 
 <div id="bolder">SUMMARY RESULT</div>
 <ol class="eng" class="height">
-  <li id="bolder">Function Test With M/B :<%= @eflashssd.pc1mb%></li>
+  <li id="bolder" class="height">Function Test With M/B :<%= @eflashssd.pc1mb%></li>
     <ol class="dec"> 
       <li class="height">Basic Function Test</li>
       <li class="height">Format Test</li>
       <li class="height">Burn In Test</li>
-      <li class="height">Read/ Write Speed Test</li>
+      <li class="height">Reboot Test</li>
+      <li class="height">Install System Test</li>
       <li class="height">Test Result</li>
   </ol>
     
-  <li id="bolder">Function Test With M/B :<%= @eflashssd.pc2mb%></li>
+  <li id="bolder" class="height">Function Test With M/B :<%= @eflashssd.pc2mb%></li>
   <ol class="dec">
       <li class="height">Basic Function Test</li>
-      <li class="height">Format Test</li>
-      <li class="height">Burn In Test</li>
-      <li class="height">Read/ Write Speed Test</li>
+      <li class="height">Install System Test</li>
       <li class="height">Test Result</li>
       </ol>
    
-  <li id="bolder">Function Test With M/B :<%= @eflashssd.pc3mb%></li>
-  <ol class="dec">
-      <li class="height">Basic Function Test</li>
-      <li class="height">Format Test</li>
-      <li class="height">Burn In Test</li>
-      <li class="height">Read/ Write Speed Test</li>
-      <li class="height">Test Result</li>
-  </ol>
-
-  <li id="bolder">Function Test With <%= @eflashssd.pc4os%></li>
-  <ol class="dec">
-      <li class="height">Basic Function Test</li>
-      <li class="height">Format Test</li>
-      <li class="height">Read/ Write Speed Test</li>
-      <li class="height">Test Result</li>
-  </ol>
-      <li id="bolder">Platform Compatibility Test :</li>
-      <li id="bolder">Additional Qualification :</li>
-  <ol class="dec">
+  <li id="bolder" class="height">Function Test With M/B :<%= @eflashssd.pc3mb%></li>
+  
+  <li id="bolder" class="height">Function Test With M/B <%= @eflashssd.pc4os%></li>
+  
+      <li id="bolder" class="height">Platform Compatibility Test :</li>
+      <li id="bolder" class="height">Additional Qualification :</li>
+  <ol class="dec" class="height">
       <li class="height">Environmental</li>
       <li class="height">Certification</li>
   </ol>
   </ol>
 
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-<br><br><br><br><br><br><br>
     <p style="border-bottom-style:solid;border-bottom: 2px solid;"></p>
     <pre>Form No: APA-RD-00001-F05-1                  2</pre>
     <div style="text-align: right;"> <%= wicked_pdf_image_tag 'bottombar.png' %></div>
@@ -194,38 +181,81 @@
     <td id="border1px"><%= @eflashssd.pc4bios%></td>
   </tr id="border1px" >
   <tr id="border1px" >
-    <td colspan="7" class="colord6"><b>Test Result</b></td>
+    <td colspan="7" class="colord6" id="border1px"><b>Test Result</b></td>
   </tr>
    <tr id="border1px" >
     <td colspan="2"  id="border1px">Basic Function Test</td>
     <td id="border1px"><%= @eflashssd.pc1basic %></td>
     <td id="border1px"><%= @eflashssd.pc2basic %></td>
-    
+    <td id="border1px"><%=  %></td>
+    <td id="border1px"><%=  %></td>
+   
   </tr>
    <tr id="border1px" >
     <td rowspan="2"  >Burn In Test</td>
     <td id="border1px" >Comp32</td>
     <td id="border1px"><%= @eflashssd.pc1comp32 %></td>   
-    <td id="border1px"> </td>
-    <td id="border1px"> </td>
+    <td id="border1px"><%=  %></td>
+    <td id="border1px"><%=  %></td>
+    <td id="border1px"><%=  %></td>
   </tr>
    <tr id="border1px" >
-    <td  id="border1px">BurnIn test </td>
+    <td  id="border1px">BurnIn test Pro V8.0 </td>
     <td id="border1px"><%= @eflashssd.pc1burnin %></td>
-    <td id="border1px"> </td>
-    <td id="border1px"> </td>
+    <td id="border1px"><%=  %></td>
+    <td id="border1px"><%=  %></td>
+    <td id="border1px"><%=  %></td>
+  </tr>
+  <tr id="border1px" >
+    <td colspan="2"  id="border1px">Warm Boot Test</td>
+    <td id="border1px"><%= @eflashssd.pc1wboot %></td>
+    <td id="border1px"><%=  %></td>
+    <td id="border1px"><%=  %></td>
+    <td id="border1px"><%=  %></td>
+  </tr>
+  <tr id="border1px" >
+    <td colspan="2"  id="border1px">Cold Boot Test</td>
+    <td id="border1px"><%= @eflashssd.pc1cboot %></td>
+    <td id="border1px"><%=  %></td>
+    <td id="border1px"><%=  %></td>
+    <td id="border1px"><%=  %></td>
+  </tr>
+  </table>
+  <table style="border-collapse:collapse;text-align:center;border:1px solid black;">
+  <tr id="border1px" >
+    <td colspan="8" class="colord6" ><b>Install System Test </b></td>
+  </tr>
+  <tr>
+  	<td id="border1px" style="height:35px;width:10%"></td>
+  	<td id="border1px" style="height:35px;width:10%">Windows Emb. 7 Standard</td>
+  	<td id="border1px" style="height:35px;width:10%">Windows Emb. 8 Standard</td>
+  	<td id="border1px" style="height:35px;width:10%">Windows Emb. 8.1 Industry</td>
+  	<td id="border1px" style="height:35px;width:10%">Windows 10</td>
+  	<td id="border1px" style="height:35px;width:10%">Fedora kernel 3.3.4 -5 fc17</td>
+  	<td id="border1px" style="height:35px;width:10%">Ubuntu kernel 3.13.0 -32</td>
+  	<td id="border1px" style="height:35px;width:10%">Red Hat kernel 2.6.32 -431.e16 </td>
+  	
+  </tr>
+  <tr>
+  	<td id="border1px" >Result</td>
+  	<td id="border1px" ><%= @eflashssd.pc1inos1 %></td>
+  	<td id="border1px" ><%= @eflashssd.pc1inos2 %></td>
+  	<td id="border1px" ><%= @eflashssd.pc1inos3 %></td>
+  	<td id="border1px" ><%= @eflashssd.pc1inos4 %></td>
+  	<td id="border1px" ><%= @eflashssd.pc2inos6 %></td>
+  	<td id="border1px" ><%= @eflashssd.pc2inos7 %></td>
+  	<td id="border1px" ><%= @eflashssd.pc2inos8 %></td>
   </tr>
   <tr >
-    <td colspan="7" style="text-align: left;" ><b>Remark:</b></td>
+    <td colspan="8" style="text-align: left;"  ><b>Remark:</b></td>
   </tr>
    <tr  >
-    <td colspan="7" style="text-align: center;"><b>Test Result - <%= @eflashssd.testres %> </b></td>
+    <td colspan="8" style="text-align: center;" ><b>Test Result - <%= @eflashssd.testres %> </b></td>
   </tr>
 </table>
 
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
       <p style="border-bottom-style:solid;border-bottom: 2px solid;"></p>
@@ -254,8 +284,7 @@
 </tr>
 <tr style="border-bottom: 1px solid black;">
   <td>M/B: <%= @eflashssd.pc1mb %></td>
-  <td colspan="2" style="border-right: 1px solid black;"></td>
-  <td></td>
+  <td colspan="2" style="border-right: 1px solid black;">Interface: <%= @eflashssd.pc1interface %></td>
 </tr>
 </table>
 <ol>
@@ -263,14 +292,12 @@
 <table style="border-collapse:collapse;border: 1px solid black;padding-top: 15px;">  
   <tr style="border: 1px solid black">
      <td id="text-cent-col-bord" style="width:20%;"></td> 
-     <td id="text-cent-col-bord" style="width:10%;">Hot Plug</td> 
-     <td id="text-cent-col-bord" style="width:10%;">Safe Removed</td>
+     <td id="text-cent-col-bord" style="width:10%;">Copy</td> 
+     <td id="text-cent-col-bord" style="width:10%;">Delete</td>
+     <td id="text-cent-col-bord" style="width:10%;">Restart</td>
      <td id="text-cent-col-bord" style="width:10%;">Suspend  (S3)</td> 
      <td id="text-cent-col-bord" style="width:10%;">Hibernate  (S4)</td> 
-     <td id="text-cent-col-bord" style="width:10%;">Restart</td> 
-     <td id="text-cent-col-bord" style="width:10%;">LED</td> 
-     <td id="text-cent-col-bord" style="width:10%;">Copy</td> 
-     <td id="text-cent-col-bord" style="width:10%;">Delete</td>  
+     <td id="text-cent-col-bord" style="width:10%;">LED</td>  
   </tr>
   <tr style="border: 1px solid black">
      <td id="text-cent-col-bord"><%= @eflashssd.pc1os %></td> 
@@ -280,8 +307,7 @@
      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc1basic %></td> 
      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc1basic %></td> 
      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc1led %></td> 
-     <td id="border1px" style="text-align: center;"><%= @eflashssd.pc1basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= @eflashssd.pc1basic %></td>
+  
   </tr>
 </table>
 </li>
@@ -318,9 +344,50 @@
     </tr>
     
     </table>
-    <li style="padding-top: 15px;"> Read/ Write Speed Test
-      <p><%= wicked_pdf_image_tag @eflashssd.image1.url(:medium) %></p>
-    </li>
+    <li style="padding-top: 15px;">Reboot Test
+  <table style="border-collapse:collapse;border: 1px solid black;width:70%;border">
+    <tr style="border: 1px solid black">
+      <td id="text-cent-col-bord" style="width: 25%;"></td>
+      <td id="text-cent-col-bord" style="width: 35%;">Warm Boot 6000 Cycles</td>
+      <td id="text-cent-col-bord" style="width: 35%;">Cold Boot 6000 Cycles</td>
+    </tr>
+    <tr style="border: 1px solid black">
+      <td id="text-cent-col-bord"><%= @eflashssd.pc1os %></td>
+      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc1wboot%></td>
+      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc1cboot%></td>
+    </tr>
+    </table>
+
+     <li style="padding-top: 15px;">Install System Test
+  <table style="border-collapse:collapse;border: 1px solid black;width:70%;border">
+    <tr style="border: 1px solid black	">
+      <td id="text-cent-col-bord" style="width: 45%;text-align:left;">Install System</td>
+      <td id="text-cent-col-bord" style="width: 15%;">Result</td>
+    </tr>
+    <tr style="border: 1px solid black" >
+      <td id="text-cent-col-bord" style="text-align:left;">Install Windows Embedded Standard 7 System</td>
+      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc1inos1%></td>
+    </tr>
+    <tr style="border: 1px solid black">
+      <td id="text-cent-col-bord" style="text-align:left;">Install Windows Embedded 8 Standard System</td>
+      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc1inos2%></td>
+    </tr>
+    <tr style="border: 1px solid black">
+      <td id="text-cent-col-bord" style="text-align:left;">Install Windows Embedded 8.1 Industry Pro System</td>
+      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc1inos3%></td>
+    </tr>
+    <tr style="border: 1px solid black">
+      <td id="text-cent-col-bord" style="text-align:left;"> Windows 10 Multiple Edition  </td>
+      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc1inos4%></td>
+    </tr>
+    <tr style="border: 1px solid black">
+      <td id="text-cent-col-bord" style="text-align:left;"> Windows 10 Enterprise  </td>
+      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc1inos5%></td>
+    </tr>
+
+    </table>
+
+    
     <table style="border-collapse:collapse;border: 1px solid black;width:100%;border">
     <li style="padding-top: 15px;">Test Result
        <tr  >
@@ -330,7 +397,7 @@
     </table>
 </li>
 </ol>
-<br><br>
+<br><br><br><br><br><br><br><br>
 
       
       <p style="border-bottom-style:solid;border-bottom: 2px solid;"></p>
@@ -360,54 +427,76 @@
 </tr>
 <tr style="border-bottom: 1px solid black;">
   <td>M/B: <%= @eflashssd.pc2mb %></td>
-  <td colspan="2" style="border-right: 1px solid black;"></td>
-  <td></td>
+  <td colspan="2" style="border-right: 1px solid black;">Interface: <%= @eflashssd.pc2interface %></td>
 </tr>
 </table>
 <ol>
-<li >Basic Function Test
-<table style="border-collapse:collapse;border: 1px solid black;">  
+<li>Basic Function Test
+<table style="border-collapse:collapse;border: 1px solid black;padding-top: 15px;">  
   <tr style="border: 1px solid black">
      <td id="text-cent-col-bord" style="width:20%;"></td> 
-     <td id="text-cent-col-bord" style="width:10%;">Hot Plug</td> 
-     <td id="text-cent-col-bord" style="width:10%;">Safe Removed</td>
+     <td id="text-cent-col-bord" style="width:10%;">Copy</td> 
+     <td id="text-cent-col-bord" style="width:10%;">Delete</td>
+     <td id="text-cent-col-bord" style="width:10%;">Restart</td>
      <td id="text-cent-col-bord" style="width:10%;">Suspend  (S3)</td> 
      <td id="text-cent-col-bord" style="width:10%;">Hibernate  (S4)</td> 
-     <td id="text-cent-col-bord" style="width:10%;">Restart</td> 
-     <td id="text-cent-col-bord" style="width:10%;">LED</td> 
-     <td id="text-cent-col-bord" style="width:10%;">Copy</td> 
-     <td id="text-cent-col-bord" style="width:10%;">Delete</td>  
+     <td id="text-cent-col-bord" style="width:10%;">LED</td>  
   </tr>
   <tr style="border: 1px solid black">
-     <td id="text-cent-col-bord"><%= @eflashssd.pc2os %></td> 
+     <td id="text-cent-col-bord"><%= @eflashssd.pc1os %></td> 
      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc2basic %></td> 
      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc2basic %></td>
      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc2basic %></td> 
      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc2basic %></td> 
      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc2basic %></td> 
      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc2led %></td> 
-     <td id="border1px" style="text-align: center;"><%= @eflashssd.pc2basic %></td> 
-     <td id="border1px" style="text-align: center;"><%= @eflashssd.pc2basic %></td>
+  
   </tr>
-
+</table>
 </li>
-<li style="padding-top: 15px;">Burn in test
+
+     <li style="padding-top: 15px;">Install System Test
   <table style="border-collapse:collapse;border: 1px solid black;width:70%;border">
     <tr style="border: 1px solid black">
-      <td id="text-cent-col-bord" style="width: 25%;"></td>
-      <td id="text-cent-col-bord" style="width: 35%;">Comp32 15hrs</td>
-      <td id="text-cent-col-bord" style="width: 35%;">Burn In Test V8.0 168hrs</td>
+      <td id="text-cent-col-bord" style="width: 45%;text-align:left;">Install System</td>
+      <td id="text-cent-col-bord" style="width: 15%;">Result</td>
     </tr>
     <tr style="border: 1px solid black">
-      <td id="text-cent-col-bord"><%= @eflashssd.pc2os %></td>
-      <td id="border1px" style="text-align: center;"><%= %></td>
-      <td id="border1px" style="text-align: center;"><%= %></td>
+      <td id="text-cent-col-bord" style="text-align:left;">Install Windows Embedded Standard 7 System</td>
+      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc2inos1%></td>
     </tr>
-    
+    <tr style="border: 1px solid black">
+      <td id="text-cent-col-bord" style="text-align:left;">Install Windows Embedded 8 Standard System</td>
+      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc2inos2%></td>
+    </tr>
+    <tr style="border: 1px solid black">
+      <td id="text-cent-col-bord" style="text-align:left;">Install Windows Embedded 8.1 Industry Pro System</td>
+      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc2inos3%></td>
+    </tr>
+    <tr style="border: 1px solid black">
+      <td id="text-cent-col-bord" style="text-align:left;"> Windows 7 System</td>
+      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc2inos4%></td>
+    </tr>
+    <tr style="border: 1px solid black">
+      <td id="text-cent-col-bord" style="text-align:left;"> Windows 8.1 System  </td>
+      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc2inos5%></td>
+    </tr>
+    <tr style="border: 1px solid black">
+      <td id="text-cent-col-bord" style="text-align:left;"> Fedora Kernel 3.3.4-5 System  </td>
+      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc2inos6%></td>
+    </tr>
+    <tr style="border: 1px solid black">
+      <td id="text-cent-col-bord" style="text-align:left;"> Ubuntu kernel 3.13.0 -32 System  </td>
+      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc2inos7%></td>
+    </tr>
+    <tr style="border: 1px solid black">
+      <td id="text-cent-col-bord" style="text-align:left;"> Red Hat kernel 2.6.32 -43 1.e16 System </td>
+      <td id="border1px" style="text-align: center;"><%= @eflashssd.pc2inos8%></td>
+    </tr>
+
     </table>
-    <li style="padding-top: 15px;"> Read/ Write Speed Test
-      <p><%= wicked_pdf_image_tag @eflashssd.image1.url(:medium) %></p>
-    </li>
+
+    
     <table style="border-collapse:collapse;border: 1px solid black;width:100%;border">
     <li style="padding-top: 15px;">Test Result
        <tr  >
@@ -417,8 +506,10 @@
     </table>
 </li>
 </ol>
-<br><br>
  
+ <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
       <p style="border-bottom-style:solid;border-bottom: 2px solid;"></p>
       <pre>Form No: APA-RD-00001-F05-1                  5</pre>
       <div style="text-align: right;"> <%= wicked_pdf_image_tag 'bottombar.png' %></div>
@@ -435,36 +526,50 @@
   <td id="text-cent-col-bord" style="height:30px;width:25%;font-weight:bolder;">Testing Product</td>
   <td id="border1px" style="height:30px;width:35%;"><%= @eflashssd.desc%></td>
   <td id="text-cent-col-bord" style="height:30px;width:20%;font-weight:bolder;">Testing Engineer</td>
-  <td id="border1px" style="height:30px;width:30%;"><%= @eflashssd.rpname %></td>
+  <td id="border1px" style="height:30px;width:20%;"><%= @eflashssd.rpname %></td>
 </tr>
 
 <tr >
-  <td rowspan="2" style="height:60px;width:20%;font-weight:bolder;border-bottom: 1px solid black" id="text-cent-col-bord">Testing Environment</td>
-  <td >Brand: <%= @eflashssd.pc3vendor%></td>
-  <td >Chipset: <%= @eflashssd.pc3chip%></td>
-  <td style="border-right: 1px solid black;">BIOS: <%= @eflashssd.pc3bios %></td>
+  <td rowspan="2" style="height:60px;width:25%;font-weight:bolder;border-bottom: 1px solid black" id="text-cent-col-bord">Testing Environment</td>
+  <td style="width:35%;">Brand: <%= @eflashssd.pc3vendor%></td>
+  <td style="width:20%;">Chipset: <%= @eflashssd.pc3chip%></td>
+  <td style="border-right: 1px solid black;width:20%;">BIOS: <%= @eflashssd.pc3bios %></td>
 </tr>
 <tr style="border-bottom: 1px solid black;">
-  <td>M/B: <%= @eflashssd.pc3mb %></td>
+  <td style="width:35%;">M/B: <%= @eflashssd.pc3mb %></td>
+  <td colspan="2" style="border-right: 1px solid black;width:40%;">Interface: <%= @eflashssd.pc3interface %></td>
+</tr>
+
+<tr >
+  <td rowspan="2" style="height:60px;width:20%;font-weight:bolder;border-bottom: 1px solid black" id="text-cent-col-bord">Testing Software</td>
+</tr>
+<tr style="border-bottom: 1px solid black;">
+  <td>CrystalDiskMark5.0.2</td>
   <td colspan="2" style="border-right: 1px solid black;"></td>
-  <td></td>
+</tr>
+
+</table>
+
+<br>
+
+    <table style="width:100%;border-collapse:collapse;" >
+<tr id="border1px" >
+  <td colspan="2" id="text-cent-col-bord" style="height:20px;width:50%;">Test Function : BurnIn Test 168hrs</td>
+</tr>
+<tr>
+  <td id="text-cent-col-bord" style="height:20px;width:50%;">Before</td>
+  <td id="text-cent-col-bord" style="height:20px;width:50%;">After</td>
+ </tr>
+
+<tr>
+<td style="width:50%;text-align:center;" id="border1px"><%= wicked_pdf_image_tag @eflashssd.image1.url(:medium) %></td>
+<td style="width:50%;text-align:center;" id="border1px"><%= wicked_pdf_image_tag @eflashssd.image2.url(:medium) %></td>
 </tr>
 </table>
 
-    <li style="padding-top: 10px;"> Read/ Write Speed Test
-      <p><%= wicked_pdf_image_tag @eflashssd.image2.url(:medium) %></p>
-    </li>
-    <table style="border-collapse:collapse;border: 1px solid black;width:100%;border">
-    <li style="padding-top: 10px;">Test Result
-       <tr  >
-    <td  style="text-align: left;"><%=  %></td>
-      </tr>
-    </li>
-    </table>
-</li>
-</ol>
 
-<br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+
   <p style="border-bottom-style:solid;border-bottom: 2px solid;"></p>
   <pre>Form No: APA-RD-00001-F05-1                  6</pre>
      <div style="text-align: right;"> <%= wicked_pdf_image_tag 'bottombar.png' %></div>
@@ -475,197 +580,159 @@
      <div id="text-center"> <%= wicked_pdf_image_tag 'topbar.png' %></div>
 
 
-<p id="bolder" >D.  Function Test With: <%= @eflashssd.pc4os%></p>
+<p id="bolder" >D.  Performance Test With M/B: <%= @eflashssd.pc4os%></p>
 <table style="width:100%;border-collapse:collapse;" >
 <tr id="border1px" >
   <td id="text-cent-col-bord" style="height:30px;width:25%;font-weight:bolder;">Testing Product</td>
   <td id="border1px" style="height:30px;width:35%;"><%= @eflashssd.desc%></td>
   <td id="text-cent-col-bord" style="height:30px;width:20%;font-weight:bolder;">Testing Engineer</td>
-  <td id="border1px" style="height:30px;width:30%;"><%= @eflashssd.rpname %></td>
+  <td id="border1px" style="height:30px;width:20%;"><%= @eflashssd.rpname %></td>
 </tr>
 
 <tr >
-  <td rowspan="2" style="height:60px;width:20%;font-weight:bolder;border-bottom: 1px solid black" id="text-cent-col-bord">Testing Environment</td>
-  <td >Brand: <%= @eflashssd.pc4vendor%></td>
-  <td >Chipset: <%= @eflashssd.pc4chip%></td>
-  <td style="border-right: 1px solid black;">BIOS: <%= @eflashssd.pc4bios %></td>
+  <td rowspan="2" style="height:60px;width:25%;font-weight:bolder;border-bottom: 1px solid black" id="text-cent-col-bord">Testing Environment</td>
+  <td style="width:35%;">Brand: <%= @eflashssd.pc4vendor%></td>
+  <td style="width:20%;">Chipset: <%= @eflashssd.pc4chip%></td>
+  <td style="border-right: 1px solid black;width:20%;">BIOS: <%= @eflashssd.pc4bios %></td>
 </tr>
 <tr style="border-bottom: 1px solid black;">
-  <td>M/B: <%= @eflashssd.pc4mb %></td>
-  <td colspan="2" style="border-right: 1px solid black;">Testing Software: Ubuntu 14.04</td>
-  <td></td>
+  <td style="width:35%;">M/B: <%= @eflashssd.pc4mb %></td>
+  <td colspan="2" style="border-right: 1px solid black;width:40%;">Interface: <%= @eflashssd.pc4interface %></td>
+</tr>
+
+<tr >
+  <td rowspan="2" style="height:60px;width:20%;font-weight:bolder;border-bottom: 1px solid black" id="text-cent-col-bord">Testing Software</td>
+</tr>
+<tr style="border-bottom: 1px solid black;">
+  <td>Ubuntu 14.10 Benchmark</td>
+  <td colspan="2" style="border-right: 1px solid black;"></td>
 </tr>
 </table>
-<ol>
 
-</li>
-    <li style="padding-top: 15px;"> Read/ Write Speed Test
-      <p><%= wicked_pdf_image_tag @eflashssd.image3.url(:medium) %></p>
-    </li>
-    <br><br>
-    <table style="border-collapse:collapse;border: 1px solid black;width:100%;border">
-    <li style="padding-top: 15px;">Test Result
-       <tr  >
-    <td  style="text-align: left;"><%=  %></td>
-      </tr>
-    </li>
-    </table>
-</li>
-</ol>
+<br>
 
-  
+<table style="width:100%;border-collapse:collapse;" >
+<tr id="border1px" >
+  <td colspan="2" id="text-cent-col-bord" style="height:20px;width:50%;">Performance Before the Test </td>
+</tr>
+ 
+<tr>
+<td style="width:100%;text-align:center;" id="border1px"><%= wicked_pdf_image_tag @eflashssd.image3.url(:medium) %></td>
+</tr>
+</table>
+
+<br><br>
+
+
   <p style="border-bottom-style:solid;border-bottom: 2px solid;"></p>
   <pre>Form No: APA-RD-00001-F05-1                  7</pre>
      <div style="text-align: right;"> <%= wicked_pdf_image_tag 'bottombar.png' %></div>
 
 <!--  page 7 Bottom -->
 
-<!--  page 9 Top --> 
+<!--  page 8 Top --> 
 
       <div id="text-center"> <%= wicked_pdf_image_tag 'topbar.png' %></div>
 
 <p id="bolder" >F.  Platform Compatibility Test</p>
 
 <table style="border-collapse:collapse;border: 1px solid black;">  
-  <tr style="border: 1px solid black">
-     <td id="text-cent-col-bord" style="width:50%;" colspan="4">Platform Information</td> 
-     <td id="text-cent-col-bord" style="width:50%;" colspan="6"> Test Item</td> 
+ 
+    <tr style="border: 1px solid black">
+     <td id="text-cent-col-bord" style="width:12.5%;">Platform</td> 
+     <td id="text-cent-col-bord" style="width:12.5%;">Chipset</td> 
+     <td id="text-cent-col-bord" style="width:12.5%;">M/B</td>
+     <td id="text-cent-col-bord" style="width:12.5%;">Interface</td> 
+     <td id="text-cent-col-bord" style="width:9%;">System</td> 
+     <td id="text-cent-col-bord" style="width:9%;">Result</td> 
       
 
   </tr>
-    <tr style="border: 1px solid black">
-     <td id="text-cent-col-bord" style="width:12.5%;">Chipset</td> 
-     <td id="text-cent-col-bord" style="width:12.5%;">M/B</td> 
-     <td id="text-cent-col-bord" style="width:12.5%;">Interface</td>
-     <td id="text-cent-col-bord" style="width:12.5%;">System</td> 
-     <td id="text-cent-col-bord" style="width:9%;">Format</td> 
-     <td id="text-cent-col-bord" style="width:9%;">Copy</td> 
-     <td id="text-cent-col-bord" style="width:9%;">Delete</td> 
-     <td id="text-cent-col-bord" style="width:9%;">Compare</td>  
-     <td id="text-cent-col-bord" style="width:9%;">Restart</td>  
-     <td id="text-cent-col-bord" style="width:9%;">Suspend</td>  
-
+  <tr style="border: 1px solid black;height:50px;">
+     <td id="text-cent-col-bord" >PC1</td> 
+     <td id="text-cent-col-bord" >Intel Z68</td>
+     <td id="text-cent-col-bord" >Asus P8Z68-M Pro</td> 
+     <td id="border1px" style="text-align: center;">SATA III</td> 
+     <td id="border1px" style="text-align: center;">Windows 8.1</td> 
+     <td id="border1px" style="text-align: center;">V</td> 
+    
   </tr>
-  <tr style="border: 1px solid black">
-     <td id="text-cent-col-bord" >Intel H97</td> 
-     <td id="text-cent-col-bord" >Asus H97-PRO GAMER</td>
-     <td id="text-cent-col-bord" >USB 2.0</td> 
-     <td id="text-cent-col-bord" >Win 7</td> 
+  <tr style="border: 1px solid black;height:50px;">
+     <td id="text-cent-col-bord" >PC2</td> 
+     <td id="text-cent-col-bord" >Intel Z77</td>
+     <td id="text-cent-col-bord" >Gigabyte IVB</td> 
+     <td id="border1px" style="text-align: center;">SATA III</td> 
+     <td id="border1px" style="text-align: center;">Windows 8.1</td> 
      <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
+     
   </tr>
-  <tr style="border: 1px solid black">
-     <td id="text-cent-col-bord" >Intel Z97</td> 
-     <td id="text-cent-col-bord" >Asus Z97-A/USB 3.1</td>
-     <td id="text-cent-col-bord" >USB 3.0</td> 
-     <td id="text-cent-col-bord" >Win 10</td> 
+   <tr style="border: 1px solid black;height:50px;">
+     <td id="text-cent-col-bord" >PC3</td> 
+     <td id="text-cent-col-bord" >Intel Z87</td>
+     <td id="text-cent-col-bord" >Asus Maximus VI Hero</td> 
+     <td id="border1px" style="text-align: center;">SATA III</td> 
+     <td id="border1px" style="text-align: center;">Windows 8.1</td> 
      <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
+     
   </tr>
-   <tr style="border: 1px solid black">
-     <td id="text-cent-col-bord" >AMD Sempron</td> 
-     <td id="text-cent-col-bord" >Asus AM1M-A</td>
-     <td id="text-cent-col-bord" >USB 2.0</td> 
-     <td id="text-cent-col-bord" >Win 8.1</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
+   <tr style="border: 1px solid black;height:50px;">
+     <td id="text-cent-col-bord" >PC4</td> 
+     <td id="text-cent-col-bord" >Intel Z77</td>
+     <td id="text-cent-col-bord" >GA-Z77X-D3H</td> 
+     <td id="border1px" style="text-align: center;">SATA III</td> 
+     <td id="border1px" style="text-align: center;">Windows 8.1</td> 
+     <td id="border1px" style="text-align: center;">V</td>
+    
   </tr>
-   <tr style="border: 1px solid black">
-     <td id="text-cent-col-bord" >Intel X99</td> 
-     <td id="text-cent-col-bord" >Gigabyte X99-UD4</td>
-     <td id="text-cent-col-bord" >USB 3.0</td> 
-     <td id="text-cent-col-bord" >Ubuntu 14.04</td> 
+   <tr style="border: 1px solid black;height:50px;">
+     <td id="text-cent-col-bord" >PC5</td> 
+     <td id="text-cent-col-bord" >Intel QM77</td>
+     <td id="text-cent-col-bord" >Avalue EMX QM77-AIRGA-Z77-D3H</td> 
+     <td id="border1px" style="text-align: center;">SATA III</td> 
+     <td id="border1px" style="text-align: center;">Windows 8.1</td> 
      <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
+ 
   </tr>
-   <tr style="border: 1px solid black">
-     <td id="text-cent-col-bord" >--</td> 
-     <td id="text-cent-col-bord" >Apple Mac Book Air 11-inch</td>
-     <td id="text-cent-col-bord" >USB 3.0</td> 
-     <td id="text-cent-col-bord" >Mac OS X Lion 10.7.4</td> 
+   <tr style="border: 1px solid black;height:50px;">
+     <td id="text-cent-col-bord" >PC6</td> 
+     <td id="text-cent-col-bord" >AMD 790FX</td>
+     <td id="text-cent-col-bord" >Asus M4A79T Deluxe</td> 
+     <td id="border1px" style="text-align: center;">SATA III</td> 
+     <td id="border1px" style="text-align: center;">Windows 8.1</td> 
      <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
+      
   </tr>
-   <tr style="border: 1px solid black">
-     <td id="text-cent-col-bord" >AMD 780G+SB700</td> 
-     <td id="text-cent-col-bord" >Asus M3A78-EM</td>
-     <td id="text-cent-col-bord" >USB 2.0</td> 
-     <td id="text-cent-col-bord" >Win XP</td> 
+   <tr style="border: 1px solid black;height:50px;">
+     <td id="text-cent-col-bord" >PC7</td> 
+     <td id="text-cent-col-bord" >AMD 790GX</td>
+     <td id="text-cent-col-bord" >Asus M4A78T-E</td> 
+     <td id="border1px" style="text-align: center;">SATA III</td> 
+     <td id="border1px" style="text-align: center;">Windows 8.1</td> 
      <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
+     
   </tr>
-   <tr style="border: 1px solid black">
-     <td id="text-cent-col-bord" >AMD A85X</td> 
-     <td id="text-cent-col-bord" >Gigabyte F2A85XM-HD3</td>
-     <td id="text-cent-col-bord" >USB 2.0</td> 
-     <td id="text-cent-col-bord" >Win 7</td> 
+   <tr style="border: 1px solid black;height:50px;">
+     <td id="text-cent-col-bord" >PC8</td> 
+     <td id="text-cent-col-bord" >AMD A88X</td>
+     <td id="text-cent-col-bord" >Asus A88XM</td> 
+     <td id="border1px" style="text-align: center;">SATA III</td> 
+     <td id="border1px" style="text-align: center;">Windows 8.1</td> 
      <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
+     
   </tr>
-   <tr style="border: 1px solid black">
-     <td id="text-cent-col-bord" >Intel Z170</td> 
-     <td id="text-cent-col-bord" >Asus Z170-A</td>
-     <td id="text-cent-col-bord" >USB 2.0</td> 
-     <td id="text-cent-col-bord" >Win 10</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-  </tr>
-   <tr style="border: 1px solid black">
-     <td id="text-cent-col-bord" >Intel Z87</td> 
-     <td id="text-cent-col-bord" >Msi Z87M GAMING</td>
-     <td id="text-cent-col-bord" >USB 2.0</td> 
-     <td id="text-cent-col-bord" >Win 7</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-     <td id="border1px" style="text-align: center;">V</td> 
-  </tr>
+  
 </table>
 
 <br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
 
 
   
-      <p style="border-bottom-style:solid;border-bottom: 2px solid;"></p><pre>Form No: APA-RD-00001-F05-1                  9</pre>
+      <p style="border-bottom-style:solid;border-bottom: 2px solid;"></p><pre>Form No: APA-RD-00001-F05-1                  8</pre>
       <div style="text-align: right;"> <%= wicked_pdf_image_tag 'bottombar.png' %></div>
 
-<!--  page 9 Bottom -->
-<!--  page 10 Top --> 
+<!--  page 8 Bottom -->
+<!--  page 9 Top --> 
 
      <div id="text-center"> <%= wicked_pdf_image_tag 'topbar.png' %></div>
 
@@ -698,13 +765,13 @@
   
 </pre>
 
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
     <p style="border-bottom-style:solid;border-bottom: 2px solid;padding-bottom: 8px;"></p>
-    <pre>Form No: APA-RD-00001-F05-1                  10</pre>
+    <pre>Form No: APA-RD-00001-F05-1                  9</pre>
      <div style="text-align: right;"> <%= wicked_pdf_image_tag 'bottombar.png' %></div>
-<!--  page 10 Bottom -->
+<!--  page 9 Bottom -->
 
 </tbody>
 </table>
