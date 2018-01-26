@@ -42,9 +42,9 @@ class EflashssdsController < ApplicationController
 
 def create
     @eflashssd = Eflashssd.new(eflashssd_params)
-      #@eflashssd.user = current_user
+      @eflashssd.user = current_user
       if @eflashssd.save
-        redirect_to eflashssd_path
+        redirect_to @eflashssd
       else
         render 'new'    
       end
@@ -88,8 +88,8 @@ def eflashssd_params
         :pc2inos1  ,:pc2inos2  ,:pc2inos3  ,:pc2inos4  ,:pc2inos5  ,:pc2inos6  ,:pc2inos7  ,:pc2inos8 ,
         :pc3os  ,:pc3mb  ,:pc3vendor  ,:pc3chip  ,:pc3bios  ,:pc3interface,
 		:pc4os  ,:pc4mb  ,:pc4vendor  ,:pc4chip  ,:pc4bios  ,:pc4interface,
-		:image1, :image2, :image3)
+		:image1, :image2, :image3, :qty, :coldbootfail, :qtreport , :plandate, :status)
 end
-	
+
 
 end

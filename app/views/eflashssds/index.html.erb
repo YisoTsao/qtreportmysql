@@ -15,23 +15,29 @@
       <table class="table table-hover" >
   <thead>
     <tr>
+      <th id="hide">ID</th>
+      <th>Pccitem</th>
       <th>Receivedate</th>
-      <th>Startdate</th>
-      <th>Finishdate</th>
+      <th id="hide">prodpn</th>
       <th>Solution</th>
       <th>Flash</th>
-      <th>Pccitem</th>
+      <th id="hide">desc</th>
       <th>Capacity</th>
+      <th id="hide">fwvversion</th>
       <th>Qual</th>
+      <th>Q'ty</th>
+      <th id="hide">Plan date</th>
+      <th>Startdate</th>
+      <th>Finishdate</th>
+      <th>Result</th>
+      <th id="hide">Status</th>
+      <th id="hide">Cold Boot & Power Failure</th>
       <th>Owner</th>
-      <th>Result</th>      
+      <th id="hide">Qual Report</th>  
       <th>Remark</th>
       <th id="hide">expl</th>
-      <th id="hide">ID</th>
+
       <th id="hide">prodname</th>
-      <th id="hide">desc</th>
-      <th id="hide">prodpn</th>
-      <th id="hide">fwvversion</th>
       <th id="hide">pcbvers</th>
       <th id="hide">rpname</th>
       <th id="hide">rpdate</th>
@@ -96,24 +102,29 @@
   <tbody id="sortable" >
     <% @eflashssds.each do |eflashssd| %>
       <tr>
-        
+        <td id="hide"><%= eflashssd.id %></td>
+        <td><%= eflashssd.pccitem %></td>
         <td><%= eflashssd.receivedate  %></td>
-        <td><%= eflashssd.startdate %></td>
-        <td><%= eflashssd.finishdate %></td>
+        <th id="hide"><%= eflashssd.prodpn %></th>
         <td><%= eflashssd.solution %></td>
         <th><%= eflashssd.ftype %></th>
-        <td><%= eflashssd.pccitem %></td>
+        <th id="hide"><%= eflashssd.desc %></th>
         <td><%= eflashssd.capacity %></td>
+        <th id="hide"><%= eflashssd.fwvversion %></th>
         <td><%= eflashssd.qual %></td>
-        <td><%= eflashssd.owner %></td>
+        <td ><%= eflashssd.qty %></td>
+        <td id="hide"><%= eflashssd.plandate %></td>
+        <td><%= eflashssd.startdate %></td>
+        <td><%= eflashssd.finishdate %></td>
         <th><%= eflashssd.testres %></th>
+        <th id="hide"><%= eflashssd.status %></th>
+        <th id="hide"><%= eflashssd.coldbootfail %></th>        
+        <td><%= eflashssd.owner %></td>
+        <td id="hide"><%= eflashssd.qtreport %></td>
         <td><%= eflashssd.remark %></td>
-      <th id="hide"><%= eflashssd.expl %></th>
-      <td id="hide"><%= eflashssd.id %></td>
+      <th id="hide"><%= eflashssd.expl %></th> 
+
       <th id="hide"><%= eflashssd.prodname %></th>
-      <th id="hide"><%= eflashssd.desc %></th>
-      <th id="hide"><%= eflashssd.prodpn %></th>
-      <th id="hide"><%= eflashssd.fwvversion %></th>
       <th id="hide"><%= eflashssd.pcbvers %></th>
       <th id="hide"><%= eflashssd.rpname %></th>
       <th id="hide"><%= eflashssd.rpdate %></th>

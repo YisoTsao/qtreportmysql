@@ -44,26 +44,31 @@ ActiveRecord::Schema.define(version: 20180120072259) do
   end
 
   create_table "eflashssds", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.date "receivedate"
-    t.date "startdate"
-    t.date "finishdate"
+    t.integer "pccitem"
+    t.string "receivedate"
+    t.string "prodpn"
     t.string "solution"
     t.string "ftype"
-    t.integer "pccitem"
-    t.string "capacity"
-    t.string "qual"
-    t.string "owner"
-    t.string "prodname"
-    t.string "prodpn"
-    t.text "fwvversion"
     t.text "desc"
-    t.string "pcbvers"
+    t.string "capacity"
+    t.text "fwvversion"
+    t.string "qual"
+    t.integer "qty"
+    t.string "plandate"
+    t.string "startdate"
+    t.string "finishdate"
     t.string "testres"
+    t.string "status"
+    t.string "coldbootfail"
+    t.string "owner"
+    t.string "qtreport"
+    t.text "remark"
+    t.string "prodname"
+    t.string "pcbvers"
     t.string "rpname"
-    t.date "rpdate"
+    t.string "rpdate"
     t.text "approvename"
     t.text "expl"
-    t.text "remark"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "pc1os"
@@ -129,6 +134,7 @@ ActiveRecord::Schema.define(version: 20180120072259) do
     t.string "image3_content_type"
     t.integer "image3_file_size"
     t.datetime "image3_updated_at"
+    t.integer "user_id"
   end
 
   create_table "handies", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

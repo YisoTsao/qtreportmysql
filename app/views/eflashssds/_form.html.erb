@@ -13,19 +13,19 @@
   </p>
 
 
+<div class="field">
+    <%= form.label :pccitem %>
+    <%= form.number_field :pccitem , class: 'width'%>
+  </div>
+
   <div class="field" >
     <%= form.label :receivedate %>
     <%= form.text_field :receivedate , class: 'width'%>
   </div>
 
-  <div class="field">
-    <%= form.label :startdate %>
-    <%= form.text_field :startdate , class: 'width'%>  
-    </div>
-
-  <div class="field">
-    <%= form.label :finishdate %>
-    <%= form.text_field :finishdate , class: 'width'%>
+<div class="field">
+    <%= form.label :prodpn %>
+    <%= form.text_field :prodpn , class: 'width'%>
   </div>
 
   <div class="field">
@@ -38,24 +38,44 @@
     <%= form.text_field :ftype , class: 'width'%>
   </div>
 
-  <div class="field">
-    <%= form.label :pccitem %>
-    <%= form.number_field :pccitem , class: 'width'%>
-  </div>
+<div class="field">
+    <%= form.label :Description %>
+    <%= form.text_field :desc , class: 'width'%>
+  </div> 
 
   <div class="field">
     <%= form.label :capacity %>
     <%= form.text_field :capacity , class: 'width'%>
   </div>
 
+<div class="field">
+    <%= form.label :fwvversion %>
+    <%= form.text_field :fwvversion , class: 'width'%>
+  </div>
+  
   <div class="field">
-    <%= form.label :qual %>
+    <%= form.label :Qual %>
     <%= form.text_field :qual , class: 'width'%>
   </div>
 
+<div class="field">
+    <%= form.label :Qty %>
+    <%= form.text_field :qty , class: 'width'%>
+  </div>
+
   <div class="field">
-    <%= form.label :owner %>
-    <%= form.text_field :owner , class: 'width'%>
+    <%= form.label :plandate %>
+    <%= form.text_field :plandate , class: 'width'%>  
+    </div>
+
+  <div class="field">
+    <%= form.label :startdate %>
+    <%= form.text_field :startdate , class: 'width'%>  
+    </div>
+
+  <div class="field">
+    <%= form.label :finishdate %>
+    <%= form.text_field :finishdate , class: 'width'%>
   </div>
 
 <div class="field">
@@ -63,6 +83,26 @@
     <%= form.text_field :testres , class: 'width'%>
   </div>
    
+   <div class="field">
+    <%= form.label :Status %>
+    <%= form.text_field :status , class: 'width'%>
+  </div>
+
+<div class="field">
+    <%= form.label :Coldbootfail %>
+    <%= form.text_field :coldbootfail , class: 'width'%>
+  </div>
+
+<div class="field">
+    <%= form.label :owner %>
+    <%= form.text_field :owner , class: 'width'%>
+  </div>
+
+ <div class="field">
+    <%= form.label :Qualreport %>
+    <%= form.text_field :qtreport , class: 'width'%>
+  </div>
+
   <div class="field">
     <%= form.label :Remark %>
     <%= form.text_field :remark , class: 'width'%>
@@ -71,20 +111,6 @@
   <div class="field">
     <%= form.label :prodname %>
     <%= form.text_field :prodname , class: 'width'%>
-  </div>
-
-<div class="field">
-    <%= form.label :Description %>
-    <%= form.text_field :desc , class: 'width'%>
-  </div> 
-
-  <div class="field">
-    <%= form.label :prodpn %>
-    <%= form.text_field :prodpn , class: 'width'%>
-  </div>
-   <div class="field">
-    <%= form.label :fwvversion %>
-    <%= form.text_field :fwvversion , class: 'width'%>
   </div>  
    
    <div class="field">
@@ -163,10 +189,7 @@
     <%= form.text_field :pc1cboot , class: 'width'%>
   </div>
 
-  <div class="field">
-    <%= form.label :pc1fat %>
-    <%= form.text_field :pc1fat , class: 'width'%>
-  </div>
+  
   <div class="field">
     <%= form.label :pc1fat32 %>
     <%= form.text_field :pc1fat32 , class: 'width'%>
@@ -175,10 +198,7 @@
     <%= form.label :pc1ntfs %>
     <%= form.text_field :pc1ntfs , class: 'width'%>
   </div>
-  <div class="field">
-    <%= form.label :pc1exfat %>
-    <%= form.text_field :pc1exfat , class: 'width'%>
-  </div>
+  
 
   <div class="field">
     <%= form.label :pc1result %>
