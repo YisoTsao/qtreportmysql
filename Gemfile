@@ -51,7 +51,7 @@ gem 'therubyracer'
 gem "kaminari"
 gem 'mail_form', '~> 1.7'
 gem 'simple_form'
-
+gem 'slim-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -73,6 +73,7 @@ group :development do
   gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.3'
   gem 'capistrano-bundler', '~> 1.3.0'
   #gem 'capistrano-passenger'
+  gem 'letter_opener_web'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
