@@ -1,9 +1,9 @@
 class Contact < MailForm::Base
-  attribute :name,      :validate => true
-  attribute :email,     :validate => /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
-  attribute :message,      :validate => true
-  attribute :nickname,      :captcha => true
-  attribute :file,      :attachment => true
+  append :remote_ip, :user_agent
+  attribute :name,      validate: true
+  attribute :email,     validate: /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
+  attribute :message
+  validates :message,   length: { in: 15..2000 }
 
   # Declare the e-mail headers. It accepts anything the mail method
   # in ActionMailer accepts.

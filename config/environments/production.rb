@@ -90,17 +90,6 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.action_mailer.raise_delivery_errors = true
-config.action_mailer.default_url_options = { host: "http://localhost:3000" }
-config.action_mailer.delivery_method = :smtp
-config.action_mailer.smtp_settings = config_for(:email).symbolize_keys{
-  address: "smtp.gmail.com",
-  port: 587,
-  domain: "gmail.com",
-  authentication: "plain",
-  enable_starttls_auto: true,
-  user_name: "yiso05255@gmail.com",
-  password: "Yiso_525"
-
-}
+config.action_mailer.delivery_method = :letter_opener_web
 
 end
