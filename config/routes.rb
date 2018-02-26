@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   get 'pages/home'
@@ -17,7 +18,7 @@ resources :eflashssds do
 end
 
   root to: 'pages#home'
-  resources :contacts , only: [:new, :create] 
+  resources :contacts 
   
   if Rails.env.development?
   mount LetterOpenerWeb::Engine, at: "/letter_opener"

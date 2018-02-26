@@ -1,19 +1,32 @@
 class ContactsController < ApplicationController
+	before_action :set_contact , only: [:show, :edit, :update, :destroy]
+
+
 	def new
     @contact = Contact.new
   end
 
   def create
-    @contact = Contact.new(params[:contact])
-    @contact.request = request
-    if @contact.deliver
-      flash.now[:error] = nil
-      flash.now[:notice] = 'Thank you for your message!'
+    @contact = Contact.new(contact_params)
+    if @contact.save
+    ContactMailer.notify_comment(current_user,@contact).deliver
+      redirect_to @contact
     else
-      flash.now[:error] = 'Cannot send message.'
       render :new
     end
   end
+
+  private
+
+  def set_contact
+      @contact = Contact.find(params[:id])
+    end
+
+
+    def contact_params
+      params.require(:contact).permit(:name, :email, :message)
+    end
+
  end
 
 
