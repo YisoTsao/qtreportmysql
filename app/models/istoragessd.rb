@@ -1,0 +1,2 @@
+class Istoragessd < ApplicationRecord
+end
