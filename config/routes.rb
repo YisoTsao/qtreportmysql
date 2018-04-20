@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
 
 
+  get 'istoragessd/index'
+
+  get 'istoragessd/new'
+
+  get 'istoragessd/show'
+
+  get 'istoragessd/edit'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   get 'pages/home'

@@ -1,8 +1,7 @@
 class HandiesController < ApplicationController
   before_action :set_handy, only: [:show, :edit, :update, :destroy ]
-  before_action :authenticate_user! , only: [:new, :create, :edit, :update, :destroy]
-  # GET /handies
-  # GET /handies.json
+  before_action :authenticate_user! , only: [:new, :create, :edit, :update, :destroy,:import]
+  
   def index
     if params[:search]
          @handies = Handy.where('pccitem LIKE ? OR receivedate LIKE ? OR startdate LIKE ? OR

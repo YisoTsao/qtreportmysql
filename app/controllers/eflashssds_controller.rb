@@ -1,5 +1,6 @@
 class EflashssdsController < ApplicationController
 	before_action :set_eflashssd, only: [:show, :edit, :update, :destroy ]
+  before_action :authenticate_user! , only: [:new, :create, :edit, :update, :destroy, :import]
 
   def index
      if params[:search]
