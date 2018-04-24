@@ -1,20 +1,13 @@
 Rails.application.routes.draw do
 
 
-  get 'istoragessd/index'
-
-  get 'istoragessd/new'
-
-  get 'istoragessd/show'
-
-  get 'istoragessd/edit'
-
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   get 'pages/home'
 
   resources :handies
   resources :eflashssds
+  resources :istoragessds
   devise_for :users
 
 resources :handies do
@@ -22,6 +15,10 @@ resources :handies do
 end
 
 resources :eflashssds do
+    collection { post :import }
+end
+
+resources :istoragessds do
     collection { post :import }
 end
 

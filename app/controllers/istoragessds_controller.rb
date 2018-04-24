@@ -1,7 +1,25 @@
-class IstoragessdController < ApplicationController
+class IstoragessdsController < ApplicationController
 	before_action :set_istoragessd, only: [:show, :edit, :update, :destroy ]
+   	before_action :authenticate_user! , only: [:new, :create, :edit, :update, :destroy,:import]
+  
   def index
-  	@istoragessd = Istoragessd.all 
+    if params[:search]
+         @istoragessds = Istoragessd.where('pccitem LIKE ? OR receivedate LIKE ? OR startdate LIKE ? OR
+          finishdate LIKE ? OR schedule LIKE ? OR qual LIKE ? OR solution LIKE ? OR capacity LIKE ?',
+           "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%",
+           "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%")
+      else
+      @istoragessds = Istoragessd.all
+      respond_to do |format|
+            format.html 
+            format.json 
+            format.csv { send_data @istoragessds.to_csv }
+            format.xls { send_data @istoragessds.to_csv } 
+                end  
+
+      #@istoragessds = Istoragessd.paginate(page:params[:page], per_page: 30 )
+        
+       end 
   end
 
   def new
@@ -36,6 +54,12 @@ class IstoragessdController < ApplicationController
   	@istoragessd.destroy
   	redirect_to istoragessds_url 
   end
+
+def import   
+  Istoragessd.import(params[:file])
+  redirect_to istoragessds_url, notice: "Istoragessds imported."
+end
+
 
   private 
 

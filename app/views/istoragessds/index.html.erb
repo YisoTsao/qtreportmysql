@@ -1,0 +1,108 @@
+  <p id="notice"><%= notice %></p>
+
+
+<h1>I-Storag-SSD</h1>
+<%= form_tag istoragessds_path, :method => :get do %>
+  
+    <%= text_field_tag :search, params[:search] , class: "search" %>
+    <%= submit_tag "Search ", :name => nil  %>
+<% end %>
+
+
+
+<div class="media">
+    <div class="media-body">
+      <table class="table table-hover" >
+  <thead>
+    <tr>
+      <th id="hide">ID</th>
+      <th>Pccitem</th>
+      <th>Receivedate</th>
+      <th >prodpn</th>
+      <th>Solution</th>
+      <th>Flash</th>
+      <th id="hide">desc</th>
+      <th>Capacity</th>
+      <th id="hide">fwvversion</th>
+      <th>Qual</th>
+      <th>Q'ty</th>
+      <th id="hide">Plan date</th>
+      <th>Startdate</th>
+      <th>Finishdate</th>
+      <th>Result</th>
+      <th id="hide">Status</th>
+      <th id="hide">Cold Boot & Power Failure</th>
+      <th>Owner</th>
+      <th id="hide">Qual Report</th>  
+      <th>Remark</th>
+      <th id="hide">expl</th>
+
+      
+      
+     
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody id="sortable" >
+    <% @istoragessds.each do |istoragessd| %>
+      <tr>
+        <td id="hide"><%= istoragessd.id %></td>
+        <td><%= istoragessd.pccitem %></td>
+        <td><%= istoragessd.receivedate  %></td>
+        <th ><%= istoragessd.prodpn %></th>
+        <td><%= istoragessd.solution %></td>
+        <th><%= istoragessd.ftype %></th>
+        <th id="hide"><%= istoragessd.desc %></th>
+        <td><%= istoragessd.capacity %></td>
+        <th id="hide"><%= istoragessd.fwvversion %></th>
+        <td><%= istoragessd.qual %></td>
+        <td ><%= istoragessd.qty %></td>
+        <td id="hide"><%= istoragessd.plandate %></td>
+        <td><%= istoragessd.startdate %></td>
+        <td><%= istoragessd.finishdate %></td>
+        <th><%= istoragessd.testres %></th>
+        <th id="hide"><%= istoragessd.status %></th>
+        <th id="hide"><%= istoragessd.coldbootfail %></th>        
+        <td><%= istoragessd.owner %></td>
+        <td id="hide"><%= istoragessd.qtreport %></td>
+        <td><%= istoragessd.remark %></td>
+      <th id="hide"><%= istoragessd.expl %></th> 
+
+      
+    
+     
+      <!-- -->
+      <% if current_user  %>
+        <td><%= link_to 'Show', istoragessd , class: 'btn btn-mini btn-default' %></td>
+        <td><%= link_to 'Edit', edit_istoragessd_path(istoragessd) , class: 'btn btn-mini btn-primary' %></td>
+        <td><%= link_to 'Destroy', istoragessd, method: :delete, data: { confirm: 'Are you sure?' } , class: 'btn btn-mini btn-danger'%></td>
+      </tr>
+    <% end %>
+        <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+
+<br>
+
+
+<%= link_to 'Create new item', new_istoragessd_path , class: 'btn btn-default'%> |
+
+
+<h3>Import CSV file</h3>
+<%= form_tag  import_istoragessds_path , multipart: true do %>
+<%= file_field_tag :file %>
+<%= submit_tag "Upload CSV file"  , class: 'btn btn-default'%>
+<% end %>
+
+
+
+<h3>Export file </h3>
+<%= link_to 'Download CSV', istoragessds_path(format: "csv") , class: 'btn btn-default'%> |
+<%= link_to "Download Excel", istoragessds_path(format: "xls") , class: 'btn btn-default'%>
+
+
+<br><br>
+
