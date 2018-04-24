@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180213102542) do
+ActiveRecord::Schema.define(version: 20180424073916) do
 
   create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "namespace"
@@ -274,6 +274,77 @@ ActiveRecord::Schema.define(version: 20180213102542) do
     t.integer "image3_file_size"
     t.datetime "image3_updated_at"
     t.integer "user_id"
+  end
+
+  create_table "istoragessds", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "pccitem"
+    t.date "receivedate"
+    t.string "solution"
+    t.string "ftype"
+    t.string "capacity"
+    t.string "qual"
+    t.integer "qty"
+    t.date "startdate"
+    t.date "finishdate"
+    t.string "testres"
+    t.string "owner"
+    t.text "remark"
+    t.string "prodpn"
+    t.text "fwvversion"
+    t.string "prodname"
+    t.string "pcbvers"
+    t.string "rpname"
+    t.date "rpdate"
+    t.text "approvename"
+    t.text "desc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "pc1os"
+    t.text "pc1mb"
+    t.text "pc1vendor"
+    t.text "pc1chip"
+    t.text "pc1bios"
+    t.text "pc1interface"
+    t.text "pc1basic"
+    t.text "pc1comp32"
+    t.text "pc1burnin"
+    t.text "pc1iometer"
+    t.text "pc1fat32"
+    t.text "pc1ntfs"
+    t.text "pc1exfat"
+    t.text "pc1result"
+    t.text "pc1install7"
+    t.text "pc1reboot7"
+    t.text "pc2os"
+    t.text "pc2mb"
+    t.text "pc2vendor"
+    t.text "pc2chip"
+    t.text "pc2bios"
+    t.text "pc2interface"
+    t.text "pc2basic"
+    t.text "pc2fat32"
+    t.text "pc2ntfs"
+    t.text "pc2exfat"
+    t.text "pc2result"
+    t.text "pc2install7"
+    t.text "pc2installfedo"
+    t.text "pc2reboot81"
+    t.text "pc3os"
+    t.text "pc3mb"
+    t.text "pc3vendor"
+    t.text "pc3chip"
+    t.text "pc3bios"
+    t.text "pc3interface"
+    t.text "pc3basic"
+    t.text "pc3comp32"
+    t.text "pc3burnin"
+    t.text "pc3iometer"
+    t.text "pc3fat32"
+    t.text "pc3ntfs"
+    t.text "pc3exfat"
+    t.text "pc3result"
+    t.text "pc3install10"
+    t.text "pc3reboot10"
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
