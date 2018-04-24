@@ -27,6 +27,11 @@ class IstoragessdsController < ApplicationController
   end
 
   def show
+  	respond_to do |format|
+            format.html 
+            format.json 
+            #format.pdf  { render template: 'eflashssds/report' , pdf: 'Report', layout: 'pdf.html', location: @handy } 
+            end 
   end
 
   def create
@@ -68,13 +73,15 @@ end
 	end
 
 	def istoragessd_params
-		params.require(:istoragessd).permit(:pc1os,:pc1mb,:pc1vendor,:pc1chip,:pc1bios,
-			:pc1interface,:pc1basic,:pc1comp32,:pc1burnin,:pc1iometer,:pc1fat32,:pc1ntfs,
-			:pc1exfat,:pc1result,:pc1install7,:pc1reboot7,:pc2os,:pc2mb,:pc2vendor,:pc2chip,
-			:pc2bios,:pc2interface,:pc2basic,:pc2fat32,:pc2ntfs,:pc2exfat,:pc2result,:pc2install7,
-			:pc2installfedo,:pc2reboot81,:pc3os,:pc3mb,:pc3vendor,:pc3chip,:pc3bios,:pc3interface,
-			:pc3basic,:pc3comp32,:pc3burnin,:pc3iometer,:pc3fat32,:pc3ntfs,:pc3exfat,:pc3result,
-			:pc3install10,:pc3reboot10,:pc4os,:pc4mb,:pc4vendor,:pc4chip,:pc4bios,:pc4interface,
-			:pc4result,)
+		params.require(:istoragessd).permit(:pccitem, :receivedate, :solution, :ftype, :capacity,
+			:qual, :qty, :startdate, :finishdate, :testres, :owner, :remark, :prodpn, :fwvversion,
+			:prodname, :pcbvers, :rpname, :rpdate, :approvename, :desc,:pc1os, :pc1mb,
+			:pc1vendor,:pc1chip,:pc1bios,:pc1interface,:pc1basic,:pc1comp32,:pc1burnin,
+			:pc1iometer,:pc1fat32,:pc1ntfs,:pc1exfat,:pc1result,:pc1install7,:pc1reboot7,:pc2os,
+			:pc2mb,:pc2vendor,:pc2chip,:pc2bios,:pc2interface,:pc2basic,:pc2fat32,:pc2ntfs,:pc2exfat,
+			:pc2result,:pc2install7,:pc2installfedo,:pc2reboot81,:pc3os,:pc3mb,:pc3vendor,
+			:pc3chip,:pc3bios,:pc3interface,:pc3basic,:pc3comp32,:pc3burnin,:pc3iometer,
+			:pc3fat32,:pc3ntfs,:pc3exfat,:pc3result,:pc3install10,:pc3reboot10,:pc4os,:pc4mb,
+			:pc4vendor,:pc4chip,:pc4bios,:pc4interface,:pc4result)
 	end
 end

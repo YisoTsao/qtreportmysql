@@ -1,4 +1,5 @@
 class Istoragessd < ApplicationRecord
+belongs_to :user , optional: true
 
 	def self.import(file)
     CSV.foreach(file.path, headers: true) do |row|
