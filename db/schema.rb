@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180424073916) do
+ActiveRecord::Schema.define(version: 20180424074914) do
 
   create_table "active_admin_comments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "namespace"
@@ -345,6 +345,13 @@ ActiveRecord::Schema.define(version: 20180424073916) do
     t.text "pc3result"
     t.text "pc3install10"
     t.text "pc3reboot10"
+    t.text "pc4os"
+    t.text "pc4mb"
+    t.text "pc4vendor"
+    t.text "pc4chip"
+    t.text "pc4bios"
+    t.text "pc4interface"
+    t.text "pc4result"
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
