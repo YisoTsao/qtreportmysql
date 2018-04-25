@@ -30,7 +30,7 @@ class IstoragessdsController < ApplicationController
   	respond_to do |format|
             format.html 
             format.json 
-            #format.pdf  { render template: 'eflashssds/report' , pdf: 'Report', layout: 'pdf.html', location: @handy } 
+            format.pdf  { render template: 'eflashssds/report' , pdf: 'Report', layout: 'pdf.html', location: @handy } 
             end 
   end
 
@@ -82,6 +82,7 @@ end
 			:pc2result,:pc2install7,:pc2installfedo,:pc2reboot81,:pc3os,:pc3mb,:pc3vendor,
 			:pc3chip,:pc3bios,:pc3interface,:pc3basic,:pc3comp32,:pc3burnin,:pc3iometer,
 			:pc3fat32,:pc3ntfs,:pc3exfat,:pc3result,:pc3install10,:pc3reboot10,:pc4os,:pc4mb,
-			:pc4vendor,:pc4chip,:pc4bios,:pc4interface,:pc4result)
+			:pc4vendor,:pc4chip,:pc4bios,:pc4interface,:pc4result,:image1,:image2,:image3,
+			:image4,:image5,:image6,:image7,:image8,:image9,:image10,:image11,:image12,)
 	end
 end

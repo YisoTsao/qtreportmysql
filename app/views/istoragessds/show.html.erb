@@ -1,2 +1,240 @@
-<h1>Istoragessd#show</h1>
-<p>Find me in app/views/istoragessd/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<h1><%= link_to 'Download PDF' , istoragessds_url(format: "pdf"), class: 'btn btn-primary'%>
+</h1>
+<h1>Product Description </h1>
+
+<table style="width:50%;">
+  <tr >
+  <td id="desc" >Product Name:</td>
+  <td id="descline" ><%= @istoragessd.prodname %></td>
+  </tr>
+  <tr>
+    <td id="desc" >Product P/N:</td>
+    <td id="descline" ><%= @istoragessd.prodpn %></td>
+  </tr>
+   <tr>
+    <td id="desc" >Firmware Version:</td>
+    <td id="descline"><%= @istoragessd.fwvversion %></td>
+  </tr>
+   <tr>
+    <td id="desc" > Description:</td>
+    <td id="descline"><%= @istoragessd.desc %></td>
+  </tr>
+   <tr>
+    <td id="desc" > Controller:</td>
+    <td id="descline"><%= @istoragessd.solution %></td>
+  </tr>
+   <tr>
+    <td id="desc" >Flash Type:</td>
+    <td id="descline"><%= @istoragessd.ftype %></td>
+  </tr>
+   <tr>
+    <td id="desc" >PCB Version:</td>
+    <td id="descline"><%= @istoragessd.pcbvers %></td>
+  </tr>
+   <tr>
+    <td id="desc" >Qualification:</td>
+    <td id="descline"><%= @istoragessd.qual %></td>
+  </tr>
+   <tr>
+    <td id="desc">Test Result:</td>
+    <td id="descline"><%= @istoragessd.testres %></td>
+  </tr>
+   <tr>
+    <td id="desc" >Explain:</td>
+    <td id="descline"><%= @istoragessd.prodname %> <%= @istoragessd.capacity %> <%= @istoragessd.qual %> <%= @istoragessd.solution %> <%=@istoragessd.ftype %></td>
+  </tr>
+  </table>
+
+
+<h1>Product Description </h1>
+
+<div class="media">
+    <div class="media-body">
+      <table class="table table-hover">
+  <thead>
+    <tr>
+      <th id="indexbarcolor">Pccitem</th>
+      <th id="indexbarcolor">Receivedate</th>
+      <th id="indexbarcolor">Plandate</th>
+      <th id="indexbarcolor">Startdate</th>
+      <th id="indexbarcolor">Finishdate</th>
+      <th id="indexbarcolor">Solution</th>
+      <th id="indexbarcolor">Capacity</th>
+      <th id="indexbarcolor">Qual</th>
+      <th id="indexbarcolor">Owner</th>
+      <th id="indexbarcolor">Remark</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><%= @istoragessd.pccitem %></td>
+        <td><%= @istoragessd.receivedate  %></td>
+        <td></td>
+        <td><%= @istoragessd.startdate %></td>
+        <td><%= @istoragessd.finishdate %></td>
+        <td><%= @istoragessd.solution %></td>
+        <td><%= @istoragessd.capacity %></td>
+        <td><%= @istoragessd.qual %></td>
+        <td><%= @istoragessd.owner %></td>
+        <td><%= @istoragessd.remark %></td>
+</tr>
+</tbody>
+</table>
+
+<br>
+
+<h1>M/B Description </h1>
+<div class="media">
+    <div class="media-body">
+      <table class="table table-hover">
+  <thead>
+    <tr>
+      <th id="indexbarcolor">PC</th>
+      <th id="indexbarcolor">OS</th>
+      <th id="indexbarcolor">M/B</th>
+      <th id="indexbarcolor">Vendor</th>
+      <th id="indexbarcolor">Chip</th>
+      <th id="indexbarcolor">BIOS</th>
+      <th id="indexbarcolor">Interface</th>
+      <th id="indexbarcolor">Basic Test</th>
+      <th id="indexbarcolor">Comp32</th>
+      <th id="indexbarcolor">Burnin</th>
+      <th id="indexbarcolor">FAT32</th>
+      <th id="indexbarcolor">NTFS</th>
+      <th id="indexbarcolor">exFAT</th>
+      <th id="indexbarcolor">OS 1</th>
+      <th id="indexbarcolor">OS 2</th>
+      <th id="indexbarcolor">OS 3</th>
+      <th id="indexbarcolor">OS 4</th>
+      <th id="indexbarcolor">OS 5</th>
+      <th id="indexbarcolor">OS 6</th>
+      <th id="indexbarcolor">OS 7</th>
+      <th id="indexbarcolor">OS 8</th>
+     
+      <th id="indexbarcolor">Result</th>
+      <th  id="indexbarcolor" colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td>1</th>
+        <td><%= @istoragessd.pc1os %></td>
+        <td><%= @istoragessd.pc1mb %></td>
+        <td><%= @istoragessd.pc1vendor  %></td>
+        <td><%= @istoragessd.pc1chip %></td>
+        <td><%= @istoragessd.pc1bios %></td>
+        <td><%= @istoragessd.pc1interface %></td>
+        <td><%= @istoragessd.pc1basic %></td>
+        <td><%= @istoragessd.pc1comp32 %></td>
+        <td><%= @istoragessd.pc1burnin %></td>
+        <td><%= @istoragessd.pc1fat32 %></td>
+        <td><%= @istoragessd.pc1ntfs %></td>
+        <td><%= @istoragessd.pc1exfat %></td>
+        <td><%= @istoragessd.pc1install7 %></td>
+       
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        
+        <td><%= @istoragessd.pc1result %></td>
+</tr>
+</tbody>
+  <tbody>
+      <tr>
+        <td>2</th>
+        <td><%= @istoragessd.pc2os %></td>
+        <td><%= @istoragessd.pc2mb %></td>
+        <td><%= @istoragessd.pc2vendor  %></td>
+        <td><%= @istoragessd.pc2chip %></td>
+        <td><%= @istoragessd.pc2bios %></td>
+        <td><%= @istoragessd.pc2interface %></td>
+        <td><%= @istoragessd.pc2basic %></td>
+        <td></td>
+        <td><%=  %></td>
+        <td><%=  %></td>
+        <td><%=  %></td>
+        <td><%=  %></td>
+        <td><%=  %></td>
+        <td><%=  %></td>
+        <td><%= @istoragessd.pc2install7 %></td>
+        <td><%= @istoragessd.pc2installfedo %></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+</tr>
+</tbody>
+  <tbody>
+      <tr>
+        <td>1</th>
+        <td><%= @istoragessd.pc3os %></td>
+        <td><%= @istoragessd.pc3mb %></td>
+        <td><%= @istoragessd.pc3vendor  %></td>
+        <td><%= @istoragessd.pc3chip %></td>
+        <td><%= @istoragessd.pc3bios %></td>
+        <td><%= @istoragessd.pc3interface %></td>
+        <td><%= @istoragessd.pc3basic %></td>
+        <td><%= @istoragessd.pc3comp32 %></td>
+        <td><%= @istoragessd.pc3burnin %></td>
+        <td><%= @istoragessd.pc3fat32 %></td>
+        <td><%= @istoragessd.pc3ntfs %></td>
+        <td><%= @istoragessd.pc3exfat %></td>
+        <td><%= @istoragessd.pc3install10 %></td>
+       
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        
+        <td><%= @istoragessd.pc1result %></td>
+</tr>
+</tbody>
+
+
+<tbody>
+      <tr>
+        <td>4</th>
+        <td><%= @istoragessd.pc4os %></td>
+        <td><%= @istoragessd.pc4mb %></td>
+        <td><%= @istoragessd.pc4vendor  %></td>
+        <td><%= @istoragessd.pc4chip %></td>
+        <td><%= @istoragessd.pc4bios %></td>
+        <td><%= @istoragessd.pc4interface %></td>
+        <td><%=  %></td>
+        <td><%=  %></td>
+        <td><%=  %></td>
+        <td><%=  %></td>
+        <td><%=  %></td>
+        <td><%=  %></td>
+        <td><%=  %></td>
+        <td><%=  %></td>
+        <td><%=  %></td>
+        <td><%=  %></td>
+        <td><%=  %></td>
+        <td><%=  %></td>
+        <td><%=  %></td>
+        <td><%=  %></td>
+        <td><%=  %></td>
+</tr>
+</tbody>
+</table>
+
+
+<table> 
+<h1>Crystaldiskmark</h1>
+
+<td><%= link_to image_tag(@istoragessd.image1.url(:thumb)), @istoragessd.image1.url %></td>
+
+<td><%= link_to image_tag(@istoragessd.image2.url(:thumb)), @istoragessd.image2.url %></td>
+
+<td><%= link_to image_tag(@istoragessd.image3.url(:thumb)), @istoragessd.image3.url %></td>
+</table>
+
+<font size= "20" ><%= link_to 'Edit', edit_istoragessd_path(@istoragessd) %></font> <font size= "20" >|</font>
+<font size= "20" ><%= link_to 'Back', istoragessds_path %></font>
