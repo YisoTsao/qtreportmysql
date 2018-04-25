@@ -101,21 +101,18 @@
       <th id="indexbarcolor">Interface</th>
       <th id="indexbarcolor">Basic Test</th>
       <th id="indexbarcolor">Comp32</th>
+      <th id="indexbarcolor">Iometer</th>
       <th id="indexbarcolor">Burnin</th>
       <th id="indexbarcolor">FAT32</th>
       <th id="indexbarcolor">NTFS</th>
       <th id="indexbarcolor">exFAT</th>
-      <th id="indexbarcolor">OS 1</th>
-      <th id="indexbarcolor">OS 2</th>
-      <th id="indexbarcolor">OS 3</th>
-      <th id="indexbarcolor">OS 4</th>
-      <th id="indexbarcolor">OS 5</th>
-      <th id="indexbarcolor">OS 6</th>
-      <th id="indexbarcolor">OS 7</th>
-      <th id="indexbarcolor">OS 8</th>
-     
+      <th id="indexbarcolor">Windows 7</th>
+      <th id="indexbarcolor">Windows 8.1</th>
+      <th id="indexbarcolor">Windows 10</th>
+      <th id="indexbarcolor">Fedora 17</th>
       <th id="indexbarcolor">Result</th>
-      <th  id="indexbarcolor" colspan="3"></th>
+      
+      <th  id="indexbarcolor" colspan="4"></th>
     </tr>
   </thead>
 
@@ -130,16 +127,15 @@
         <td><%= @istoragessd.pc1interface %></td>
         <td><%= @istoragessd.pc1basic %></td>
         <td><%= @istoragessd.pc1comp32 %></td>
+        <td><%= @istoragessd.pc1iometer %></td>
         <td><%= @istoragessd.pc1burnin %></td>
         <td><%= @istoragessd.pc1fat32 %></td>
         <td><%= @istoragessd.pc1ntfs %></td>
         <td><%= @istoragessd.pc1exfat %></td>
         <td><%= @istoragessd.pc1install7 %></td>
-       
         <td> </td>
         <td> </td>
         <td> </td>
-        
         <td><%= @istoragessd.pc1result %></td>
 </tr>
 </tbody>
@@ -154,26 +150,22 @@
         <td><%= @istoragessd.pc2interface %></td>
         <td><%= @istoragessd.pc2basic %></td>
         <td></td>
-        <td><%=  %></td>
-        <td><%=  %></td>
-        <td><%=  %></td>
-        <td><%=  %></td>
-        <td><%=  %></td>
-        <td><%=  %></td>
+        <td></td>
+        <td></td>
+        <td><%= @istoragessd.pc1fat32 %></td>
+        <td><%= @istoragessd.pc1ntfs %></td>
+        <td><%= @istoragessd.pc1exfat %></td>
+        <td></td>
         <td><%= @istoragessd.pc2install7 %></td>
-        <td><%= @istoragessd.pc2installfedo %></td>
         <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+		<td><%= @istoragessd.pc2installfedo %></td>
+        <td><%= @istoragessd.pc2result %></td>
+        
 </tr>
 </tbody>
   <tbody>
       <tr>
-        <td>1</th>
+        <td>3</th>
         <td><%= @istoragessd.pc3os %></td>
         <td><%= @istoragessd.pc3mb %></td>
         <td><%= @istoragessd.pc3vendor  %></td>
@@ -182,17 +174,16 @@
         <td><%= @istoragessd.pc3interface %></td>
         <td><%= @istoragessd.pc3basic %></td>
         <td><%= @istoragessd.pc3comp32 %></td>
+        <td><%= @istoragessd.pc3iometer %></td>
         <td><%= @istoragessd.pc3burnin %></td>
         <td><%= @istoragessd.pc3fat32 %></td>
         <td><%= @istoragessd.pc3ntfs %></td>
         <td><%= @istoragessd.pc3exfat %></td>
-        <td><%= @istoragessd.pc3install10 %></td>
-       
-        <td> </td>
-        <td> </td>
-        <td> </td>
-        
-        <td><%= @istoragessd.pc1result %></td>
+        <td></td>
+        <td></td>
+        <td><%= @istoragessd.pc3install10 %></td>        
+        <td></td>
+        <td><%= @istoragessd.pc3result %></td>
 </tr>
 </tbody>
 

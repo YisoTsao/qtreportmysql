@@ -31,7 +31,7 @@
 
     <%= form.label :image10 %>
     <%= form.file_field :image10  %>
-    
+
      <%= form.label :image11 %>
     <%= form.file_field :image11  %>
 
@@ -267,11 +267,6 @@
     <%= form.text_field :pc2basic , class: 'width'%>
   </div>
 
-  <div class="field">
-    <%= form.label :pc2result %>
-    <%= form.text_field :pc2result , class: 'width'%>
-  </div>
-
 
 <div class="field">
     <%= form.label :pc2install81%>
@@ -288,6 +283,11 @@
     <%= form.text_field :pc2reboot81 , class: 'width'%>
   </div>
 
+<div class="field">
+    <%= form.label :pc2result %>
+    <%= form.text_field :pc2result , class: 'width'%>
+  </div>
+  
   <div class="field">
     <%= form.label :PC3OS %>
     <%= form.text_field :pc3os , class: 'width'%>
@@ -335,6 +335,11 @@
     <%= form.label :pc3exfat %>
     <%= form.text_field :pc3exfat , class: 'width'%>
   </div>
+
+<div class="field">
+    <%= form.label :pc3burnin %>
+    <%= form.text_field :pc3burnin , class: 'width'%>  
+    </div>
 
   <div class="field">
     <%= form.label :pc3comp32 %>
