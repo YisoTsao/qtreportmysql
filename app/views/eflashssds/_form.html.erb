@@ -2,13 +2,13 @@
 <%= form_for @eflashssd, html: { multipart: true } do |form| %>
     <p class="imagefont">
    
-    <%= form.label :image1 %>
+    <%= form.label :Before_CDM %>
     <%= form.file_field :image1  %>
 
-    <%= form.label :image2 %>
+    <%= form.label :After_CDM %>
     <%= form.file_field :image2  %>
 
-    <%= form.label :image3 %>
+    <%= form.label :Benchmark %>
     <%= form.file_field :image3  %>
   </p>
 

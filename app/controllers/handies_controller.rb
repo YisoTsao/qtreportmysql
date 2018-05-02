@@ -23,11 +23,6 @@ class HandiesController < ApplicationController
   end
 
 
-
-
-  # GET /handies/1    
-  # GET /handies/1.json
-
   def show 
     respond_to do |format|
             format.html 
@@ -38,18 +33,14 @@ class HandiesController < ApplicationController
   end
 
 
-  # GET /handies/new
   def new
     @handy = Handy.new
   end
 
-  # GET /handies/1/edit
   def edit
   end
 
  
-  # POST /handies
-  # POST /handies.json
   def create
     @handy = Handy.new(handy_params)
     respond_to do |format|

@@ -30,7 +30,7 @@ class IstoragessdsController < ApplicationController
   	respond_to do |format|
             format.html 
             format.json 
-            format.pdf  { render template: 'eflashssds/report' , pdf: 'Report', layout: 'pdf.html', location: @handy } 
+            format.pdf  { render template: 'istoragessds/report' , pdf: 'Report', layout: 'pdf.html', location: @istoragessd } 
             end 
   end
 

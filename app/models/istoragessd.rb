@@ -3,86 +3,134 @@ belongs_to :user , optional: true
 
 has_attached_file  :image1,
   styles: 
-  {   large: "500x500", 
-      medium: "346x346",
-      thumb: "200x200"}, 
+  {   thumb: "180x180", 
+      medium: "420x420",
+      large: "500x500",
+      hdtune: "200x200", 
+      iometer: "200x200", 
+      atto: "200x200", 
+      pcmark: "200x200"}, 
       default_url: ""# "/images/:style/missing.png"
 
       has_attached_file :image2,
   styles: 
-  {   large: "500x500", 
-      medium: "346x346",
-      thumb: "200x200"}, 
+  {   thumb: "180x180", 
+      medium: "420x420",
+      large: "500x500",
+      hdtune: "200x200", 
+      iometer: "200x200", 
+      atto: "200x200", 
+      pcmark: "200x200"},  
       default_url: ""# "/images/:style/missing.png"
 
       has_attached_file :image3, 
   styles: 
-  {   large: "500x500", 
-      medium: "600x600",
-      thumb: "200x200"}, 
+  {   thumb: "180x180", 
+      medium: "420x420",
+      large: "500x500",
+      hdtune: "200x200", 
+      iometer: "200x200", 
+      atto: "200x200", 
+      pcmark: "200x200"},  
       default_url: ""# "/images/:style/missing.png"
 
 has_attached_file :image4, 
   styles: 
-  {   large: "500x500", 
-      medium: "600x600",
-      thumb: "200x200"}, 
+  {   thumb: "180x180", 
+      medium: "420x420",
+      large: "500x500",
+      hdtune: "200x200", 
+      iometer: "200x200", 
+      atto: "200x200", 
+      pcmark: "200x200"},  
       default_url: ""# "/images/:style/missing.png"
 
       has_attached_file :image5, 
   styles: 
-  {   large: "500x500", 
-      medium: "600x600",
-      thumb: "200x200"}, 
+  {   thumb: "180x180", 
+      medium: "420x420",
+      large: "500x500",
+      hdtune: "200x200", 
+      iometer: "200x200", 
+      atto: "200x200", 
+      pcmark: "200x200"},  
       default_url: ""# "/images/:style/missing.png"
 
       has_attached_file :image6, 
   styles: 
-  {   large: "500x500", 
-      medium: "600x600",
-      thumb: "200x200"}, 
+  {   thumb: "180x180", 
+      medium: "420x420",
+      large: "500x500",
+      hdtune: "200x200", 
+      iometer: "200x200", 
+      atto: "200x200", 
+      pcmark: "200x200"},  
       default_url: ""# "/images/:style/missing.png"
 
       has_attached_file :image7, 
   styles: 
-  {   large: "500x500", 
-      medium: "600x600",
-      thumb: "200x200"}, 
+  {   thumb: "180x180", 
+      medium: "420x420",
+      large: "500x500",
+      hdtune: "200x200", 
+      iometer: "200x200", 
+      atto: "200x200", 
+      pcmark: "200x200"},  
       default_url: ""# "/images/:style/missing.png"
 
       has_attached_file :image8, 
   styles: 
-  {   large: "500x500", 
-      medium: "600x600",
-      thumb: "200x200"}, 
+  {   thumb: "180x180", 
+      medium: "420x420",
+      large: "500x500",
+      hdtune: "200x200", 
+      iometer: "200x200", 
+      atto: "200x200", 
+      pcmark: "200x200"},  
       default_url: ""# "/images/:style/missing.png"
 
       has_attached_file :image9, 
   styles: 
-  {   large: "500x500", 
-      medium: "600x600",
-      thumb: "200x200"}, 
+  {   thumb: "180x180", 
+      medium: "420x420",
+      large: "500x500",
+      hdtune: "200x200", 
+      iometer: "200x200", 
+      atto: "200x200", 
+      pcmark: "200x200"},  
       default_url: ""# "/images/:style/missing.png"
 
       has_attached_file :image10, 
   styles: 
-  {   large: "500x500", 
-      medium: "600x600",
-      thumb: "200x200"}, 
+  {   thumb: "180x180", 
+      medium: "420x420",
+      large: "500x500",
+      hdtune: "200x200", 
+      iometer: "200x200", 
+      atto: "200x200", 
+      pcmark: "200x200"},  
       default_url: ""# "/images/:style/missing.png"
 
 has_attached_file :image11, 
   styles: 
-  {   large: "500x500", 
-      medium: "600x600",
-      thumb: "200x200"}, 
+  {   thumb: "180x180", 
+      medium: "420x420",
+      large: "500x500",
+      hdtune: "200x200", 
+      iometer: "200x200", 
+      atto: "200x200", 
+      pcmark: "200x200"},  
       default_url: ""# "/images/:style/missing.png"
 
       has_attached_file :image12, 
   styles: 
-  {   large: "500x500", 
-      medium: "600x600",
-      thumb: "200x200"}, 
+  {   thumb: "180x180", 
+      medium: "420x420",
+      large: "500x500",
+      hdtune: "200x200", 
+      iometer: "200x200", 
+      atto: "200x200", 
+      pcmark: "200x200"},  
       default_url: ""# "/images/:style/missing.png"
 
   #This validates the type of file uploaded. According to this, only images are allowed.

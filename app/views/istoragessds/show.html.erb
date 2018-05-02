@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= link_to 'Download PDF' , istoragessds_url(format: "pdf"), class: 'btn btn-primary'%>
+<h1><%= link_to 'Download PDF' , istoragessd_url(format: "pdf"), class: 'btn btn-primary'%>
 </h1>
 <h1>Product Description </h1>
 
@@ -220,11 +220,41 @@
 <table> 
 <h1>Crystaldiskmark</h1>
 
-<td><%= link_to image_tag(@istoragessd.image1.url(:thumb)), @istoragessd.image1.url %></td>
+<td><%= link_to image_tag(@istoragessd.image1.url(:medium)), @istoragessd.image1.url %></td>
 
-<td><%= link_to image_tag(@istoragessd.image2.url(:thumb)), @istoragessd.image2.url %></td>
+<td><%= link_to image_tag(@istoragessd.image2.url(:medium)), @istoragessd.image2.url %></td>
 
-<td><%= link_to image_tag(@istoragessd.image3.url(:thumb)), @istoragessd.image3.url %></td>
+<td><%= link_to image_tag(@istoragessd.image3.url(:medium)), @istoragessd.image3.url %></td>
+
+<td><%= link_to image_tag(@istoragessd.image4.url(:medium)), @istoragessd.image4.url %></td>
+</table>
+
+<table> 
+<h1>AS SSD Benchmark</h1>
+<td><%= link_to image_tag(@istoragessd.image5.url(:medium)), @istoragessd.image5.url %></td>
+<td><%= link_to image_tag(@istoragessd.image6.url(:medium)), @istoragessd.image6.url %></td>
+</table>
+
+<table> 
+<h1>HDTune Pro</h1>
+<td><%= link_to image_tag(@istoragessd.image7.url(:medium)), @istoragessd.image7.url %></td>
+<td><%= link_to image_tag(@istoragessd.image8.url(:medium)), @istoragessd.image8.url %></td>
+</table>
+
+<table> 
+<h1>Iometer</h1>
+<td><%= link_to image_tag(@istoragessd.image9.url(:medium)), @istoragessd.image9.url %></td>
+<td><%= link_to image_tag(@istoragessd.image10.url(:medium)), @istoragessd.image10.url %></td>
+</table>
+
+<table> 
+<h1>ATTO</h1>
+<td><%= link_to image_tag(@istoragessd.image11.url(:medium)), @istoragessd.image11.url %></td>
+</table>
+
+<table> 
+<h1>PCMark 7</h1>
+<td><%= link_to image_tag(@istoragessd.image12.url(:medium)), @istoragessd.image12.url %></td>
 </table>
 
 <font size= "20" ><%= link_to 'Edit', edit_istoragessd_path(@istoragessd) %></font> <font size= "20" >|</font>

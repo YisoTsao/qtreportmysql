@@ -2,40 +2,40 @@
 <%= form_for @istoragessd, html: { multipart: true } do |form| %>
     <p class="imagefont">
    
-    <%= form.label :image1 %>
+    <%= form.label :CDM1 %>
     <%= form.file_field :image1  %>
 
-    <%= form.label :image2 %>
+    <%= form.label :CDM2 %>
     <%= form.file_field :image2  %>
 
 
-    <%= form.label :image3 %>
+    <%= form.label :CDM3 %>
     <%= form.file_field :image3  %>
 
-    <%= form.label :image4 %>
+    <%= form.label :CDM4 %>
     <%= form.file_field :image4  %>
 
-     <%= form.label :image5 %>
+     <%= form.label :"ASssdBenchmark-MB" %>
     <%= form.file_field :image5  %>
 
-    <%= form.label :image6 %>
+    <%= form.label :"ASssdBenchmark-iops" %>
     <%= form.file_field :image6  %>
 
-    <%= form.label :image7 %>
+    <%= form.label :"HDTune-Read" %>
     <%= form.file_field :image7  %>
-     <%= form.label :image8 %>
+     <%= form.label :"HDTune-Write" %>
     <%= form.file_field :image8  %>
 
-    <%= form.label :image9 %>
+    <%= form.label :"IOmeter-4k Random Read" %>
     <%= form.file_field :image9  %>
 
-    <%= form.label :image10 %>
+    <%= form.label :"IOmeter-4k Random Write" %>
     <%= form.file_field :image10  %>
 
-     <%= form.label :image11 %>
+     <%= form.label :ATTO %>
     <%= form.file_field :image11  %>
 
-    <%= form.label :image12 %>
+    <%= form.label :PCMark7 %>
     <%= form.file_field :image12  %>
 
   </p>
@@ -265,6 +265,19 @@
   <div class="field">
     <%= form.label :PC2basic %>
     <%= form.text_field :pc2basic , class: 'width'%>
+  </div>
+
+<div class="field">
+    <%= form.label :pc2fat32 %>
+    <%= form.text_field :pc2fat32 , class: 'width'%>
+  </div>
+  <div class="field">
+    <%= form.label :pc2ntfs %>
+    <%= form.text_field :pc2ntfs , class: 'width'%>
+  </div>
+  <div class="field">
+    <%= form.label :pc2exfat %>
+    <%= form.text_field :pc2exfat , class: 'width'%>
   </div>
 
 
