@@ -5,9 +5,11 @@ class IstoragessdsController < ApplicationController
   def index
     if params[:search]
          @istoragessds = Istoragessd.where('pccitem LIKE ? OR receivedate LIKE ? OR startdate LIKE ? OR
-          finishdate LIKE ? OR schedule LIKE ? OR qual LIKE ? OR solution LIKE ? OR capacity LIKE ?',
+          finishdate LIKE ? OR qual LIKE ? OR solution LIKE ? OR capacity LIKE ? OR prodpn LIKE ? OR ftype 
+          LIKE ?',
            "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%",
-           "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%")
+           "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%",
+           "%#{params[:search]}%")
       else
       @istoragessds = Istoragessd.all
       respond_to do |format|

@@ -5,9 +5,11 @@ class EflashssdsController < ApplicationController
   def index
      if params[:search]
          @eflashssds = Eflashssd.where('pccitem LIKE ? OR receivedate LIKE ? OR startdate LIKE ? OR
-          finishdate LIKE ? OR qual LIKE ? OR solution LIKE ? OR capacity LIKE ?',
-           "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", 
-           "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%")
+          finishdate LIKE ? OR qual LIKE ? OR solution LIKE ? OR capacity LIKE ? OR prodpn LIKE ? OR ftype 
+          LIKE ?',
+           "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%",
+           "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%",
+           "%#{params[:search]}%")
       else
 
   	@eflashssds = Eflashssd.all
