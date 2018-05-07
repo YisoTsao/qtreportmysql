@@ -40,386 +40,331 @@
 
   </p>
 
+<h1>Product</h1>
+<br>
 
-<div class="field">
-    <%= form.label :pccitem %>
-    <%= form.number_field :pccitem , class: 'width'%>
-  </div>
+<table style="width:50%;">
+  <tr >
+  <td  >PCC Item:</td>
+  <td  ><%= form.number_field :pccitem %></td>
+  </tr>
+  <tr>
+    <td  >Receive Date:</td>
+    <td  ><%= form.text_field :receivedate %></td>
+  </tr>
+   <tr>
+    <td  >Product P/N:</td>
+    <td ><%= form.text_field :prodpn %></td>
+  </tr>
+   <tr>
+    <td  > Controller:</td>
+    <td ><%= form.text_field :solution %> </td>
+  </tr>
+   <tr>
+    <td  > Flash:</td>
+    <td ><%= form.text_field :ftype %></td>
+  </tr>
+   <tr>
+    <td  >Description:</td>
+    <td ><%= form.text_field :desc %></td>
+  </tr>
+  <tr>
+    <td  >Capacity:</td>
+    <td ><%= form.text_field :capacity %></td>
+  </tr>
+   <tr>
+    <td  >PCB Version:</td>
+    <td ><%= form.text_field :fwvversion %></td>
+  </tr>
+   <tr>
+    <td  >Qualification:</td>
+    <td ><%= form.text_field :qual %></td>
+  </tr>
+   <tr>
+    <td >Q'ty:</td>
+    <td ><%= form.text_field :qty %></td>
+  </tr>
+   <tr>
+    <td >Start date:</td>
+    <td ><%= form.text_field :startdate %></td>
+  </tr>
+  <tr>
+    <td >Finish date:</td>
+    <td ><%= form.text_field :finishdate %></td>
+  </tr>
+  <tr>
+    <td >Test Result:</td>
+    <td ><%= form.text_field :testres %></td>
+  </tr>
+  <tr>
+    <td >Owner:</td>
+    <td ><%= form.text_field :owner %></td>
+  </tr>
+  <tr>
+    <td >Remark:</td>
+    <td ><%= form.text_field :remark %></td>
+  </tr>
+  <tr>
+    <td >Product Name:</td>
+    <td ><%= form.text_field :prodname %></td>
+  </tr>
+  <tr>
+    <td >PCB Version:</td>
+    <td ><%= form.text_field :pcbvers %></td>
+  </tr>
+  <tr>
+    <td >Report Name:</td>
+    <td ><%= form.text_field :rpname %></td>
+  </tr>
+   <tr>
+    <td >Report Date:</td>
+    <td ><%= form.text_field :rpdate %></td>
+  </tr>
+   <tr>
+    <td >Approve Name:</td>
+    <td ><%= form.text_field :approvename %></td>
+  </tr>
 
-  <div class="field" >
-    <%= form.label :receivedate %>
-    <%= form.text_field :receivedate , class: 'width'%>
-  </div>
+  </table>
 
-<div class="field">
-    <%= form.label :prodpn %>
-    <%= form.text_field :prodpn , class: 'width'%>
-  </div>
 
-  <div class="field">
-    <%= form.label :solution %>
-    <%= form.text_field :solution , class: 'width'%>  
-    </div>
 
-  <div class="field">
-    <%= form.label :ftype %>
-    <%= form.text_field :ftype , class: 'width'%>
-  </div>
 
-<div class="field">
-    <%= form.label :Description %>
-    <%= form.text_field :desc , class: 'width'%>
-  </div> 
 
-  <div class="field">
-    <%= form.label :capacity %>
-    <%= form.text_field :capacity , class: 'width'%>
-  </div>
-
-<div class="field">
-    <%= form.label :fwvversion %>
-    <%= form.text_field :fwvversion , class: 'width'%>
-  </div>
+<h1>PC1</h1>
+<table style="width:50%;">
+  <tr>
+    <td >PC1 OS:</td>
+    <td ><%= form.text_field :pc1os %></td>
+  </tr>
+  <tr>
+    <td >PC1 M/B :</td>
+    <td ><%= form.text_field :pc1mb %></td>
+  </tr>
+  <tr>
+    <td >PC1 Vendor:</td>
+    <td ><%= form.text_field :pc1vendor %></td>
+  </tr>
+  <tr>
+    <td >PC1 Chip:</td>
+    <td ><%= form.text_field :pc1chip %></td>
+  </tr>
+   <tr>
+    <td >PC1 Bios:</td>
+    <td ><%= form.text_field :pc1bios %></td>
+  </tr>
+  <tr>
+    <td >PC1 Interface :</td>
+    <td ><%= form.text_field :pc1interface %></td>
+  </tr>
+  <tr>
+    <td >PC1 Basic:</td>
+    <td ><%= form.text_field :pc1basic %></td>
+  </tr>
+  <tr>
+    <td >PC1 Comp32:</td>
+    <td ><%= form.text_field :pc1comp32 %></td>
+  </tr>
+  <tr>
+    <td >PC1 Burnin:</td>
+    <td ><%= form.text_field :pc1burnin %></td>
+  </tr>
+  <tr>
+    <td >PC1 Iometer:</td>
+    <td ><%= form.text_field :pc1iometer %></td>
+  </tr>
+  <tr>
+    <td >PC1 Reboot:</td>
+    <td ><%= form.text_field :pc1reboot7 %></td>
+  </tr>
+  <tr>
+    <td >PC1 FAT32:</td>
+    <td ><%= form.text_field :pc1fat32 %></td>
+  </tr>
+  <tr>
+    <td >PC1 NTFS:</td>
+    <td ><%= form.text_field :pc1ntfs %></td>
+  </tr>
+  <tr>
+    <td >PC1 exFAT:</td>
+    <td ><%= form.text_field :pc1exfat %></td>
+  </tr>
+  <tr>
+    <td >PC1 Install Win7:</td>
+    <td ><%= form.text_field :pc1install7 %></td>
+  </tr>
+  <tr>
+    <td >PC1 Result:</td>
+    <td ><%= form.text_field :pc1result %></td>
+  </tr>
+</table>
   
-  <div class="field">
-    <%= form.label :Qual %>
-    <%= form.text_field :qual , class: 'width'%>
-  </div>
+  <h1>PC2</h1>
+<table style="width:50%;" >
+  <tr>
+    <td >PC2 OS:</td>
+    <td ><%= form.text_field :pc2os %></td>
+  </tr>
+  <tr>
+    <td >PC2 M/B :</td>
+    <td ><%= form.text_field :pc2mb %></td>
+  </tr>
+  <tr>
+    <td >PC2 Vendor:</td>
+    <td ><%= form.text_field :pc2vendor %></td>
+  </tr>
+  <tr>
+    <td >PC2 Chip:</td>
+    <td ><%= form.text_field :pc2chip %></td>
+  </tr>
+   <tr>
+    <td >PC2 Bios:</td>
+    <td ><%= form.text_field :pc2bios %></td>
+  </tr>
+  <tr>
+    <td >PC2 Interface :</td>
+    <td ><%= form.text_field :pc2interface %></td>
+  </tr>
+  <tr>
+    <td >PC2 Basic:</td>
+    <td ><%= form.text_field :pc2basic %></td>
+  </tr>
+  <tr>
+    <td >PC2 FAT32:</td>
+    <td ><%= form.text_field :pc2fat32 %></td>
+  </tr>
+  <tr>
+    <td >PC2 NTFS:</td>
+    <td ><%= form.text_field :pc2ntfs %></td>
+  </tr>
+  <tr>
+    <td >PC2 exFAT:</td>
+    <td ><%= form.text_field :pc2exfat %></td>
+  </tr>
+  <tr>
+    <td >PC2 Install Win8.1:</td>
+    <td ><%= form.text_field :pc2install7 %></td>
+  </tr>
+  <tr>
+    <td >PC2 Install Fedora:</td>
+    <td ><%= form.text_field :pc2installfedo %></td>
+  </tr>
+  <tr>
+    <td >PC2 Reboot:</td>
+    <td ><%= form.text_field :pc2reboot81 %></td>
+  </tr>
+  <tr>
+    <td >PC2 Result:</td>
+    <td ><%= form.text_field :pc2result %></td>
+  </tr>
+</table>
 
-<div class="field">
-    <%= form.label :Qty %>
-    <%= form.text_field :qty , class: 'width'%>
-  </div>
+
+<h1>PC3</h1>
+<table style="width:50%;">
+  <tr>
+    <td >PC3 OS:</td>
+    <td ><%= form.text_field :pc3os %></td>
+  </tr>
+  <tr>
+    <td >PC3 M/B :</td>
+    <td ><%= form.text_field :pc3mb %></td>
+  </tr>
+  <tr>
+    <td >PC3 Vendor:</td>
+    <td ><%= form.text_field :pc3vendor %></td>
+  </tr>
+  <tr>
+    <td >PC3 Chip:</td>
+    <td ><%= form.text_field :pc3chip %></td>
+  </tr>
+   <tr>
+    <td >PC3 Bios:</td>
+    <td ><%= form.text_field :pc3bios %></td>
+  </tr>
+  <tr>
+    <td >PC3 Interface :</td>
+    <td ><%= form.text_field :pc3interface %></td>
+  </tr>
+  <tr>
+    <td >PC3 Basic:</td>
+    <td ><%= form.text_field :pc3basic %></td>
+  </tr>
+  <tr>
+    <td >PC3 Comp32:</td>
+    <td ><%= form.text_field :pc3comp32 %></td>
+  </tr>
+  <tr>
+    <td >PC3 Burnin:</td>
+    <td ><%= form.text_field :pc3burnin %></td>
+  </tr>
+  <tr>
+    <td >PC3 Iometer:</td>
+    <td ><%= form.text_field :pc3iometer %></td>
+  </tr>
+  <tr>
+    <td >PC3 Reboot:</td>
+    <td ><%= form.text_field :pc3reboot10 %></td>
+  </tr>
+  <tr>
+    <td >PC3 FAT32:</td>
+    <td ><%= form.text_field :pc3fat32 %></td>
+  </tr>
+  <tr>
+    <td >PC3 NTFS:</td>
+    <td ><%= form.text_field :pc3ntfs %></td>
+  </tr>
+  <tr>
+    <td >PC3 exFAT:</td>
+    <td ><%= form.text_field :pc3exfat %></td>
+  </tr>
+  <tr>
+    <td >PC3 Install Win10:</td>
+    <td ><%= form.text_field :pc3install10 %></td>
+  </tr>
+  <tr>
+    <td >PC3 Result:</td>
+    <td ><%= form.text_field :pc3result %></td>
+  </tr>
+</table>
 
   
+  <h1>PC4</h1>
+<table style="width:50%;">
+  <tr>
+    <td >PC4 OS:</td>
+    <td ><%= form.text_field :pc4os %></td>
+  </tr>
+  <tr>
+    <td >PC4 M/B :</td>
+    <td ><%= form.text_field :pc4mb %></td>
+  </tr>
+  <tr>
+    <td >PC4 Vendor:</td>
+    <td ><%= form.text_field :pc4vendor %></td>
+  </tr>
+  <tr>
+    <td >PC4 Chip:</td>
+    <td ><%= form.text_field :pc4chip %></td>
+  </tr>
+   <tr>
+    <td >PC4 Bios:</td>
+    <td ><%= form.text_field :pc4bios %></td>
+  </tr>
+  <tr>
+    <td >PC4 Interface :</td>
+    <td ><%= form.text_field :pc4interface %></td>
+  </tr>
 
-  <div class="field">
-    <%= form.label :startdate %>
-    <%= form.text_field :startdate , class: 'width'%>  
-    </div>
+  </table>
+  
 
-  <div class="field">
-    <%= form.label :finishdate %>
-    <%= form.text_field :finishdate , class: 'width'%>
-  </div>
 
-<div class="field">
-    <%= form.label :testresult %>
-    <%= form.text_field :testres , class: 'width'%>
-  </div>
+  
    
-   
-
-
-<div class="field">
-    <%= form.label :owner %>
-    <%= form.text_field :owner , class: 'width'%>
-  </div>
-
- 
-
-  <div class="field">
-    <%= form.label :Remark %>
-    <%= form.text_field :remark , class: 'width'%>
-  </div>
-
-  <div class="field">
-    <%= form.label :prodname %>
-    <%= form.text_field :prodname , class: 'width'%>
-  </div>  
-   
-   <div class="field">
-    <%= form.label :pcbvers %>
-    <%= form.text_field :pcbvers , class: 'width'%>
-  </div>
-
-  <div class="field">
-    <%= form.label :Reportname %>
-    <%= form.text_field :rpname , class: 'width'%>
-  </div>
-
-  <div class="field">
-    <%= form.label :Reportdate %>
-    <%= form.text_field :rpdate , class: 'width'%>
-  </div>
-
-  <div class="field">
-    <%= form.label :Approvename %>
-    <%= form.text_field :approvename , class: 'width'%>
-  </div>
-
-
-  <div class="field">
-    <%= form.label :PC1OS %>
-    <%= form.text_field :pc1os , class: 'width'%>
-  </div>
-
-  <div class="field">
-    <%= form.label :PC1MB %>
-    <%= form.text_field :pc1mb , class: 'width'%>
-  </div>
-
-  <div class="field">
-    <%= form.label :PC1Vendor %>
-    <%= form.text_field :pc1vendor , class: 'width'%>  
-    </div>
-
-  <div class="field">
-    <%= form.label :PC1Chip %>
-    <%= form.text_field :pc1chip , class: 'width'%>
-  </div>
-
-  <div class="field">
-    <%= form.label :PC1BIOS %>
-    <%= form.text_field :pc1bios , class: 'width'%>
-  </div>
-
-  <div class="field">
-    <%= form.label :PC1interface %>
-    <%= form.text_field :pc1interface , class: 'width'%>
-  </div>
-
-  <div class="field">
-    <%= form.label :PC1basic %>
-    <%= form.text_field :pc1basic , class: 'width'%>  
-  </div>
-
-  <div class="field">
-    <%= form.label :PC1comp32 %>
-    <%= form.text_field :pc1comp32 , class: 'width'%>  
-    </div>
-
-  <div class="field">
-    <%= form.label :PC1burnin %>
-    <%= form.text_field :pc1burnin , class: 'width'%>
-  </div>
-
-<div class="field">
-    <%= form.label :PC1iometer %>
-    <%= form.text_field :pc1iometer , class: 'width'%>
-  </div>
-
-  <div class="field">
-    <%= form.label :PC1reboot7 %>
-    <%= form.text_field :pc1reboot7 , class: 'width'%>
-  </div>
-
-  
-  <div class="field">
-    <%= form.label :pc1fat32 %>
-    <%= form.text_field :pc1fat32 , class: 'width'%>
-  </div>
-  <div class="field">
-    <%= form.label :pc1ntfs %>
-    <%= form.text_field :pc1ntfs , class: 'width'%>
-  </div>
-  <div class="field">
-    <%= form.label :pc1exfat %>
-    <%= form.text_field :pc1exfat , class: 'width'%>
-  </div>
-
-
-  <div class="field">
-    <%= form.label :pc1result %>
-    <%= form.text_field :pc1result , class: 'width'%>
-  </div> 
-
-
-  <div class="field">
-    <%= form.label :pc1install7 %>
-    <%= form.text_field :pc1install7 , class: 'width'%>
-  </div>
-
- 
-
-  <div class="field">
-    <%= form.label :PC2OS %>
-    <%= form.text_field :pc2os , class: 'width'%>
-  </div>
-
-  <div class="field">
-    <%= form.label :PC2MB %>
-    <%= form.text_field :pc2mb , class: 'width'%>
-  </div>
-
-  <div class="field">
-    <%= form.label :PC2Vendor %>
-    <%= form.text_field :pc2vendor , class: 'width'%>
-  </div>
-
-  <div class="field">
-    <%= form.label :PC2Chip %>
-    <%= form.text_field :pc2chip , class: 'width'%>
-  </div>
-
-  <div class="field">
-    <%= form.label :PC2BIOS %>
-    <%= form.text_field :pc2bios , class: 'width'%>
-  </div>
-
-  <div class="field">
-    <%= form.label :PC2interface %>
-    <%= form.text_field :pc2interface , class: 'width'%>
-  </div>
-
-  <div class="field">
-    <%= form.label :PC2basic %>
-    <%= form.text_field :pc2basic , class: 'width'%>
-  </div>
-
-<div class="field">
-    <%= form.label :pc2fat32 %>
-    <%= form.text_field :pc2fat32 , class: 'width'%>
-  </div>
-  <div class="field">
-    <%= form.label :pc2ntfs %>
-    <%= form.text_field :pc2ntfs , class: 'width'%>
-  </div>
-  <div class="field">
-    <%= form.label :pc2exfat %>
-    <%= form.text_field :pc2exfat , class: 'width'%>
-  </div>
-
-
-<div class="field">
-    <%= form.label :pc2install81%>
-    <%= form.text_field :pc2install7 , class: 'width'%>
-  </div>
-
-  <div class="field">
-    <%= form.label :pc2installfedo %>
-    <%= form.text_field :pc2installfedo , class: 'width'%>
-  </div>
-
-<div class="field">
-    <%= form.label :pc2reboot81 %>
-    <%= form.text_field :pc2reboot81 , class: 'width'%>
-  </div>
-
-<div class="field">
-    <%= form.label :pc2result %>
-    <%= form.text_field :pc2result , class: 'width'%>
-  </div>
-  
-  <div class="field">
-    <%= form.label :PC3OS %>
-    <%= form.text_field :pc3os , class: 'width'%>
-  </div>
-
-  <div class="field">
-    <%= form.label :PC3MB %>
-    <%= form.text_field :pc3mb , class: 'width'%>
-  </div>
-
-  <div class="field">
-    <%= form.label :PC3Vendor %>
-    <%= form.text_field :pc3vendor , class: 'width'%>
-  </div>
-
-  <div class="field">
-    <%= form.label :PC3Chip %>
-    <%= form.text_field :pc3chip , class: 'width'%>
-  </div>
-
-  <div class="field">
-    <%= form.label :PC3BIOS %>
-    <%= form.text_field :pc3bios , class: 'width'%>
-  </div>
-
-  <div class="field">
-    <%= form.label :PC3interface %>
-    <%= form.text_field :pc3interface , class: 'width'%>
-  </div>
-
-<div class="field">
-    <%= form.label :pc3basic %>
-    <%= form.text_field :pc3basic , class: 'width'%>  
-  </div>
-
-  <div class="field">
-    <%= form.label :pc3fat32 %>
-    <%= form.text_field :pc3fat32 , class: 'width'%>
-  </div>
-  <div class="field">
-    <%= form.label :pc3ntfs %>
-    <%= form.text_field :pc3ntfs , class: 'width'%>
-  </div>
-  <div class="field">
-    <%= form.label :pc3exfat %>
-    <%= form.text_field :pc3exfat , class: 'width'%>
-  </div>
-
-<div class="field">
-    <%= form.label :pc3burnin %>
-    <%= form.text_field :pc3burnin , class: 'width'%>  
-    </div>
-
-  <div class="field">
-    <%= form.label :pc3comp32 %>
-    <%= form.text_field :pc3comp32 , class: 'width'%>  
-    </div>
-
-<div class="field">
-    <%= form.label :pc3iometer %>
-    <%= form.text_field :pc3iometer , class: 'width'%>
-  </div>
-
-<div class="field">
-    <%= form.label :pc3install10 %>
-    <%= form.text_field :pc3install10 , class: 'width'%>
-  </div>
-
-  <div class="field">
-    <%= form.label :pc3reboot10 %>
-    <%= form.text_field :pc3reboot10 , class: 'width'%>
-  </div>
-
-  
-  <div class="field">
-    <%= form.label :pc3result %>
-    <%= form.text_field :pc3result , class: 'width'%>
-  </div> 
-
-
-  
-   <div class="field">
-    <%= form.label :PC4OS %>
-    <%= form.text_field :pc4os , class: 'width'%>
-  </div>
-  <div class="field">
-    <%= form.label :PC4MB %>
-    <%= form.text_field :pc4mb , class: 'width'%>
-  </div>
-
-  <div class="field">
-    <%= form.label :PC4Vendor %>
-    <%= form.text_field :pc4vendor , class: 'width'%>
-  </div>
-
-  <div class="field">
-    <%= form.label :PC4Chip %>
-    <%= form.text_field :pc4chip , class: 'width'%>
-  </div>
-
-  <div class="field">
-    <%= form.label :PC4BIOS %>
-    <%= form.text_field :pc4bios , class: 'width'%>
-  </div>
-
-  <div class="field">
-    <%= form.label :PC4interface %>
-    <%= form.text_field :pc4interface , class: 'width'%>
-  </div>
-
-<div class="field">
-    <%= form.label :pc4result %>
-    <%= form.text_field :pc4result , class: 'width'%>
-  </div>
-
   
  <div class="actions">
     <%= form.submit %>
   </div>
-
  
 <% end %>
