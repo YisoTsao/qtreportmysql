@@ -2,41 +2,57 @@
 <%= form_for @istoragessd, html: { multipart: true } do |form| %>
     <p class="imagefont">
    
-    <%= form.label :CDM1 %>
-    <%= form.file_field :image1  %>
-
-    <%= form.label :CDM2 %>
-    <%= form.file_field :image2  %>
-
-
-    <%= form.label :CDM3 %>
-    <%= form.file_field :image3  %>
-
-    <%= form.label :CDM4 %>
-    <%= form.file_field :image4  %>
-
-     <%= form.label :"ASssdBenchmark-MB" %>
-    <%= form.file_field :image5  %>
-
-    <%= form.label :"ASssdBenchmark-iops" %>
-    <%= form.file_field :image6  %>
-
-    <%= form.label :"HDTune-Read" %>
-    <%= form.file_field :image7  %>
-     <%= form.label :"HDTune-Write" %>
-    <%= form.file_field :image8  %>
-
-    <%= form.label :"IOmeter-4k Random Read" %>
-    <%= form.file_field :image9  %>
-
-    <%= form.label :"IOmeter-4k Random Write" %>
-    <%= form.file_field :image10  %>
-
-     <%= form.label :ATTO %>
-    <%= form.file_field :image11  %>
-
-    <%= form.label :PCMark7 %>
-    <%= form.file_field :image12  %>
+   <table>
+     <tr>
+       <td>CDM1</td>
+       <td style="width:85%;"><%= form.file_field :image1  %></td>
+     </tr>
+     <tr>
+       <td>CDM2</td>
+       <td><%= form.file_field :image2  %></td>
+     </tr>
+     <tr>
+       <td>CDM3</td>
+       <td><%= form.file_field :image3  %></td>
+     </tr>
+     <tr>
+       <td>CDM4</td>
+       <td><%= form.file_field :image4  %></td>
+     </tr>
+      <tr>
+       <td>ASssdBenchmark-MB</td>
+       <td><%= form.file_field :image5  %></td>
+     </tr>
+      <tr>
+       <td>ASssdBenchmark-iops</td>
+       <td><%= form.file_field :image6  %></td>
+     </tr>
+      <tr>
+       <td>HDTune-Read</td>
+       <td><%= form.file_field :image7  %></td>
+     </tr>
+      <tr>
+       <td>HDTune-Write</td>
+       <td><%= form.file_field :image8  %></td>
+     </tr>
+      <tr>
+       <td>IOmeter-4k Random Read</td>
+       <td><%= form.file_field :image9  %></td>
+     </tr>
+      <tr>
+       <td>IOmeter-4k Random Write</td>
+       <td><%= form.file_field :image10  %></td>
+     </tr>
+      <tr>
+       <td>ATTO</td>
+       <td><%= form.file_field :image11  %></td>
+     </tr>
+      <tr>
+       <td>PCMark7</td>
+       <td><%= form.file_field :image12  %></td>
+     </tr>
+   </table>
+    
 
   </p>
 
@@ -46,7 +62,7 @@
 <table style="width:50%;">
   <tr >
   <td  >PCC Item:</td>
-  <td  ><%= form.number_field :pccitem %></td>
+  <td  style="width:83%;"><%= form.number_field :pccitem %></td>
   </tr>
   <tr>
     <td  >Receive Date:</td>
@@ -135,7 +151,7 @@
 <table style="width:50%;">
   <tr>
     <td >PC1 OS:</td>
-    <td ><%= form.text_field :pc1os %></td>
+    <td style="width:83%;"><%= form.text_field :pc1os %></td>
   </tr>
   <tr>
     <td >PC1 M/B :</td>
@@ -203,7 +219,7 @@
 <table style="width:50%;" >
   <tr>
     <td >PC2 OS:</td>
-    <td ><%= form.text_field :pc2os %></td>
+    <td style="width:83%;"><%= form.text_field :pc2os %></td>
   </tr>
   <tr>
     <td >PC2 M/B :</td>
@@ -264,7 +280,7 @@
 <table style="width:50%;">
   <tr>
     <td >PC3 OS:</td>
-    <td ><%= form.text_field :pc3os %></td>
+    <td style="width:83%;"><%= form.text_field :pc3os %></td>
   </tr>
   <tr>
     <td >PC3 M/B :</td>
@@ -333,7 +349,7 @@
 <table style="width:50%;">
   <tr>
     <td >PC4 OS:</td>
-    <td ><%= form.text_field :pc4os %></td>
+    <td style="width:83%;"><%= form.text_field :pc4os %></td>
   </tr>
   <tr>
     <td >PC4 M/B :</td>
